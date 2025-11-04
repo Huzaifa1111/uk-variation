@@ -41,7 +41,7 @@ export default function Header() {
       { href: "/about", label: "About Us" },
       { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
       { href: "/support", label: "Support" },
-      
+      { href: "/contact", label: "Contact Us" }, // Added Contact Us
     ],
     servicesItems: [
       { href: "/services", icon: null, label: "All Services" },
@@ -53,6 +53,7 @@ export default function Header() {
     moreMenuItems: [
       { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
       { href: "/support", label: "Support" },
+      { href: "/contact", label: "Contact Us" }, // Added Contact Us
       { href: "/alerts", label: "Alerts" },
     ]
   };
@@ -69,6 +70,8 @@ export default function Header() {
     isPricingPage: pathname === "/naxi-dropshipping",
     isHomePage: pathname === "/",
     isProfilePage: pathname === "/profile" || pathname === "/profile/",
+    isSupportPage: pathname === "/support" || pathname === "/support/",
+    isContactPage: pathname === "/contact" || pathname === "/contact/", // Added Contact Us page check
   };
 
   const isAnyServicesPage = Object.values(pageChecks).slice(1, 6).some(Boolean);
@@ -147,7 +150,16 @@ export default function Header() {
 
           <nav className="hidden lg:flex space-x-20 items-center">
             {navData.desktopNav.map((item, index) => (
-              <a key={index} href={item.href} className="text-white hover:underline">{item.label}</a>
+              <a 
+                key={index} 
+                href={item.href} 
+                className={`text-white hover:underline ${
+                  (item.href === "/support" && pageChecks.isSupportPage) ||
+                  (item.href === "/contact" && pageChecks.isContactPage) ? "text-blue-300 underline" : ""
+                }`}
+              >
+                {item.label}
+              </a>
             ))}
             
             <div className="relative">
@@ -227,7 +239,14 @@ export default function Header() {
               )}
 
               {navData.moreMenuItems.map((item, index) => (
-                <a key={index} href={item.href} className="flex items-center p-3 hover:bg-blue-600 rounded-lg text-white transition-colors">
+                <a 
+                  key={index} 
+                  href={item.href} 
+                  className={`flex items-center p-3 hover:bg-blue-600 rounded-lg text-white transition-colors ${
+                    (item.href === "/support" && pageChecks.isSupportPage) ||
+                    (item.href === "/contact" && pageChecks.isContactPage) ? "bg-blue-600" : ""
+                  }`}
+                >
                   <span className="font-medium">{item.label}</span>
                 </a>
               ))}

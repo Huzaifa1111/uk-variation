@@ -1,4 +1,3 @@
-// data.js
 
 // Hero section data - contains all text content, images, and slide configurations
 export const heroData = {
@@ -23,7 +22,6 @@ export const heroData = {
   },
   
   // Mobile-specific slides configuration
-  // Each slide contains 4 images with their respective positioning classes
   mobileSlides: [
     {
       images: [
@@ -128,7 +126,6 @@ export const heroData = {
   ],
 
   // Desktop-specific slides configuration
-  // Each slide contains 4 images with desktop-optimized positioning classes
   desktopSlides: [
     {
       images: [
@@ -234,14 +231,14 @@ export const heroData = {
 
   // Carousel configuration
   carousel: {
-    minSwipeDistance: 50, // Minimum swipe distance in pixels for mobile
-    // autoSwitchInterval: 3000, // Uncomment to enable auto-switch every 3 seconds
+    minSwipeDistance: 50, 
+    autoSwitchInterval: 3000, 
   }
 };
 
-// Region selection data - contains all countries, flags, and layout configurations
+// Region selection data 
 export const regionData = {
-  // Section styling and layout
+ 
   styles: {
     sectionClass: "md:bg-gray-100 bg-gray-100",
     containerClass: "relative flex flex-col items-center p-[60px] text-center text-black overflow-hidden",
@@ -308,7 +305,7 @@ export const regionData = {
   }
 };
 
-// Hot items section data - contains product items, layout configurations, and styling
+// Hot items section data 
 export const hotItemsData = {
   // Section styling and layout
   styles: {
@@ -416,7 +413,7 @@ export const hotItemsData = {
   }
 };
 
-// Managed by section data - contains partner brands and layout configurations
+// Managed by section data 
 export const managedByData = {
   // Section styling and layout
   styles: {
@@ -479,7 +476,7 @@ export const managedByData = {
   hoverEffects: "transition-all duration-300 hover:scale-110 hover:brightness-110 hover:saturate-150 hover:contrast-125 hover:drop-shadow-lg"
 };
 
-// Categories section data - contains product categories and layout configurations
+// Categories section data
 export const categoriesData = {
   // Section styling and layout
   styles: {
@@ -559,7 +556,7 @@ export const categoriesData = {
   }
 };
 
-// Explore items section data - contains featured products and layout configurations
+// Explore items section data
 export const exploreItemsData = {
   // Section styling and layout
   styles: {
@@ -621,7 +618,7 @@ export const exploreItemsData = {
       },
 
       // Bottom cards in right column
-      // In exploreItemsData - update the desktop Personal Care card image
+      // exploreItemsData 
 bottomCards: {
   class: "grid grid-cols-2 gap-6",
   items: [
@@ -652,7 +649,6 @@ bottomCards: {
       image: {
         src: "/it10.webp",
         alt: "Personal Care",
-        // Fixed desktop positioning - ensure it's properly centered and visible
         class: "w-[170px] h-[170px] object-cover mx-auto"
       }
     }
@@ -731,7 +727,7 @@ bottomCards: {
 
 
 
-// Why choose us section data - contains reasons to choose the service with icons and descriptions
+// Why choose us section data 
 export const whyChooseUsData = {
   // Section styling and layout
   styles: {
@@ -788,10 +784,10 @@ export const whyChooseUsData = {
   contentClass: "text-left"
 };
 
-// data.js
 
 
-// Testimonials section data - contains customer reviews and ratings
+
+// Testimonials section data\
 export const testimonialsData = {
   // Section styling and layout
   styles: {
@@ -869,7 +865,7 @@ export const testimonialsData = {
 
 
 
-// Courier partners section data - contains delivery partner logos and information
+// Courier partners section data 
 export const courierPartnersData = {
   // Section styling and layout
   styles: {
@@ -912,7 +908,7 @@ export const courierPartnersData = {
 };
 
 
-// Footer section data - contains navigation, contact info, and social media links
+// Footer section data 
 export const footerData = {
   // Footer styling
   styles: {

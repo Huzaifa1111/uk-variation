@@ -1,14 +1,11 @@
 import SupportHero from '../../components/support/SupportHero';
 import FAQSection from '../../components/support/FAQSection';
-import PlateFormsSection from '../../components/support/PlatformsSection';
 
 export default function SupportPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SupportHero />
-      <FAQSection />
-      <PlateFormsSection />
-
+      <FAQSection />  
     </div>
   );
 }
