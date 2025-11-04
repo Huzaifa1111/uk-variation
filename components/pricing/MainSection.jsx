@@ -38,9 +38,14 @@ export default function MainSection() {
                   Source anything from China with Naxi and sell <br /> in
                   Pakistan, UAE, UK & Saudi Arabia
                 </p>
-                <button className="bg-white text-black px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-gray-200">
+                <a 
+                  href="https://dashboard.naxi.ae/sign-up" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-black px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-gray-200 transition-colors"
+                >
                   Sign Up
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -76,9 +81,14 @@ export default function MainSection() {
               <h1 className="text-xl font-bold mb-3">
                 Dropshipping<br /> with Naxi
               </h1>
-              <button className="bg-white text-blue-700 px-4 py-2 rounded-lg text-xs font-medium hover:bg-gray-200">
+              <a 
+                href="https://dashboard.naxi.ae/sign-up" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-blue-700 px-4 py-2 rounded-lg text-xs font-medium hover:bg-gray-200 transition-colors"
+              >
                 Start Selling
-              </button>
+              </a>
             </div>
           </div>
         </div>

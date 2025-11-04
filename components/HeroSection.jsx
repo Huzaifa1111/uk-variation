@@ -46,12 +46,12 @@ export default function HeroSection() {
   };
 
   // Auto switch every 3 seconds (uncomment to enable)
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveSlide((prev) => (prev + 1) % mobileSlides.length);
-  //   }, 3000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % mobileSlides.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className={styles.sectionClass}>
@@ -77,9 +77,14 @@ export default function HeroSection() {
         <p className="mx-auto max-w-[27rem] mb-6 md:mb-8 text-sm md:text-md hidden md:block">
           {textContent.subtitle}
         </p>
-        <button className={styles.buttonClass}>
+        <a 
+          href="https://dashboard.naxi.ae/sign-up"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.buttonClass}
+        >
           {textContent.buttonText}
-        </button>
+        </a>
       </div>
 
       {/* Mobile Slides with Touch Events */}

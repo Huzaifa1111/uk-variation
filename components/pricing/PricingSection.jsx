@@ -4,35 +4,35 @@ import Image from "next/image";
 
 export default function PricingSection() {
   const platforms = [
-    "path46.png",
-    "layer1.png",
-    "layer1 (1).png",
-    "Shopify.png",
-    "Wordpress_logo 1.png",
-    "group (4).png",
-    "path833.png",
-    "Group 3.png",
-    "snapchat.PNg",
+    "path46.svg",
+    "layer1.svg",
+    "Group 7.svg",
+    "layer1 (1).svg",
+    "Wordpress_logo 1.svg",
+    "Group.svg",
+    "path833.svg",
+    "Group 3.svg",
+    "Group 8.svg",
   ];
 
   const plans = [
     {
       gradient: "bg-gradient-to-br from-[#D9D9D9] to-[#737373]",
-      icon: "/vector (24).png",
+      icon: "/vector (24).svg",
       title: "Basic Plan",
       price: "$29",
       period: "/month"
     },
     {
       gradient: "bg-gradient-to-br from-[#467DFF] to-[#004CFF]",
-      icon: "/vector (24).png",
+     icon: "/vector (24).svg",
       title: "Pro Plan",
       price: "$79",
       period: "/month"
     },
     {
       gradient: "bg-gradient-to-br from-[#0B1B41] to-[#1C45A7]",
-      icon: "/vector (24).png",
+      icon: "/vector (24).svg",
       title: "Enterprise Plan",
       price: "$199",
       period: "/month"
@@ -133,10 +133,10 @@ export default function PricingSection() {
       <div className="absolute top-0 left-0 w-full h-0 z-20">
         {/* Desktop Floating Images */}
         <div className="absolute top-8 left-0 hidden md:block">
-          <Image src="/image 10.png" alt="Product" width={280} height={280} className="object-contain" />
+          <Image src="/image 10.svg" alt="Product" width={280} height={280} className="object-contain" />
         </div>
         <div className="absolute right-0 top-8 hidden md:block">
-          <Image src="/bigheadphone.png" alt="Headphones" width={280} height={280} className="object-contain" />
+          <Image src="/headphone.svg" alt="Headphones" width={280} height={280} className="object-contain" />
         </div>
 
         {/* Mobile Floating Images */}

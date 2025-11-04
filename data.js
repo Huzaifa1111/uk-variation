@@ -434,15 +434,15 @@ export const managedByData = {
 
   // Partner brand images and URLs
   partnerBrands: [
-    { id: 1, src: "/Glammeria Mono.png", url: "#" },
-    { id: 2, src: "/Skynly Mono.png", url: "#" },
-    { id: 3, src: "/Lenser Mono.png", url: "#" },
-    { id: 4, src: "/Novendo Mono.png", url: "#" },
-    { id: 5, src: "/Techknigh Mono.png", url: "#" },
-    { id: 6, src: "/Brexis Mono.png", url: "#" },
-    { id: 7, src: "/stylodore Mono.png", url: "#" },
-    { id: 8, src: "/Electimize Mono.png", url: "#" },
-    { id: 9, src: "/Signity Mono.png", url: "#" },
+    { id: 1, src: "/Glammeria Color.png", url: "#" },
+    { id: 2, src: "/Skynly Color.png", url: "#" },
+    { id: 3, src: "/Lenser Color.png", url: "#" },
+    { id: 5, src: "/Techknigh Color.png", url: "#" },
+    { id: 6, src: "/Brexis Color.png", url: "#" },
+    { id: 7, src: "/stylodore Color.png", url: "#" },
+    { id: 8, src: "/Electimize Color.png", url: "#" },
+    { id: 9, src: "/Signity Color.png", url: "#" },
+    { id: 4, src: "/Novendo Color.png", url: "#" },
   ],
 
   // Desktop layout configuration
@@ -451,12 +451,12 @@ export const managedByData = {
     firstRow: {
       class: "flex justify-center gap-16",
       images: 5, // Number of images in first row
-      imageClass: "w-32 h-24 object-contain"
+      imageClass: "w-32 h-24 object-contain transition-all duration-300"
     },
     secondRow: {
       class: "flex justify-center gap-8",
       images: 4, // Number of images in second row
-      imageClass: "w-32 h-24 object-contain"
+      imageClass: "w-32 h-24 object-contain transition-all duration-300"
     }
   },
 
@@ -466,17 +466,17 @@ export const managedByData = {
     firstRow: {
       class: "grid grid-cols-4 gap-4",
       images: 4, // Number of images in first row
-      imageClass: "w-16 h-12 object-contain"
+      imageClass: "w-16 h-12 object-contain transition-all duration-300"
     },
     secondRow: {
       class: "grid grid-cols-5 gap-3",
       images: 5, // Number of images in second row
-      imageClass: "w-12 h-10 object-contain"
+      imageClass: "w-12 h-10 object-contain transition-all duration-300"
     }
   },
 
-  // Hover effects
-  hoverEffects: "transition-transform hover:scale-105 hover:opacity-80"
+  // Enhanced hover effects with color transformations
+  hoverEffects: "transition-all duration-300 hover:scale-110 hover:brightness-110 hover:saturate-150 hover:contrast-125 hover:drop-shadow-lg"
 };
 
 // Categories section data - contains product categories and layout configurations

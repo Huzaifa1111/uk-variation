@@ -44,7 +44,7 @@ Experience the best of Naxi’s services! We offer highly competitive rates fo
             </div>
             <div className="w-1/2 ml-45">
               <Image
-                src="/ser1 (2).png"
+                src="/ser1 (2).svg"
                 alt="Services Overview"
                 width={480}
                 height={256}

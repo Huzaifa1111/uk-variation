@@ -72,7 +72,7 @@ export default function HeroSection() {
             </div>
             <div className="w-1/2 ml-28">
               <Image 
-                src="/2002 1.png" 
+                src="/about-banner.svg" 
                 alt="Cityscape" 
                 width={500} 
                 height={256} 

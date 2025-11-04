@@ -31,16 +31,17 @@ export default function Header() {
   const navData = {
     mobileTabs: [
       { href: "/", icon: Home, label: "Home" },
-      { href: "/products", icon: Package, label: "Naxi 360", whitespace: true },
+      { href: "/naxi-360", icon: Package, label: "Naxi 360", whitespace: true },
       { href: "/about", icon: Users, label: "About Us", whitespace: true },
       { href: "/profile", icon: User, label: "Profile" },
     ],
     desktopNav: [
       { href: "/", label: "Home" },
-      { href: "/products", label: "Naxi 360" },
+      { href: "/naxi-360", label: "Naxi 360" },
       { href: "/about", label: "About Us" },
-      { href: "/pricing", label: "Naxi Dropshipping" },
+      { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
       { href: "/support", label: "Support" },
+      
     ],
     servicesItems: [
       { href: "/services", icon: null, label: "All Services" },
@@ -50,7 +51,7 @@ export default function Header() {
       { href: "/services/productqualitycheck", icon: FaClipboardCheck, label: "Quality Check" },
     ],
     moreMenuItems: [
-      { href: "/pricing", label: "Naxi Dropshipping" },
+      { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
       { href: "/support", label: "Support" },
       { href: "/alerts", label: "Alerts" },
     ]
@@ -64,8 +65,8 @@ export default function Header() {
     isSourcingPage: pathname === "/services/sourcing",
     isThreePlServicePage: pathname === "/services/threeplservice",
     isProductQualityCheckPage: pathname === "/services/productqualitycheck",
-    isProductsPage: pathname === "/products" || pathname === "/products/",
-    isPricingPage: pathname === "/pricing",
+    isProductsPage: pathname === "/naxi-360" || pathname === "/naxi-360/",
+    isPricingPage: pathname === "/naxi-dropshipping",
     isHomePage: pathname === "/",
     isProfilePage: pathname === "/profile" || pathname === "/profile/",
   };
@@ -84,7 +85,7 @@ export default function Header() {
     const IconComponent = tab.icon;
     const isActive = pageChecks[`is${tab.label.replace(/\s+/g, '')}Page`] || 
                     (tab.href === "/" && pageChecks.isHomePage) ||
-                    (tab.href === "/products" && pageChecks.isProductsPage) ||
+                    (tab.href === "/naxi-360" && pageChecks.isProductsPage) ||
                     (tab.href === "/about" && pageChecks.isAboutPage) ||
                     (tab.href === "/profile" && pageChecks.isProfilePage);
 
