@@ -1,0 +1,235 @@
+"use client"
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
+import { SiWhatsapp, SiSnapchat, SiPinterest } from "react-icons/si";
+import { useState } from "react";
+import { footerData } from '../data';
+
+// Icon mapping for social media
+const iconComponents = {
+  SiWhatsapp,
+  Twitter,
+  Facebook,
+  SiSnapchat,
+  Instagram,
+  SiPinterest
+};
+
+export default function Footer() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isSupportOpen, setIsSupportOpen] = useState(false);
+  
+  const { 
+    styles, 
+    companyInfo, 
+    navigation, 
+    support, 
+    contact, 
+    subscription, 
+    socialMedia, 
+    mobile, 
+    desktop 
+  } = footerData;
+
+  return (
+    <footer className={styles.footerClass}>
+      {/* Mobile Layout */}
+      <div className={styles.mobileContainerClass}>
+        {/* Logo Section */}
+        <div className="text-left mb-6">
+          <img src={companyInfo.logo.src} alt={companyInfo.logo.alt} className={companyInfo.logo.mobileClass} />
+          <p className={companyInfo.descriptionClass}>
+            {companyInfo.description}
+          </p>
+        </div>
+
+        {/* Dropdown Sections in One Row */}
+        <div className="flex gap-4 mb-6">
+          {/* Navigation Dropdown */}
+          <div className={mobile.dropdownSectionClass}>
+            <div className="flex items-center gap-2 mb-2">
+              <button
+                onClick={() => setIsNavOpen(!isNavOpen)}
+                className={mobile.dropdownButtonClass}
+              >
+                <img
+                  src={mobile.dropdownIcon.src}
+                  alt={mobile.dropdownIcon.alt}
+                  className={`${mobile.dropdownIcon.class} ${isNavOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              <h3 className={navigation.mobileTitleClass}>{navigation.title}</h3>
+            </div>
+            {isNavOpen && (
+              <ul className={navigation.mobileListClass}>
+                {navigation.links.map((link) => (
+                  <li key={link.id} className="list-disc list-inside">
+                    <a href={link.href} className={navigation.linkClass}>{link.name}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* Help & Support Dropdown */}
+          <div className={mobile.dropdownSectionClass}>
+            <div className="flex items-center gap-2 mb-2">
+              <button
+                onClick={() => setIsSupportOpen(!isSupportOpen)}
+                className={mobile.dropdownButtonClass}
+              >
+                <img
+                  src={mobile.dropdownIcon.src}
+                  alt={mobile.dropdownIcon.alt}
+                  className={`${mobile.dropdownIcon.class} ${isSupportOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              <h3 className={support.mobileTitleClass}>{support.title}</h3>
+            </div>
+            {isSupportOpen && (
+              <ul className={support.mobileListClass}>
+                {support.links.map((link) => (
+                  <li key={link.id} className="list-disc list-inside">
+                    <a href={link.href} className={support.linkClass}>{link.name}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+
+        {/* Email Subscription Section */}
+        <div className="mb-6">
+          <div className={subscription.mobileContainerClass}>
+            <input
+              type="email"
+              placeholder={subscription.placeholder}
+              className={subscription.inputClass}
+            />
+            <button className={subscription.buttonClass}>
+              <span className="text-sm">{subscription.buttonText}</span>
+              <img src={subscription.polygonIcon} alt="Polygon" className="w-2 h-3" />
+            </button>
+          </div>
+        </div>
+
+        {/* Contact Us and Social Media in One Line */}
+        <div className="flex items-start gap-8 mb-8 mt-8">
+          {/* Contact Us */}
+          <div className="flex-1">
+            <h3 className={contact.mobileTitleClass}>{contact.title}</h3>
+          </div>
+
+          {/* Social Media */}
+          <div className="flex-1">
+            <h3 className={socialMedia.mobileTitleClass}>{socialMedia.title}</h3>
+            <div className={socialMedia.mobileContainerClass}>
+              {socialMedia.platforms.map((platform) => {
+                const IconComponent = iconComponents[platform.icon];
+                return (
+                  <a key={platform.id} href={platform.href} aria-label={platform.name} className={platform.color}>
+                    <IconComponent size={18} />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* All rights reserved */}
+        <div className="text-left">
+          <p className={companyInfo.copyrightClass}>{companyInfo.copyright}</p>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className={styles.desktopContainerClass}>
+        {/* Left Side: Logo + About + Copyright */}
+        <div className={`mb-6 md:mb-0 ${desktop.leftSectionWidth}`}>
+          <img src={companyInfo.logo.src} alt={companyInfo.logo.alt} className={companyInfo.logo.desktopClass} />
+          <div>
+            <h3 className="text-lg font-semibold mb-2">About us</h3>
+            <p className={`${companyInfo.descriptionClass} mb-4 max-w-xs`}>
+              {companyInfo.description}
+            </p>
+            <p className={companyInfo.copyrightClass}>{companyInfo.copyright}</p>
+          </div>
+        </div>
+
+        {/* Navigation */}
+        <div className={`mb-6 md:mb-0 ${desktop.navigationWidth}`}>
+          <h3 className={navigation.titleClass}>{navigation.title}</h3>
+          <ul className={navigation.listClass}>
+            {navigation.links.map((link) => (
+              <li key={link.id} className="list-disc list-inside">
+                <a href={link.href} className={navigation.linkClass}>{link.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Help & Support */}
+        <div className={`mb-6 md:mb-0 ${desktop.supportWidth}`}>
+          <h3 className={support.titleClass}>{support.title}</h3>
+          <ul className={support.listClass}>
+            {support.links.map((link) => (
+              <li key={link.id} className="list-disc list-inside">
+                <a href={link.href} className={support.linkClass}>{link.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact Us */}
+        <div className={`mb-6 md:mb-0 ${desktop.contactWidth}`}>
+          <h3 className={contact.titleClass}>{contact.title}</h3>
+          <ul className={contact.listClass}>
+            {contact.contacts.map((contactItem) => (
+              <li key={contactItem.id} className="list-disc list-inside">
+                <a href={contactItem.href} className={contact.linkClass}>{contactItem.display}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Social Media with Email Input */}
+        <div className={desktop.socialWidth}>
+          <div className={subscription.desktopContainerClass}>
+            <div className="Group88 w-96 h-14 relative">
+              <div className="Rectangle25 w-65 h-12 left-[115px] t-10 top-0 absolute bg-zinc-300 rounded-lg" />
+              <div className="WriteEMail w-20 h-3 left-[130px] top-[16px] absolute justify-start text-neutral-400 text-sm font-normal font-['Inter']">
+                {subscription.placeholder}
+              </div>
+              <div className="Rectangle26 w-20 h-8 left-[290px] top-[8px] absolute bg-blue-600 rounded-[5px]">
+                <div className="flex items-center justify-between h-full">
+                  <div className="Send w-11 h-3 left-[20Px] top-[4px] absolute justify-start text-white text-md font-normal font-['Inter']">
+                    {subscription.buttonText}
+                  </div>
+                  <img src={subscription.polygonIcon} alt="Polygon" className="w-3 h-4 ml-15" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="ml-32">
+            <h3 className={socialMedia.titleClass}>{socialMedia.title}</h3>
+            <div className={socialMedia.containerClass}>
+              {socialMedia.platforms.map((platform) => {
+                const IconComponent = iconComponents[platform.icon];
+                return (
+                  <a key={platform.id} href={platform.href} aria-label={platform.name} className={platform.color}>
+                    <IconComponent size={platform.size} />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
