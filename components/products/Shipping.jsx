@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { serviceMetadata } from "../../app/servicesData";
 
@@ -69,7 +70,10 @@ export default function Storage() {
       {/* CTA Section */}
       <section className=" text-center bg-gray-100">
         <h2 className="text-4xl font-bold text-black mb-8">What are you waiting for?</h2>
-        <button className="mb-16 px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition duration-300">
+        <button
+        onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+        
+        className="mb-16 px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition duration-300">
           Sign Up
         </button>
       </section>

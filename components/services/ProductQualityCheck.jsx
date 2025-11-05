@@ -1,3 +1,4 @@
+"use client"
 export default function ProductQualityCheck({ reverse = false }) {
   return (
     <>
@@ -45,9 +46,12 @@ We have three dedicated teams based in China that specialize in product quality 
       {/* CTA Section - Responsive */}
       <section className="py-8 md:py-12 text-center">
         <h2 className="text-2xl md:text-4xl font-bold text-black mb-4 md:mb-8">What are you waiting for?</h2>
-        <button className="mb-6 md:mb-8 px-6 md:px-8 py-2 md:py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition duration-300">
-          Sign Up
-        </button>
+       <button 
+  className="mb-6 md:mb-8 px-6 md:px-8 py-2 md:py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition duration-300"
+  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+>
+  Sign Up
+</button>
       </section>
     </>
   );

@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 
 export default function ServicesHero() {
@@ -7,7 +8,7 @@ export default function ServicesHero() {
       <div className="md:hidden pt-30 pb-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-[#0E3799] to-[#175CFF] text-white p-6 rounded-3xl flex flex-col items-center">
-             <div className="w-full">
+            <div className="w-full">
               <Image
                 src="/ser1 (2).png"
                 alt="Services Overview"
@@ -16,15 +17,15 @@ export default function ServicesHero() {
                 className="w-full h-auto rounded-2xl object-cover"
                 priority
               />
-            <div className="w-full text-left mb-6 mt-6">
-              <h1 className="text-2xl font-bold mb-4">Our Services</h1>
-              <p className="text-sm mb-6 leading-relaxed">
-Experience the best of Naxi’s services! We offer highly competitive rates for our INDIVIDUAL services, so you can enjoy top-notch solutions              </p>
-              <button className="px-6 py-2 bg-white text-black rounded-xl hover:bg-gray-200 transition-colors">
-                Sign Up
-              </button>
-            </div>
-           
+              <div className="w-full text-left mb-6 mt-6">
+                <h1 className="text-2xl font-bold mb-4">Our Services</h1>
+                <p className="text-sm mb-6 leading-relaxed">
+                  Experience the best of Naxi’s services! We offer highly competitive rates for our INDIVIDUAL services, so you can enjoy top-notch solutions              </p>
+                <button className="px-6 py-2 bg-white text-black rounded-xl hover:bg-gray-200 transition-colors">
+                  Sign Up
+                </button>
+              </div>
+
             </div>
           </div>
         </div>
@@ -37,8 +38,11 @@ Experience the best of Naxi’s services! We offer highly competitive rates fo
             <div className="w-1/2">
               <h1 className="text-4xl font-bold mb-6">Our Services</h1>
               <p className="text-lg mb-6">
-Experience the best of Naxi’s services! We offer highly competitive rates for our INDIVIDUAL services, so you can enjoy top-notch solutions              </p>
-              <button className="px-6 py-2 bg-white text-black rounded-xl hover:bg-gray-200 transition-colors">
+                Experience the best of Naxi’s services! We offer highly competitive rates for our INDIVIDUAL services, so you can enjoy top-notch solutions              </p>
+              <button
+                onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+                className="px-6 py-2 bg-white text-black rounded-xl hover:bg-gray-200 transition-colors"
+              >
                 Sign Up
               </button>
             </div>

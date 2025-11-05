@@ -5,13 +5,13 @@ export default function ProductsHero() {
     <section className="bg-gray-100 relative overflow-hidden text-white  md:pt-40 md:px-32">
       {/* Mobile Logo */}
 
-       {/* Logo on top left */}
-        <img
-          src="/Group (3).png"
-          alt="Naxi Logo"
-          className="z-20 absolute left-4 top-4 w-20 h-auto object-contain"
-        />
-      
+      {/* Logo on top left */}
+      <img
+        src="/Group (3).png"
+        alt="Naxi Logo"
+        className="z-20 absolute left-4 top-4 w-20 h-auto object-contain"
+      />
+
 
       <div className="max-w-7xl mx-auto relative">
         {/* Main Card Container */}
@@ -63,7 +63,10 @@ export default function ProductsHero() {
                 Source anything from China with Naxi and sell <br className="hidden md:block" /> in
                 Pakistan, UAE, UK & Saudi Arabia
               </p>
-              <button className="bg-white text-blue-600 mt-2 px-4 py-2 md:px-6 md:py-2 rounded-lg text-xs md:text-base font-medium hover:bg-gray-200">
+              <button
+                onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+                className="bg-white text-blue-600 mt-2 px-4 py-2 md:px-6 md:py-2 rounded-lg text-xs md:text-base font-medium hover:bg-gray-200"
+              >
                 Start Selling
               </button>
             </div>

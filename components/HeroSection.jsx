@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { heroData } from '../data'; // or './data' depending on your structure
+import { heroData } from '../data'; 
 
 export default function HeroSection() {
   const [activeSlide, setActiveSlide] = useState(0);

@@ -1,3 +1,5 @@
+"use client"  
+
 import { MessageCircle, Mail, Phone } from 'lucide-react';
 
 export default function ContactHero() {
@@ -29,9 +31,12 @@ export default function ContactHero() {
             <p className="text-gray-600 mb-8 leading-relaxed flex-grow">
               We have got live Social Experts waiting to help you Monday to Friday from 9am to 5pm EST.
             </p>
-            <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-auto">
-              Chat with us
-            </button>
+          <button 
+  onClick={() => window.open('https://www.naxi.ae/contact-us', '_blank')}
+  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-auto"
+>
+  Chat with us
+</button>
           </div>
 
           {/* Email Us */}

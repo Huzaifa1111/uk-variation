@@ -52,26 +52,26 @@ export default function PricingSection() {
 
         {/* Desktop Platform Layout - 4 in first row, 5 in second row */}
         <div className="hidden md:flex flex-col items-center gap-8 mb-12">
-          <div className="flex justify-center gap-8 lg:gap-14">
+          <div className="flex justify-center gap-8 lg:gap-20 ">
             {platforms.slice(0, 4).map((platform, index) => (
               <Image
                 key={index}
                 src={`/${platform}`}
                 alt={`${platform.split(".")[0]} logo`}
-                width={100}
-                height={100}
+                width={120}
+                height={120}
                 className="object-contain"
               />
             ))}
           </div>
-          <div className="flex justify-center gap-8 lg:gap-14">
+          <div className="flex justify-center gap-8 lg:gap-20">
             {platforms.slice(4).map((platform, index) => (
               <Image
                 key={index + 4}
                 src={`/${platform}`}
                 alt={`${platform.split(".")[0]} logo`}
-                width={100}
-                height={100}
+                width={120}
+                height={120}
                 className="object-contain"
               />
             ))}
@@ -120,13 +120,13 @@ export default function PricingSection() {
 
         {/* Buttons */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:space-x-4 mb-6 px-4">
-          <button className="bg-white text-sm md:text-lg text-black px-6 py-1 rounded-lg md:font-semibold hover:bg-gray-200">
-            Browse
-          </button>
-          <a href="#" className="md:mb-0 mb-12 text-white text-xs md:text-lg hover:text-gray-300">
-            Still have questions? <span className="underline ">Learn more</span>
-          </a>
-        </div>
+  <button className="bg-white text-sm md:text-lg text-black px-6 py-1 rounded-lg md:font-semibold hover:bg-gray-200">
+    Browse
+  </button>
+  <a href="/support" className="md:mb-0 mb-12 text-white text-xs md:text-lg hover:text-gray-300">
+    Still have questions? <span className="underline">Learn more</span>
+  </a>
+</div>
       </div>
 
       {/* Floating Images - Now placed between sections to overlap both */}

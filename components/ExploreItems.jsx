@@ -1,3 +1,4 @@
+"use client"
 import { exploreItemsData } from '../data'; // or './data' depending on your structure
 
 export default function ExploreItems() {
@@ -19,9 +20,12 @@ export default function ExploreItems() {
               className="whitespace-normal text-2xl mb-4 leading-tight" 
               dangerouslySetInnerHTML={{ __html: desktop.featuredCard.content.title }}
             />
-            <button className={desktop.featuredCard.content.button.class}>
-              {desktop.featuredCard.content.button.text}
-            </button>
+            <button 
+  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+  className={desktop.featuredCard.content.button.class}
+>
+  {desktop.featuredCard.content.button.text}
+</button>
           </div>
 
           <div className="relative w-full flex-1 flex items-center justify-center">
@@ -44,9 +48,12 @@ export default function ExploreItems() {
               <h3 className="text-xl mb-4 leading-snug w-3/4">
                 {desktop.rightColumn.topCard.title}
               </h3>
-              <button className={desktop.rightColumn.topCard.button.class}>
-                {desktop.rightColumn.topCard.button.text}
-              </button>
+             <button 
+  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+  className={desktop.rightColumn.topCard.button.class}
+>
+  {desktop.rightColumn.topCard.button.text}
+</button>
             </div>
             <img
               src={desktop.rightColumn.topCard.image.src}
@@ -91,9 +98,12 @@ export default function ExploreItems() {
               className="text-base font-semibold mb-2 leading-snug"
               dangerouslySetInnerHTML={{ __html: mobile.firstCard.title }}
             />
-            <button className={mobile.firstCard.button.class}>
-              {mobile.firstCard.button.text}
-            </button>
+           <button 
+  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+  className={mobile.firstCard.button.class}
+>
+  {mobile.firstCard.button.text}
+</button> 
           </div>
           <div className="relative flex items-end justify-end">
             {mobile.firstCard.images.map((img, index) => (
@@ -115,9 +125,12 @@ export default function ExploreItems() {
               <h3 className="text-[11px] font-semibold leading-tight w-[95%]">
                 {mobile.secondRow.leftCard.title}
               </h3>
-              <button className={mobile.secondRow.leftCard.button.class}>
-                {mobile.secondRow.leftCard.button.text}
-              </button>
+             <button 
+  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+  className={mobile.secondRow.leftCard.button.class}
+>
+  {mobile.secondRow.leftCard.button.text}
+</button>
             </div>
             <img
               src={mobile.secondRow.leftCard.image.src}
@@ -132,9 +145,12 @@ export default function ExploreItems() {
               <h3 className="text-[8px] font-bold leading-tight">
                 {mobile.secondRow.rightCard.title}
               </h3>
-              <button className={mobile.secondRow.rightCard.button.class}>
-                {mobile.secondRow.rightCard.button.text}
-              </button>
+             <button 
+  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+  className={mobile.secondRow.rightCard.button.class}
+>
+  {mobile.secondRow.rightCard.button.text}
+</button>
             </div>
             <img
               src={mobile.secondRow.rightCard.image.src}
