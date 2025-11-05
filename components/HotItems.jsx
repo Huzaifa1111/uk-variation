@@ -1,22 +1,18 @@
-import { hotItemsData } from '../data'; // or './data' depending on your structure
+import { hotItemsData } from "../data"; // or './data' depending on your structure
 
 export default function HotItems() {
   // Destructure data from hotItemsData
-  const { 
-    styles, 
-    topBar, 
-    items, 
-    buttonText, 
-    card, 
-    textStyles 
-  } = hotItemsData;
+  const { styles, topBar, items, buttonText, card, textStyles } = hotItemsData;
 
   return (
     <section className={styles.sectionClass}>
       {/* Top bar */}
       <div className={styles.topBarClass}>
-        <h2 className="md:text-xl text-sm md:font-bold">{topBar.title}</h2>
-        <a href={topBar.exploreLink.href} className={topBar.exploreLink.className}>
+        <h2 className="md:text-xl text-sm md:font-light">{topBar.title}</h2>
+        <a
+          href={topBar.exploreLink.href}
+          className={topBar.exploreLink.className}
+        >
           {topBar.exploreLink.text}
         </a>
       </div>
@@ -32,7 +28,9 @@ export default function HotItems() {
             <div className="flex-1 z-10">
               <h3 className={textStyles.desktop.title}>{item.title}</h3>
               <p className={textStyles.desktop.description}>{item.desc}</p>
-              <button className={textStyles.desktop.button}>{buttonText}</button>
+              <button className={textStyles.desktop.button}>
+                {buttonText}
+              </button>
             </div>
             <div className="absolute -right-2 -bottom-10">
               {item.hasMultipleImages ? (
@@ -71,12 +69,8 @@ export default function HotItems() {
                 className={item.mobileImageClass}
               />
             </div>
-            <h3 className={textStyles.mobile.title}>
-              {item.title}
-            </h3>
-            <button className={textStyles.mobile.button}>
-              {buttonText}
-            </button>
+            <h3 className={textStyles.mobile.title}>{item.title}</h3>
+            <button className={textStyles.mobile.button}>{buttonText}</button>
           </div>
         ))}
       </div>

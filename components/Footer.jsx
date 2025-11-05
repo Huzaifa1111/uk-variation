@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Facebook,
   Instagram,
@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { SiWhatsapp, SiSnapchat, SiPinterest } from "react-icons/si";
 import { useState } from "react";
-import { footerData } from '../data';
+import { footerData } from "../data";
 
 // Icon mapping for social media
 const iconComponents = {
@@ -17,23 +17,23 @@ const iconComponents = {
   Facebook,
   SiSnapchat,
   Instagram,
-  SiPinterest
+  SiPinterest,
 };
 
 export default function Footer() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSupportOpen, setIsSupportOpen] = useState(false);
-  
-  const { 
-    styles, 
-    companyInfo, 
-    navigation, 
-    support, 
-    contact, 
-    subscription, 
-    socialMedia, 
-    mobile, 
-    desktop 
+
+  const {
+    styles,
+    companyInfo,
+    navigation,
+    support,
+    contact,
+    subscription,
+    socialMedia,
+    mobile,
+    desktop,
   } = footerData;
 
   return (
@@ -42,7 +42,11 @@ export default function Footer() {
       <div className={styles.mobileContainerClass}>
         {/* Logo Section */}
         <div className="text-left mb-6">
-          <img src={companyInfo.logo.src} alt={companyInfo.logo.alt} className={companyInfo.logo.mobileClass} />
+          <img
+            src={companyInfo.logo.src}
+            alt={companyInfo.logo.alt}
+            className={companyInfo.logo.mobileClass}
+          />
           <p className={companyInfo.descriptionClass}>
             {companyInfo.description}
           </p>
@@ -60,16 +64,22 @@ export default function Footer() {
                 <img
                   src={mobile.dropdownIcon.src}
                   alt={mobile.dropdownIcon.alt}
-                  className={`${mobile.dropdownIcon.class} ${isNavOpen ? 'rotate-180' : ''}`}
+                  className={`${mobile.dropdownIcon.class} ${
+                    isNavOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
-              <h3 className={navigation.mobileTitleClass}>{navigation.title}</h3>
+              <h3 className={navigation.mobileTitleClass}>
+                {navigation.title}
+              </h3>
             </div>
             {isNavOpen && (
               <ul className={navigation.mobileListClass}>
                 {navigation.links.map((link) => (
                   <li key={link.id} className="list-disc list-inside">
-                    <a href={link.href} className={navigation.linkClass}>{link.name}</a>
+                    <a href={link.href} className={navigation.linkClass}>
+                      {link.name}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -86,7 +96,9 @@ export default function Footer() {
                 <img
                   src={mobile.dropdownIcon.src}
                   alt={mobile.dropdownIcon.alt}
-                  className={`${mobile.dropdownIcon.class} ${isSupportOpen ? 'rotate-180' : ''}`}
+                  className={`${mobile.dropdownIcon.class} ${
+                    isSupportOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
               <h3 className={support.mobileTitleClass}>{support.title}</h3>
@@ -95,7 +107,9 @@ export default function Footer() {
               <ul className={support.mobileListClass}>
                 {support.links.map((link) => (
                   <li key={link.id} className="list-disc list-inside">
-                    <a href={link.href} className={support.linkClass}>{link.name}</a>
+                    <a href={link.href} className={support.linkClass}>
+                      {link.name}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -113,7 +127,11 @@ export default function Footer() {
             />
             <button className={subscription.buttonClass}>
               <span className="text-sm">{subscription.buttonText}</span>
-              <img src={subscription.polygonIcon} alt="Polygon" className="w-2 h-3" />
+              <img
+                src={subscription.polygonIcon}
+                alt="Polygon"
+                className="w-2 h-3"
+              />
             </button>
           </div>
         </div>
@@ -127,12 +145,19 @@ export default function Footer() {
 
           {/* Social Media */}
           <div className="flex-1">
-            <h3 className={socialMedia.mobileTitleClass}>{socialMedia.title}</h3>
+            <h3 className={socialMedia.mobileTitleClass}>
+              {socialMedia.title}
+            </h3>
             <div className={socialMedia.mobileContainerClass}>
               {socialMedia.platforms.map((platform) => {
                 const IconComponent = iconComponents[platform.icon];
                 return (
-                  <a key={platform.id} href={platform.href} aria-label={platform.name} className={platform.color}>
+                  <a
+                    key={platform.id}
+                    href={platform.href}
+                    aria-label={platform.name}
+                    className={platform.color}
+                  >
                     <IconComponent size={18} />
                   </a>
                 );
@@ -151,13 +176,19 @@ export default function Footer() {
       <div className={styles.desktopContainerClass}>
         {/* Left Side: Logo + About + Copyright */}
         <div className={`mb-6 md:mb-0 ${desktop.leftSectionWidth}`}>
-          <img src={companyInfo.logo.src} alt={companyInfo.logo.alt} className={companyInfo.logo.desktopClass} />
+          <img
+            src={companyInfo.logo.src}
+            alt={companyInfo.logo.alt}
+            className={companyInfo.logo.desktopClass}
+          />
           <div>
             <h3 className="text-lg font-semibold mb-2">About us</h3>
             <p className={`${companyInfo.descriptionClass} mb-4 max-w-xs`}>
               {companyInfo.description}
             </p>
-            <p className={companyInfo.copyrightClass}>{companyInfo.copyright}</p>
+            <p className={companyInfo.copyrightClass}>
+              {companyInfo.copyright}
+            </p>
           </div>
         </div>
 
@@ -167,7 +198,9 @@ export default function Footer() {
           <ul className={navigation.listClass}>
             {navigation.links.map((link) => (
               <li key={link.id} className="list-disc list-inside">
-                <a href={link.href} className={navigation.linkClass}>{link.name}</a>
+                <a href={link.href} className={navigation.linkClass}>
+                  {link.name}
+                </a>
               </li>
             ))}
           </ul>
@@ -179,7 +212,9 @@ export default function Footer() {
           <ul className={support.listClass}>
             {support.links.map((link) => (
               <li key={link.id} className="list-disc list-inside">
-                <a href={link.href} className={support.linkClass}>{link.name}</a>
+                <a href={link.href} className={support.linkClass}>
+                  {link.name}
+                </a>
               </li>
             ))}
           </ul>
@@ -188,13 +223,20 @@ export default function Footer() {
         {/* Contact Us */}
         <div className={`mb-6 md:mb-0 ${desktop.contactWidth}`}>
           <h3 className={contact.titleClass}>{contact.title}</h3>
-          <ul className={contact.listClass}>
+
+          {/* Replaced <ul> with simple divs */}
+          <div className="space-y-3">
             {contact.contacts.map((contactItem) => (
-              <li key={contactItem.id} className="list-disc list-inside">
-                <a href={contactItem.href} className={contact.linkClass}>{contactItem.display}</a>
-              </li>
+              <p key={contactItem.id} className="text-xs">
+                <p className="font-medium">
+                  {contactItem.type === "phone" ? "Call: " : "Email: "}
+                </p>
+                <a href={contactItem.href} className={contact.linkClass}>
+                  {contactItem.value}
+                </a>
+              </p>
             ))}
-          </ul>
+          </div>
         </div>
 
         {/* Social Media with Email Input */}
@@ -210,7 +252,11 @@ export default function Footer() {
                   <div className="Send w-11 h-3 left-[20Px] top-[4px] absolute justify-start text-white text-md font-normal font-['Inter']">
                     {subscription.buttonText}
                   </div>
-                  <img src={subscription.polygonIcon} alt="Polygon" className="w-3 h-4 ml-15" />
+                  <img
+                    src={subscription.polygonIcon}
+                    alt="Polygon"
+                    className="w-3 h-4 ml-15"
+                  />
                 </div>
               </div>
             </div>
@@ -221,7 +267,12 @@ export default function Footer() {
               {socialMedia.platforms.map((platform) => {
                 const IconComponent = iconComponents[platform.icon];
                 return (
-                  <a key={platform.id} href={platform.href} aria-label={platform.name} className={platform.color}>
+                  <a
+                    key={platform.id}
+                    href={platform.href}
+                    aria-label={platform.name}
+                    className={platform.color}
+                  >
                     <IconComponent size={platform.size} />
                   </a>
                 );
