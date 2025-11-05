@@ -16,7 +16,7 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
-    
+
     checkMobile();
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", checkMobile);
@@ -41,7 +41,7 @@ export default function Header() {
       { href: "/about", label: "About Us" },
       { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
       { href: "/support", label: "Support" },
-      { href: "/contact", label: "Contact Us" }, 
+      { href: "/contact", label: "Contact Us" },
     ],
     servicesItems: [
       { href: "/services", icon: null, label: "All Services" },
@@ -53,7 +53,7 @@ export default function Header() {
     moreMenuItems: [
       { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
       { href: "/support", label: "Support" },
-      { href: "/contact", label: "Contact Us" }, 
+      { href: "/contact", label: "Contact Us" },
     ]
   };
 
@@ -85,11 +85,11 @@ export default function Header() {
   // Reusable Components
   const MobileTab = ({ tab }) => {
     const IconComponent = tab.icon;
-    const isActive = pageChecks[`is${tab.label.replace(/\s+/g, '')}Page`] || 
-                    (tab.href === "/" && pageChecks.isHomePage) ||
-                    (tab.href === "/naxi-360" && pageChecks.isProductsPage) ||
-                    (tab.href === "/about" && pageChecks.isAboutPage) ||
-                    (tab.href === "/profile" && pageChecks.isProfilePage);
+    const isActive = pageChecks[`is${tab.label.replace(/\s+/g, '')}Page`] ||
+      (tab.href === "/" && pageChecks.isHomePage) ||
+      (tab.href === "/naxi-360" && pageChecks.isProductsPage) ||
+      (tab.href === "/about" && pageChecks.isAboutPage) ||
+      (tab.href === "/profile" && pageChecks.isProfilePage);
 
     return (
       <a href={tab.href} className="flex flex-col items-center relative flex-1 mt-2">
@@ -115,8 +115,8 @@ export default function Header() {
 
   const ServicesItem = ({ item, isMobile = false }) => {
     const IconComponent = item.icon;
-    const isActive = pageChecks[`is${item.label.replace(/\s+/g, '')}Page`] || 
-                    (item.href === "/services" && pageChecks.isServicesPage);
+    const isActive = pageChecks[`is${item.label.replace(/\s+/g, '')}Page`] ||
+      (item.href === "/services" && pageChecks.isServicesPage);
 
     if (isMobile) {
       return (
@@ -130,9 +130,8 @@ export default function Header() {
     return (
       <a
         href={item.href}
-        className={`flex items-center gap-3 px-4 py-3 text-sm hover:bg-blue-50 transition-colors ${
-          isActive ? "text-blue-600 font-medium bg-blue-50" : "text-gray-700"
-        }`}
+        className={`flex items-center gap-3 px-4 py-3 text-sm hover:bg-blue-50 transition-colors ${isActive ? "text-blue-600 font-medium bg-blue-50" : "text-gray-700"
+          }`}
       >
         {IconComponent && <IconComponent size={16} className="text-blue-500" />}
         <span>{item.label}</span>
@@ -152,35 +151,37 @@ export default function Header() {
           <nav className="hidden lg:flex items-center justify-center flex-1 max-w-4xl mx-8">
             <div className="flex items-center justify-center space-x-8 2xl:space-x-12 flex-wrap">
               {navData.desktopNav.map((item, index) => (
-                <a 
-                  key={index} 
-                  href={item.href} 
-                  className={`text-white hover:underline text-sm whitespace-nowrap ${
-                    (item.href === "/support" && pageChecks.isSupportPage) ||
+                <a
+                  key={index}
+                  href={item.href}
+                  className={`text-white hover:underline text-sm whitespace-nowrap ${(item.href === "/support" && pageChecks.isSupportPage) ||
                     (item.href === "/contact" && pageChecks.isContactPage) ? "text-blue-300 underline" : ""
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </a>
               ))}
-              
+
+              {/* Services Dropdown*/}
+
               {/* Services Dropdown */}
               <div className="relative">
                 <button
-                  className={`flex items-center space-x-1 text-sm whitespace-nowrap ${
-                    isAnyServicesPage ? "text-blue-300 underline" : "text-white"
-                  } hover:underline transition-colors`}
+                  className={`flex items-center space-x-1 text-sm whitespace-nowrap ${isAnyServicesPage ? "text-blue-300 underline" : "text-white"
+                    } hover:underline transition-colors`}
                   onMouseEnter={() => setServicesDropdownOpen(true)}
-                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                  onMouseLeave={() => setTimeout(() => setServicesDropdownOpen(false), 2000)}
                 >
                   <span>Services</span>
                   <ChevronDown size={14} className={`transform transition-transform ${servicesDropdownOpen ? "rotate-180" : ""}`} />
                 </button>
 
                 {servicesDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 z-50"
+                  <div
+                    className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 z-50"
                     onMouseEnter={() => setServicesDropdownOpen(true)}
-                    onMouseLeave={() => setServicesDropdownOpen(false)}>
+                    onMouseLeave={() => setTimeout(() => setServicesDropdownOpen(false), )}
+                  >
                     {navData.servicesItems.map((item, index) => (
                       <ServicesItem key={index} item={item} />
                     ))}
@@ -207,7 +208,7 @@ export default function Header() {
             {navData.mobileTabs.map((tab, index) => (
               <MobileTab key={index} tab={tab} />
             ))}
-            
+
             <button onClick={() => setMenuOpen(true)} className="flex flex-col items-center relative flex-1 text-white hover:text-gray-200 transition-colors">
               <div className="flex flex-col items-center px-4 py-2">
                 <Menu size={22} />
@@ -246,13 +247,12 @@ export default function Header() {
               )}
 
               {navData.moreMenuItems.map((item, index) => (
-                <a 
-                  key={index} 
-                  href={item.href} 
-                  className={`flex items-center p-3 hover:bg-blue-600 rounded-lg text-white transition-colors ${
-                    (item.href === "/support" && pageChecks.isSupportPage) ||
+                <a
+                  key={index}
+                  href={item.href}
+                  className={`flex items-center p-3 hover:bg-blue-600 rounded-lg text-white transition-colors ${(item.href === "/support" && pageChecks.isSupportPage) ||
                     (item.href === "/contact" && pageChecks.isContactPage) ? "bg-blue-600" : ""
-                  }`}
+                    }`}
                 >
                   <span className="font-medium">{item.label}</span>
                 </a>
