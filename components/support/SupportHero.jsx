@@ -1,6 +1,6 @@
 export default function SupportHero() {
   return (
-    <section className="bg-gray-50 mt-20">
+    <section className="bg-gray-50 mt-16">
       {/* Hero Text Section  */}
       <div className="bg-[radial-gradient(circle_at_center,#175CFF_0%,#0E3799_100%)] text-white py-16 md:py-24">
         <div className="container mx-auto px-6 text-center">

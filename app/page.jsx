@@ -11,19 +11,25 @@ import CourierPartners from '../components/CourierPartners'
 
 export default function Home() {
   return (
-    <main className="min-h-screen ">
-      
+    <main className="min-h-screen">
       <HeroSection />
       <RegionSelection />
-      <HotItems />
+      
+      <section id="hot-items">
+        <HotItems />
+      </section>
+      
       <ManagedBy />
-      <Categories />
+      
+      <section id="categories">
+        <Categories />
+      </section>
+      
       <SellOnlineBanner />
       <ExploreItems />
       <WhyChooseUs />
       <Testimonials />
       <CourierPartners />
-    
     </main>
   )
 }

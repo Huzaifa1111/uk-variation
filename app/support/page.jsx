@@ -5,7 +5,10 @@ export default function SupportPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <SupportHero />
-      <FAQSection />  
+      
+      <section id="faqs">
+        <FAQSection />
+      </section>
     </div>
   );
 }

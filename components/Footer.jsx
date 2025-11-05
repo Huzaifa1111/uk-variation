@@ -23,6 +23,9 @@ const iconComponents = {
 export default function Footer() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSupportOpen, setIsSupportOpen] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
 
   const {
     styles,
@@ -35,6 +38,46 @@ export default function Footer() {
     mobile,
     desktop,
   } = footerData;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!email) {
+      setMessage("Please enter your email address");
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setMessage("Please enter a valid email address");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setMessage("");
+
+    try {
+      // Here you would typically send the email to your backend
+      // For now, we'll simulate an API call
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setMessage("Thank you for subscribing!");
+        setEmail("");
+      } else {
+        setMessage("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setMessage("Failed to subscribe. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <footer className={styles.footerClass}>
@@ -119,21 +162,37 @@ export default function Footer() {
 
         {/* Email Subscription Section */}
         <div className="mb-6">
-          <div className={subscription.mobileContainerClass}>
+          <form onSubmit={handleSubmit} className={subscription.mobileContainerClass}>
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder={subscription.placeholder}
               className={subscription.inputClass}
+              disabled={isSubmitting}
             />
-            <button className={subscription.buttonClass}>
-              <span className="text-sm">{subscription.buttonText}</span>
+            <button 
+              type="submit"
+              className={subscription.buttonClass}
+              disabled={isSubmitting}
+            >
+              <span className="text-sm">
+                {isSubmitting ? "Sending..." : subscription.buttonText}
+              </span>
               <img
                 src={subscription.polygonIcon}
                 alt="Polygon"
                 className="w-2 h-3"
               />
             </button>
-          </div>
+          </form>
+          {message && (
+            <p className={`text-sm mt-2 ${
+              message.includes("Thank you") ? "text-green-600" : "text-red-600"
+            }`}>
+              {message}
+            </p>
+          )}
         </div>
 
         {/* Contact Us and Social Media in One Line */}
@@ -221,46 +280,60 @@ export default function Footer() {
         </div>
 
         {/* Contact Us */}
-        <div className={`mb-6 md:mb-0 ${desktop.contactWidth}`}>
-          <h3 className={contact.titleClass}>{contact.title}</h3>
+<div className={`mb-6 md:mb-0 ${desktop.contactWidth}`}>
+  <h3 className={contact.titleClass}>{contact.title}</h3>
 
-          {/* Replaced <ul> with simple divs */}
-          <div className="space-y-3">
-            {contact.contacts.map((contactItem) => (
-              <p key={contactItem.id} className="text-xs">
-                <p className="font-medium">
-                  {contactItem.type === "phone" ? "Call: " : "Email: "}
-                </p>
-                <a href={contactItem.href} className={contact.linkClass}>
-                  {contactItem.value}
-                </a>
-              </p>
-            ))}
-          </div>
-        </div>
+  <div className="space-y-3">
+    {contact.contacts.map((contactItem) => (
+      <div key={`contact-${contactItem.id}`} className="text-xs">
+        <span className="font-medium block">
+          {contactItem.type === "phone" ? "Call: " : "Email: "}
+        </span>
+        <a href={contactItem.href} className={contact.linkClass}>
+          {contactItem.value}
+        </a>
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* Social Media with Email Input */}
         <div className={desktop.socialWidth}>
-          <div className={subscription.desktopContainerClass}>
+          <form onSubmit={handleSubmit} className={subscription.desktopContainerClass}>
             <div className="Group88 w-96 h-14 relative">
-              <div className="Rectangle25 w-65 h-12 left-[115px] t-10 top-0 absolute bg-zinc-300 rounded-lg" />
-              <div className="WriteEMail w-20 h-3 left-[130px] top-[16px] absolute justify-start text-neutral-400 text-sm font-normal font-['Inter']">
-                {subscription.placeholder}
+              <div className="Rectangle25 w-65 h-12 left-[115px] t-10 top-0 absolute bg-zinc-300 rounded-lg">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={subscription.placeholder}
+                  className="w-full h-full bg-transparent text-black border-none outline-none px-4 text-sm"
+                  disabled={isSubmitting}
+                />
               </div>
-              <div className="Rectangle26 w-20 h-8 left-[290px] top-[8px] absolute bg-blue-600 rounded-[5px]">
-                <div className="flex items-center justify-between h-full">
-                  <div className="Send w-11 h-3 left-[20Px] top-[4px] absolute justify-start text-white text-md font-normal font-['Inter']">
-                    {subscription.buttonText}
-                  </div>
-                  <img
-                    src={subscription.polygonIcon}
-                    alt="Polygon"
-                    className="w-3 h-4 ml-15"
-                  />
-                </div>
-              </div>
+              <button 
+                type="submit"
+                className="Rectangle26 w-20 h-8 left-[290px] top-[8px] absolute bg-blue-600 rounded-[5px] flex items-center justify-center gap-1"
+                disabled={isSubmitting}
+              >
+                <span className="text-white text-sm font-normal">
+                  {isSubmitting ? "..." : subscription.buttonText}
+                </span>
+                <img
+                  src={subscription.polygonIcon}
+                  alt="Polygon"
+                  className="w-3 h-4"
+                />
+              </button>
             </div>
-          </div>
+          </form>
+          {message && (
+            <p className={`text-sm mt-2 ml-32 ${
+              message.includes("Thank you") ? "text-green-600" : "text-red-600"
+            }`}>
+              {message}
+            </p>
+          )}
           <div className="ml-32">
             <h3 className={socialMedia.titleClass}>{socialMedia.title}</h3>
             <div className={socialMedia.containerClass}>
