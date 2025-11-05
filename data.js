@@ -429,17 +429,62 @@ export const managedByData = {
     part2Class: "text-blue-600"
   },
 
-  // Partner brand images and URLs
+  // Partner brand images and URLs - add colored versions
   partnerBrands: [
-    { id: 1, src: "/Glammeria Color.png", url: "#" },
-    { id: 2, src: "/Skynly Color.png", url: "#" },
-    { id: 3, src: "/Lenser Color.png", url: "#" },
-    { id: 5, src: "/Techknigh Color.png", url: "#" },
-    { id: 6, src: "/Brexis Color.png", url: "#" },
-    { id: 7, src: "/stylodore Color.png", url: "#" },
-    { id: 8, src: "/Electimize Color.png", url: "#" },
-    { id: 9, src: "/Signity Color.png", url: "#" },
-    { id: 4, src: "/Novendo Color.png", url: "#" },
+    { 
+      id: 1, 
+      src: "/Glammeria Mono.png", 
+      coloredSrc: "/Glammeria Color.png", // Add colored version
+      url: "#" 
+    },
+    { 
+      id: 2, 
+      src: "/Skynly Mono.png", 
+      coloredSrc: "/Skynly Color.png", 
+      url: "#" 
+    },
+    { 
+      id: 3, 
+      src: "/Lenser Mono.png", 
+      coloredSrc: "/Lenser Color.png", 
+      url: "#" 
+    },
+    { 
+      id: 5, 
+      src: "/Techknigh Mono.png", 
+      coloredSrc: "/Techknigh Color.png", 
+      url: "#" 
+    },
+    { 
+      id: 6, 
+      src: "/Brexis Mono.png", 
+      coloredSrc: "/Brexis Color.png", 
+      url: "#" 
+    },
+    { 
+      id: 7, 
+      src: "/stylodore Mono.png", 
+      coloredSrc: "/stylodore Color.png", 
+      url: "#" 
+    },
+    { 
+      id: 8, 
+      src: "/Electimize Mono.png", 
+      coloredSrc: "/Electimize Color.png", 
+      url: "#" 
+    },
+    { 
+      id: 9, 
+      src: "/Signity Mono.png", 
+      coloredSrc: "/Signity Color.png", 
+      url: "#" 
+    },
+    { 
+      id: 4, 
+      src: "/Novendo Mono.png", 
+      coloredSrc: "/Novendo Color.png", 
+      url: "#" 
+    },
   ],
 
   // Desktop layout configuration
@@ -473,7 +518,7 @@ export const managedByData = {
   },
 
   // Enhanced hover effects with color transformations
-  hoverEffects: "transition-all duration-300 hover:scale-110 hover:brightness-110 hover:saturate-150 hover:contrast-125 hover:drop-shadow-lg"
+  hoverEffects: "transition-all duration-300 hover:scale-110"
 };
 
 // Categories section data
@@ -526,6 +571,20 @@ export const categoriesData = {
     },
     { 
       id: 5,
+      title: 'Furniture', 
+      img: '/sofa.png',
+      imageClass: "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
+      titleClass: "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium"
+    },
+     { 
+      id: 6,
+      title: 'Furniture', 
+      img: '/sofa.png',
+      imageClass: "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
+      titleClass: "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium"
+    },
+     { 
+      id: 7,
       title: 'Furniture', 
       img: '/sofa.png',
       imageClass: "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",

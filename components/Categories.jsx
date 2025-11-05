@@ -1,7 +1,9 @@
-import { categoriesData } from '../data'; // or './data' depending on your structure
+"use client";
+
+import { categoriesData } from '../data';
+import { useRef, useState, useEffect } from 'react';
 
 export default function Categories() {
-  // Destructure data from categoriesData
   const { 
     styles, 
     header, 
@@ -10,6 +12,53 @@ export default function Categories() {
     categoriesList, 
     arrows 
   } = categoriesData;
+
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  // Check scroll position to enable/disable arrows
+  const checkScrollPosition = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10); // 10px tolerance
+    }
+  };
+
+  useEffect(() => {
+    checkScrollPosition();
+    window.addEventListener('resize', checkScrollPosition);
+    return () => window.removeEventListener('resize', checkScrollPosition);
+  }, []);
+
+  const scroll = (direction) => {
+    if (!scrollContainerRef.current) return;
+
+    const container = scrollContainerRef.current;
+    const itemWidth = container.children[0]?.offsetWidth || 120;
+    const scrollAmount = itemWidth * 3; // Scroll approximately 3 items at a time
+
+    container.scrollBy({
+      left: direction === 'right' ? scrollAmount : -scrollAmount,
+      behavior: 'smooth'
+    });
+
+    setTimeout(checkScrollPosition, 300);
+  };
+
+  // Update scroll position when scroll ends
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      checkScrollPosition();
+    };
+
+    container.addEventListener('scroll', handleScroll);
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <section className={styles.sectionClass}>
@@ -23,8 +72,12 @@ export default function Categories() {
 
       {/* Categories */}
       <div className={containerClass}>
-        {/* Left Arrow (Hidden on Mobile) */}
-        <button className={arrows.left.class}>
+        {/* Left Arrow */}
+        <button 
+          className={`${arrows.left.class} ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : ''}`}
+          onClick={() => scroll('left')}
+          disabled={!canScrollLeft}
+        >
           <svg
             className={arrows.iconClass}
             fill="none"
@@ -35,29 +88,42 @@ export default function Categories() {
           </svg>
         </button>
 
-        {/* Categories List */}
-        <div className={categoriesList.class}>
-          {categories.map((category) => (
-            <div
-              key={category.id}
-              className={categoriesList.itemClass}
-            >
-              {/* Image */}
-              <img
-                src={category.img}
-                alt={category.title}
-                className={category.imageClass}
-              />
-              {/* Title (hidden on mobile) */}
-              <p className={category.titleClass}>
-                {category.title}
-              </p>
-            </div>
-          ))}
+        {/* Categories List - Removed scrollbar-hide and hover effects */}
+        <div 
+          ref={scrollContainerRef}
+          className={`${categoriesList.class} overflow-x-auto`}
+          style={{ 
+            scrollBehavior: 'smooth',
+            WebkitOverflowScrolling: 'touch'
+          }}
+        >
+          <div className="flex space-x-4 md:space-x-6 min-w-max">
+            {categories.map((category) => (
+              <div
+                key={category.id}
+                className={`${categoriesList.itemClass} flex-shrink-0`}
+              >
+                {/* Image */}
+                <img
+                  src={category.img}
+                  alt={category.title}
+                  className={category.imageClass}
+                />
+                {/* Title (hidden on mobile) */}
+                <p className={category.titleClass}>
+                  {category.title}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Right Arrow (Hidden on Mobile) */}
-        <button className={arrows.right.class}>
+        {/* Right Arrow */}
+        <button 
+          className={`${arrows.right.class} ${!canScrollRight ? 'opacity-30 cursor-not-allowed' : ''}`}
+          onClick={() => scroll('right')}
+          disabled={!canScrollRight}
+        >
           <svg
             className={arrows.iconClass}
             fill="none"

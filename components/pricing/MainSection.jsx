@@ -131,7 +131,7 @@ function HowToStartSection() {
       {/* Desktop Layout */}
       <section className="hidden md:block py-12 px-6 bg-gray-100">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-8">How to start?</h2>
+          <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">How to start?</h2>
           <div className="grid grid-cols-2 gap-6">
             {steps.map((step, index) => (
               <div 
@@ -140,9 +140,9 @@ function HowToStartSection() {
               >
                 <div className={`flex items-center mb-4 ${index === steps.length - 1 ? 'justify-center' : ''}`}>
                   <img src={step.icon} alt={`${step.title} icon`} className="w-10 h-10 mr-4" />
-                  <h3 className="text-xl font-bold">{step.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 antialiased">{step.title}</h3>
                 </div>
-                <p className="text-black">{step.description}</p>
+                <p className="text-gray-800 leading-relaxed antialiased">{step.description}</p>
               </div>
             ))}
           </div>
@@ -152,7 +152,7 @@ function HowToStartSection() {
       {/* Mobile Layout */}
       <section className="md:hidden py-8 px-4 bg-gray-100">
         <div className="mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-6 text-black">How to start?</h2>
+          <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">How to start?</h2>
           <div className="space-y-4">
             {steps.map((step, index) => (
               <div key={index} className="p-4">
@@ -168,8 +168,8 @@ function HowToStartSection() {
 
                   {/* Title and description on the right */}
                   <div className="flex-1">
-                    <h3 className="text-base font-bold leading-tight mb-2">{step.title}</h3>
-                    <p className="text-black text-sm leading-relaxed">{step.description}</p>
+                    <h3 className="text-base font-semibold leading-tight mb-2 text-gray-900 antialiased">{step.title}</h3>
+                    <p className="text-gray-800 text-sm leading-relaxed antialiased">{step.description}</p>
                   </div>
                 </div>
               </div>

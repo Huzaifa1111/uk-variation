@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import imgv1  from "../../public/Vector (10).png"
 
 export default function OurProcess() {
   const steps = [

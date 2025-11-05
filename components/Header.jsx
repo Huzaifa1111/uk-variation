@@ -54,7 +54,6 @@ export default function Header() {
       { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
       { href: "/support", label: "Support" },
       { href: "/contact", label: "Contact Us" }, 
-    
     ]
   };
 
@@ -71,7 +70,7 @@ export default function Header() {
     isHomePage: pathname === "/",
     isProfilePage: pathname === "/profile" || pathname === "/profile/",
     isSupportPage: pathname === "/support" || pathname === "/support/",
-    isContactPage: pathname === "/contact" || pathname === "/contact/", // Added Contact Us page check
+    isContactPage: pathname === "/contact" || pathname === "/contact/",
   };
 
   const isAnyServicesPage = Object.values(pageChecks).slice(1, 6).some(Boolean);
@@ -145,48 +144,56 @@ export default function Header() {
     <>
       {/* Main Header */}
       {showMainHeader && (
-        <header className={`py-6 px-6 flex justify-between items-center fixed w-full z-50 transition-all duration-300 ${getHeaderBackground()}`}>
-          <img src="/my7.webp" alt="Naxi Logo" className="md:w-32 w-26 h-auto cursor-pointer" />
+        <header className={`py-4 px-6 flex justify-between items-center fixed w-full z-50 transition-all duration-300 ${getHeaderBackground()}`}>
+          {/* Logo */}
+          <img src="/my7.webp" alt="Naxi Logo" className="md:w-28 w-24 h-auto cursor-pointer flex-shrink-0" />
 
-          <nav className="hidden lg:flex space-x-20 items-center">
-            {navData.desktopNav.map((item, index) => (
-              <a 
-                key={index} 
-                href={item.href} 
-                className={`text-white hover:underline ${
-                  (item.href === "/support" && pageChecks.isSupportPage) ||
-                  (item.href === "/contact" && pageChecks.isContactPage) ? "text-blue-300 underline" : ""
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
-            
-            <div className="relative">
-              <button
-                className={`flex items-center space-x-1 ${isAnyServicesPage ? "text-blue-300 underline" : "text-white"} hover:underline transition-colors`}
-                onMouseEnter={() => setServicesDropdownOpen(true)}
-                onMouseLeave={() => setServicesDropdownOpen(false)}
-              >
-                <span>Services</span>
-                <ChevronDown size={16} className={`transform transition-transform ${servicesDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50"
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center justify-center flex-1 max-w-4xl mx-8">
+            <div className="flex items-center justify-center space-x-8 2xl:space-x-12 flex-wrap">
+              {navData.desktopNav.map((item, index) => (
+                <a 
+                  key={index} 
+                  href={item.href} 
+                  className={`text-white hover:underline text-sm whitespace-nowrap ${
+                    (item.href === "/support" && pageChecks.isSupportPage) ||
+                    (item.href === "/contact" && pageChecks.isContactPage) ? "text-blue-300 underline" : ""
+                  }`}
+                >
+                  {item.label}
+                </a>
+              ))}
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  className={`flex items-center space-x-1 text-sm whitespace-nowrap ${
+                    isAnyServicesPage ? "text-blue-300 underline" : "text-white"
+                  } hover:underline transition-colors`}
                   onMouseEnter={() => setServicesDropdownOpen(true)}
-                  onMouseLeave={() => setServicesDropdownOpen(false)}>
-                  {navData.servicesItems.map((item, index) => (
-                    <ServicesItem key={index} item={item} />
-                  ))}
-                </div>
-              )}
+                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                >
+                  <span>Services</span>
+                  <ChevronDown size={14} className={`transform transition-transform ${servicesDropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {servicesDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 z-50"
+                    onMouseEnter={() => setServicesDropdownOpen(true)}
+                    onMouseLeave={() => setServicesDropdownOpen(false)}>
+                    {navData.servicesItems.map((item, index) => (
+                      <ServicesItem key={index} item={item} />
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </nav>
 
-          <div className="hidden lg:flex items-center space-x-8">
-            <img src="/vector (10).png" alt="Notifications" className="w-6 h-7 cursor-pointer hover:opacity-80" />
-            <img src="/profile.png" alt="Profile" className="w-12 h-12 rounded-full cursor-pointer hover:opacity-80" />
+          {/* Right Icons */}
+          <div className="hidden lg:flex items-center space-x-6 flex-shrink-0">
+            <img src="/vector (10).png" alt="Notifications" className="w-5 h-6 cursor-pointer hover:opacity-80" />
+            <img src="/profile.png" alt="Profile" className="w-10 h-10 rounded-full cursor-pointer hover:opacity-80" />
           </div>
 
           <div className="lg:hidden"></div>

@@ -1,7 +1,10 @@
-import { managedByData } from '../data'; // or './data' depending on your structure
+"use client"
+import React from 'react';
+
+import { managedByData } from '../data';
+import { useState } from 'react';
 
 export default function ManagedBy() {
-  // Destructure data from managedByData
   const { 
     styles, 
     heading, 
@@ -10,6 +13,8 @@ export default function ManagedBy() {
     mobile, 
     hoverEffects 
   } = managedByData;
+
+  const [hoveredImage, setHoveredImage] = useState(null);
 
   return (
     <section className={styles.sectionClass}>
@@ -27,10 +32,12 @@ export default function ManagedBy() {
             <a
               key={image.id}
               href={image.url}
-              className={hoverEffects}
+              className={`${hoverEffects} relative`}
+              onMouseEnter={() => setHoveredImage(image.id)}
+              onMouseLeave={() => setHoveredImage(null)}
             >
               <img
-                src={image.src}
+                src={hoveredImage === image.id && image.coloredSrc ? image.coloredSrc : image.src}
                 alt={`Partner ${image.id}`}
                 className={desktop.firstRow.imageClass}
               />
@@ -43,10 +50,12 @@ export default function ManagedBy() {
             <a
               key={image.id}
               href={image.url}
-              className={hoverEffects}
+              className={`${hoverEffects} relative`}
+              onMouseEnter={() => setHoveredImage(image.id)}
+              onMouseLeave={() => setHoveredImage(null)}
             >
               <img
-                src={image.src}
+                src={hoveredImage === image.id && image.coloredSrc ? image.coloredSrc : image.src}
                 alt={`Partner ${image.id}`}
                 className={desktop.secondRow.imageClass}
               />
@@ -63,10 +72,12 @@ export default function ManagedBy() {
             <a
               key={image.id}
               href={image.url}
-              className={hoverEffects}
+              className={`${hoverEffects} relative`}
+              onMouseEnter={() => setHoveredImage(image.id)}
+              onMouseLeave={() => setHoveredImage(null)}
             >
               <img
-                src={image.src}
+                src={hoveredImage === image.id && image.coloredSrc ? image.coloredSrc : image.src}
                 alt={`Partner ${image.id}`}
                 className={mobile.firstRow.imageClass}
               />
@@ -79,10 +90,12 @@ export default function ManagedBy() {
             <a
               key={image.id}
               href={image.url}
-              className={hoverEffects}
+              className={`${hoverEffects} relative`}
+              onMouseEnter={() => setHoveredImage(image.id)}
+              onMouseLeave={() => setHoveredImage(null)}
             >
               <img
-                src={image.src}
+                src={hoveredImage === image.id && image.coloredSrc ? image.coloredSrc : image.src}
                 alt={`Partner ${image.id}`}
                 className={mobile.secondRow.imageClass}
               />
