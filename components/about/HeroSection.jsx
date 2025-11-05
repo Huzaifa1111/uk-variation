@@ -11,7 +11,7 @@ export default function HeroSection() {
             <div className="text-c mb-left">
                <div className="flex justify-center">
               <Image 
-                src="/2002 1.png" 
+               src="/about-banner.svg" 
                 alt="Cityscape" 
                 width={300} 
                 height={150} 

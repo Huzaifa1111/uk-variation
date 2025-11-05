@@ -5,37 +5,37 @@ import Image from "next/image";
 export default function OurProcess() {
   const steps = [
     {
-      img: "/vector (12).png",
+      img: "/vector.svg",
       title: "Sourcing",
       desc:
         "We source high-quality products at competitive prices, managing every step from supplier selection to quality inspection to ensure reliability and value.",
     },
     {
-      img: "/vector (13).png",
+      img: "/vector (1).svg",
       title: "Shipping & Customer Clearance",
       desc:
         "We offer air and sea shipping through trusted partners, ensuring fast, affordable, and hassle-free global delivery with complete customs support.",
     },
     {
-      img: "/vector (14).png",
+      img: "/vector (2).svg",
       title: "Warehousing & Fulfillment",
       desc:
         "We provide secure, well-managed storage facilities to keep products safe, organized, and ready for dispatch.",
     },
     {
-      img: "/vector (15).png",
+      img: "/vector (7).svg",
       title: "Order Confirmation & Follow Up",
       desc:
         "Our dedicated team oversees each order from confirmation to delivery, ensuring accuracy, efficiency, and customer satisfaction.",
     },
     {
-      img: "/vector (16).png",
+      img: "/vector (8).svg",
       title: "Delivery to Your Customer",
       desc:
         "We work with five reliable shipping companies, delivering orders within three working days to ensure speed and consistency.",
     },
     {
-      img: "/vector (17).png",
+      img: "/vector (9).svg",
       title: "COD Remittance",
       desc:
         "We process payments to dropshippers within seven working days after delivery, ensuring transparency and strong partnerships.",

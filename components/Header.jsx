@@ -41,7 +41,7 @@ export default function Header() {
       { href: "/about", label: "About Us" },
       { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
       { href: "/support", label: "Support" },
-      { href: "/contact", label: "Contact Us" }, // Added Contact Us
+      { href: "/contact", label: "Contact Us" }, 
     ],
     servicesItems: [
       { href: "/services", icon: null, label: "All Services" },
@@ -53,8 +53,8 @@ export default function Header() {
     moreMenuItems: [
       { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
       { href: "/support", label: "Support" },
-      { href: "/contact", label: "Contact Us" }, // Added Contact Us
-      { href: "/alerts", label: "Alerts" },
+      { href: "/contact", label: "Contact Us" }, 
+    
     ]
   };
 
