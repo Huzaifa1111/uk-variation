@@ -1061,7 +1061,7 @@ export const footerData = {
     mobileTitleClass: "text-sm font-semibold",
     links: [
       { id: 1, name: "Home", href: "/" },
-      { id: 2, name: "Products", href: "/naxi-360" }, 
+      { id: 2, name: "Products", href: "https://dashboard.naxi.ae/products" }, 
       { id: 3, name: "Hot Items", href: "/#hot-items" }, 
       { id: 4, name: "Categories", href: "/#categories" }, 
     ],

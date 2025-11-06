@@ -164,7 +164,9 @@ export default function Header() {
       {showMainHeader && (
         <header className={`py-4 px-6 flex justify-between items-center fixed w-full z-50 transition-all duration-300 ${getHeaderBackground()}`}>
           {/* Logo */}
-          <img src="/my7.webp" alt="Naxi Logo" className="md:w-28 w-24 h-auto cursor-pointer flex-shrink-0" />
+          <a href="/">
+            <img src="/my7.webp" alt="Naxi Logo" className="md:w-28 w-24 h-auto cursor-pointer flex-shrink-0" />
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center justify-center flex-1 max-w-4xl mx-8">
@@ -211,7 +213,9 @@ export default function Header() {
           {/* Right Icons */}
           <div className="hidden lg:flex items-center space-x-6 flex-shrink-0">
             <img src="/vector (10).png" alt="Notifications" className="w-5 h-6 cursor-pointer hover:opacity-80" />
-            <img src="/profile.png" alt="Profile" className="w-10 h-10 rounded-full cursor-pointer hover:opacity-80" />
+            <a href="/profile">
+              <img src="/profile.png" alt="Profile" className="w-10 h-10 rounded-full cursor-pointer hover:opacity-80" />
+            </a>
           </div>
 
           <div className="lg:hidden"></div>
