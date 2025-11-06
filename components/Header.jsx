@@ -212,10 +212,10 @@ export default function Header() {
 
           {/* Right Icons */}
           <div className="hidden lg:flex items-center space-x-6 flex-shrink-0">
-            <img src="/vector (10).png" alt="Notifications" className="w-5 h-6 cursor-pointer hover:opacity-80" />
+            {/* <img src="/vector (10).png" alt="Notifications" className="w-5 h-6 cursor-pointer hover:opacity-80" />
             <a href="/profile">
               <img src="/profile.png" alt="Profile" className="w-10 h-10 rounded-full cursor-pointer hover:opacity-80" />
-            </a>
+            </a> */}
           </div>
 
           <div className="lg:hidden"></div>
