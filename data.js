@@ -1077,9 +1077,9 @@ export const footerData = {
     mobileTitleClass: "text-sm font-semibold",
     links: [
       { id: 1, name: "FAQs", href: "/support#faqs" },
-      { id: 2, name: "Terms & conditions", href: "#" },
-      { id: 3, name: "Blog", href: "#" },
-      { id: 4, name: "Privacy Policy", href: "#" },
+      { id: 2, name: "Terms & conditions", href: "https://www.naxi.ae/terms-and-conditions" },
+      { id: 3, name: "Blog", href: "https://dashboard.naxi.ae/sign-in" },
+      { id: 4, name: "Privacy Policy", href: "https://www.naxi.ae/privacy-policy" },
     ],
     listClass: "space-y-2 text-xs",
     mobileListClass: "space-y-2 text-xs pl-8",
