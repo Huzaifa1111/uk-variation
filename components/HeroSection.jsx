@@ -60,12 +60,16 @@ export default function HeroSection() {
         <img
           src={backgroundImages.ellipse1}
           alt="Center Ellipse"
-          className="absolute left-1/2 top-1/2 w-[800px] h-[800px] transform -translate-x-1/2 -translate-y-1/2 opacity-70"
+          className="absolute left-1/2 top-1/2 w-[800px] h-[800px] transform -translate-x-1/2 -translate-y-1/2 opacity-70 select-none"
+          draggable="false"
+          onDragStart={(e) => e.preventDefault()}
         />
         <img
           src={backgroundImages.ellipse2}
           alt="Center Ellipse"
-          className="absolute left-1/2 top-100 w-[1200px] h-[1200px] transform -translate-x-1/2 -translate-y-1/2 opacity-70"
+          className="absolute left-1/2 top-100 w-[1200px] h-[1200px] transform -translate-x-1/2 -translate-y-1/2 opacity-70 select-none"
+          draggable="false"
+          onDragStart={(e) => e.preventDefault()}
         />
       </div>
 
@@ -109,7 +113,9 @@ export default function HeroSection() {
                 key={i}
                 src={img.src}
                 alt={`Slide ${index} Image ${i}`}
-                className={img.className}
+                className={`${img.className} select-none`}
+                draggable="false"
+                onDragStart={(e) => e.preventDefault()}
               />
             ))}
           </div>
@@ -119,7 +125,9 @@ export default function HeroSection() {
         <img
           src={backgroundImages.circle}
           alt="Circle"
-          className="absolute left-1/2 top-1/2 w-48 h-48 transform -translate-x-1/2 -translate-y-1/2 opacity-90 grayscale z-20"
+          className="absolute left-1/2 top-1/2 w-48 h-48 transform -translate-x-1/2 -translate-y-1/2 opacity-90 grayscale z-20 select-none"
+          draggable="false"
+          onDragStart={(e) => e.preventDefault()}
         />
       </div>
 
@@ -139,7 +147,9 @@ export default function HeroSection() {
                 key={i}
                 src={img.src}
                 alt={`Slide ${index} Image ${i}`}
-                className={img.className}
+                className={`${img.className} select-none`}
+                draggable="false"
+                onDragStart={(e) => e.preventDefault()}
               />
             ))}
           </div>
@@ -149,7 +159,9 @@ export default function HeroSection() {
         <img
           src={backgroundImages.circle}
           alt="Circle"
-          className="absolute left-1/2 top-1/2 w-64 h-64 transform -translate-x-1/2 -translate-y-1/2 opacity-90 grayscale z-20"
+          className="absolute left-1/2 top-1/2 w-64 h-64 transform -translate-x-1/2 -translate-y-1/2 opacity-90 grayscale z-20 select-none"
+          draggable="false"
+          onDragStart={(e) => e.preventDefault()}
         />
       </div>
 

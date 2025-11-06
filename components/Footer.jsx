@@ -41,7 +41,7 @@ export default function Footer() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!email) {
       setMessage("Please enter your email address");
       return;
@@ -107,9 +107,8 @@ export default function Footer() {
                 <img
                   src={mobile.dropdownIcon.src}
                   alt={mobile.dropdownIcon.alt}
-                  className={`${mobile.dropdownIcon.class} ${
-                    isNavOpen ? "rotate-180" : ""
-                  }`}
+                  className={`${mobile.dropdownIcon.class} ${isNavOpen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
               <h3 className={navigation.mobileTitleClass}>
@@ -139,9 +138,8 @@ export default function Footer() {
                 <img
                   src={mobile.dropdownIcon.src}
                   alt={mobile.dropdownIcon.alt}
-                  className={`${mobile.dropdownIcon.class} ${
-                    isSupportOpen ? "rotate-180" : ""
-                  }`}
+                  className={`${mobile.dropdownIcon.class} ${isSupportOpen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
               <h3 className={support.mobileTitleClass}>{support.title}</h3>
@@ -171,7 +169,7 @@ export default function Footer() {
               className={subscription.inputClass}
               disabled={isSubmitting}
             />
-            <button 
+            <button
               type="submit"
               className={subscription.buttonClass}
               disabled={isSubmitting}
@@ -187,9 +185,8 @@ export default function Footer() {
             </button>
           </form>
           {message && (
-            <p className={`text-sm mt-2 ${
-              message.includes("Thank you") ? "text-green-600" : "text-red-600"
-            }`}>
+            <p className={`text-sm mt-2 ${message.includes("Thank you") ? "text-green-600" : "text-red-600"
+              }`}>
               {message}
             </p>
           )}
@@ -280,22 +277,22 @@ export default function Footer() {
         </div>
 
         {/* Contact Us */}
-<div className={`mb-6 md:mb-0 ${desktop.contactWidth}`}>
-  <h3 className={contact.titleClass}>{contact.title}</h3>
+        <div className={`mb-6 md:mb-0 ${desktop.contactWidth}`}>
+          <h3 className={contact.titleClass}>{contact.title}</h3>
 
-  <div className="space-y-3">
-    {contact.contacts.map((contactItem) => (
-      <div key={`contact-${contactItem.id}`} className="text-xs">
-        <span className="font-medium block">
-          {contactItem.type === "phone" ? "Call: " : "Email: "}
-        </span>
-        <a href={contactItem.href} className={contact.linkClass}>
-          {contactItem.value}
-        </a>
-      </div>
-    ))}
-  </div>
-</div>
+          <div className="space-y-3">
+            {contact.contacts.map((contactItem) => (
+              <div key={`contact-${contactItem.id}`} className="text-xs">
+                <span className="font-medium block">
+                  {contactItem.type === "phone" ? "Call: " : "Email: "}
+                </span>
+                <a href={contactItem.href} className={contact.linkClass}>
+                  {contactItem.value}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Social Media with Email Input */}
         <div className={desktop.socialWidth}>
@@ -311,7 +308,7 @@ export default function Footer() {
                   disabled={isSubmitting}
                 />
               </div>
-              <button 
+              <button
                 type="submit"
                 className="Rectangle26 w-20 h-8 left-[290px] top-[8px] absolute bg-blue-600 rounded-[5px] flex items-center justify-center gap-1"
                 disabled={isSubmitting}
@@ -328,9 +325,8 @@ export default function Footer() {
             </div>
           </form>
           {message && (
-            <p className={`text-sm mt-2 ml-32 ${
-              message.includes("Thank you") ? "text-green-600" : "text-red-600"
-            }`}>
+            <p className={`text-sm mt-2 ml-32 ${message.includes("Thank you") ? "text-green-600" : "text-red-600"
+              }`}>
               {message}
             </p>
           )}
