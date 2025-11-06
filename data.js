@@ -50,7 +50,7 @@ export const heroData = {
       images: [
         {
           src: "/cr1.png",
-          className: "w-20 absolute -left-10 top-5   w-20 transform -rotate-34",
+          className: "w-20 absolute -left-10 top-5     w-20 transform -rotate-34",
         },
         {
           src: "/bottle4.png",
@@ -683,12 +683,12 @@ export const exploreItemsData = {
           src: "/it5.webp",
           alt: "Hot selling items 2",
           class:
-            "w-[180px] h-[180px] object-cover absolute bottom-60 left-18 -rotate-16",
+            "w-[180px] h-[180px] object-cover absolute bottom-60 left-5 -rotate-16",
         },
         {
           src: "/my6.png",
           alt: "Hot selling items 3",
-          class: "w-[200px] h-auto object-cover absolute bottom-50 right-12",
+          class: "w-[200px] h-auto object-cover absolute bottom-50 right-2",
         },
       ],
     },
