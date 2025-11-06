@@ -9,18 +9,6 @@ export default function HeroSection() {
           {/* Main Content Card */}
           <div className="bg-gradient-to-r from-[#175CFF] to-[#0E3799] text-white p-6 rounded-3xl overflow-hidden">
             <div className="text-c mb-left">
-
-              <div className="flex justify-center">
-                <Image
-                  src="/2002 1.png"
-                  alt="Cityscape"
-                  width={300}
-                  height={150}
-                  className="w-full max-w-xs h-40 object-cover rounded-2xl mb-4"
-                />
-              </div>
-              <h1 className="text-2xl font-bold mb-4">About</h1>
-=======
                <div className="flex justify-center">
               <Image 
                src="/about-banner.svg" 

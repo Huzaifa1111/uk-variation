@@ -5,12 +5,12 @@ export default function ServicesHero() {
   return (
     <section className="bg-gray-100">
       {/* Mobile Layout */}
-      <div className="md:hidden pt-30 pb-8 px-4">
+      <div className="md:hidden pt-25 pb-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-[#0E3799] to-[#175CFF] text-white p-6 rounded-3xl flex flex-col items-center">
             <div className="w-full">
               <Image
-                src="/ser1 (2).png"
+                 src="/ser1 (2).svg"
                 alt="Services Overview"
                 width={400}
                 height={200}

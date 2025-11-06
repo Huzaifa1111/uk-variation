@@ -74,11 +74,30 @@ export default function Header() {
   };
 
   const isAnyServicesPage = Object.values(pageChecks).slice(1, 6).some(Boolean);
-  const showMainHeader = !(isMobile && pageChecks.isProductsPage);
+  
+  // FIXED: Show main header logic
+  const showMainHeader = 
+    // Always show on desktop
+    !isMobile || 
+    // For mobile on Naxi 360 page, show when scrolled
+    (isMobile && pageChecks.isProductsPage && scrolled) ||
+    // For mobile on other pages, always show
+    (isMobile && !pageChecks.isProductsPage);
 
   const getHeaderBackground = () => {
     if (pathname === "/about") return "bg-gradient-to-r from-[#1C45A7] to-[#0B1B41]";
     if (pathname === "/") return scrolled ? "bg-gradient-to-r from-[#1C45A7] to-[#0B1B41]" : "";
+    
+    // Naxi 360 page - different behavior for mobile vs desktop
+    if (pathname === "/naxi-360") {
+      if (isMobile) {
+        return scrolled ? "bg-gradient-to-r from-[#1C45A7] to-[#0B1B41]" : "";
+      } else {
+        // Desktop - always show background
+        return "bg-gradient-to-r from-[#1C45A7] to-[#0B1B41]";
+      }
+    }
+    
     return "bg-gradient-to-r from-[#1C45A7] to-[#0B1B41]";
   };
 
@@ -121,7 +140,7 @@ export default function Header() {
     if (isMobile) {
       return (
         <a href={item.href} className="flex items-center gap-3 p-2 hover:bg-blue-600 rounded-lg text-sm text-white transition-colors">
-          <IconComponent size={16} className="text-blue-200" />
+          {IconComponent && <IconComponent size={16} className="text-blue-200" />}
           {item.label}
         </a>
       );
@@ -162,8 +181,6 @@ export default function Header() {
                 </a>
               ))}
 
-              {/* Services Dropdown*/}
-
               {/* Services Dropdown */}
               <div className="relative">
                 <button
@@ -180,7 +197,7 @@ export default function Header() {
                   <div
                     className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg py-2 z-50"
                     onMouseEnter={() => setServicesDropdownOpen(true)}
-                    onMouseLeave={() => setTimeout(() => setServicesDropdownOpen(false), )}
+                    onMouseLeave={() => setTimeout(() => setServicesDropdownOpen(false), 2000)}
                   >
                     {navData.servicesItems.map((item, index) => (
                       <ServicesItem key={index} item={item} />

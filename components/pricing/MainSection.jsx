@@ -53,7 +53,7 @@ export default function MainSection() {
       </section>
 
       {/* Mobile Layout */}
-      <section className="md:hidden pb-6 bg-gray-100 pt-20">
+      <section className="md:hidden pb-6 bg-gray-100 pt-15">
         <div className="">
           <div className="relative overflow-hidden shadow-lg h-48">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#175CFF_0%,#0E3799_100%)]"></div>

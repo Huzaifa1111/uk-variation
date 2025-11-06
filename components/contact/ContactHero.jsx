@@ -4,7 +4,7 @@ import { MessageCircle, Mail, Phone } from 'lucide-react';
 
 export default function ContactHero() {
   return (
-    <section className="bg-gray-50 mt-18">
+    <section className="bg-gray-50 md:mt-18 mt-15">
       {/* Hero Text Section with Background */}
       <div className="bg-[radial-gradient(circle_at_center,#175CFF_0%,#0E3799_100%)] text-white py-16 md:py-30">
         <div className="container mx-auto px-6">
