@@ -27,18 +27,18 @@ export const heroData = {
   mobileSlides: [
     {
       images: [
-        {
+        { 
           src: "/headphone.webp",
           className: "w-33 absolute -left-14 -top-8 w-20 transform -rotate-34",
         },
         {
           src: "/it12.webp",
-          className: "w-25 absolute right-66 -top-52 w-20 transform rotate-6",
+          className: "w-25 absolute right-70 -top-52 w-20 transform rotate-6",
         },
         {
           src: "/it5.webp",
           className:
-            "w-25 absolute left-62 -top-40 w-18 transform -rotate-19 z-0",
+            "w-25 absolute left-64 -top-40 w-18 transform -rotate-19 z-0",
         },
         {
           src: "/it10.webp",
@@ -50,20 +50,20 @@ export const heroData = {
       images: [
         {
           src: "/cr1.png",
-          className: "w-30 absolute -left-14 -top-6 w-20 transform -rotate-34",
+          className: "w-20 absolute -left-10 top-5     w-20 transform -rotate-34",
         },
         {
           src: "/bottle4.png",
-          className: "w-25 absolute right-66 -top-45 w-20 transform rotate-6",
+          className: "w-20 absolute right-68 -top-45 w-20 transform rotate-6",
         },
         {
           src: "/handle2.png",
           className:
-            "w-25 absolute left-62 -top-40 w-18 transform -rotate-0 z-0",
+            "w-25 absolute left-68 -top-44   w-18 transform -rotate-0 z-0",
         },
         {
           src: "/cr2.png",
-          className: "w-60 absolute -right-22 top-2 w-18 transform rotate-28",
+          className: "w-30 absolute -right-12 top-2 w-18 transform rotate-28",
         },
       ],
     },
@@ -688,12 +688,12 @@ export const exploreItemsData = {
           src: "/it5.webp",
           alt: "Hot selling items 2",
           class:
-            "w-[180px] h-[180px] object-cover absolute bottom-60 left-18 -rotate-16",
+            "w-[180px] h-[180px] object-cover absolute bottom-60 left-5 -rotate-16",
         },
         {
           src: "/my6.png",
           alt: "Hot selling items 3",
-          class: "w-[200px] h-auto object-cover absolute bottom-50 right-12",
+          class: "w-[200px] h-auto object-cover absolute bottom-50 right-2",
         },
       ],
     },

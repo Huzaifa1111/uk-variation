@@ -91,9 +91,8 @@ export default function Footer() {
                 <img
                   src={mobile.dropdownIcon.src}
                   alt={mobile.dropdownIcon.alt}
-                  className={`${mobile.dropdownIcon.class} ${
-                    isNavOpen ? "rotate-180" : ""
-                  }`}
+                  className={`${mobile.dropdownIcon.class} ${isNavOpen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
               <h3 className={navigation.mobileTitleClass}>
@@ -123,9 +122,8 @@ export default function Footer() {
                 <img
                   src={mobile.dropdownIcon.src}
                   alt={mobile.dropdownIcon.alt}
-                  className={`${mobile.dropdownIcon.class} ${
-                    isSupportOpen ? "rotate-180" : ""
-                  }`}
+                  className={`${mobile.dropdownIcon.class} ${isSupportOpen ? "rotate-180" : ""
+                    }`}
                 />
               </button>
               <h3 className={support.mobileTitleClass}>{support.title}</h3>
@@ -174,13 +172,9 @@ export default function Footer() {
             </button>
           </form>
           {message && (
-            <p
-              className={`text-sm mt-2 ${
-                message.includes("Thank you")
-                  ? "text-green-600"
-                  : "text-red-600"
-              }`}
-            >
+            <p className={`text-sm mt-2 ${
+              message.includes("Thank you") ? "text-green-600" : "text-red-600"
+            }`}>
               {message}
             </p>
           )}
@@ -322,13 +316,9 @@ export default function Footer() {
             </div>
           </form>
           {message && (
-            <p
-              className={`text-sm mt-2 ml-32 ${
-                message.includes("Thank you")
-                  ? "text-green-600"
-                  : "text-red-600"
-              }`}
-            >
+            <p className={`text-sm mt-2 ml-32 ${
+              message.includes("Thank you") ? "text-green-600" : "text-red-600"
+            }`}>
               {message}
             </p>
           )}
