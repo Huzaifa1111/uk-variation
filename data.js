@@ -450,59 +450,59 @@ export const managedByData = {
 
   // Partner brand images and URLs - add colored versions
   partnerBrands: [
-    { 
-      id: 1, 
-      src: "/Glammeria Mono.png", 
+    {
+      id: 1,
+      src: "/Glammeria Mono.png",
       coloredSrc: "/Glammeria Color.png", // Add colored version
-      url: "#" 
+      url: "#",
     },
-    { 
-      id: 2, 
-      src: "/Skynly Mono.png", 
-      coloredSrc: "/Skynly Color.png", 
-      url: "#" 
+    {
+      id: 2,
+      src: "/Skynly Mono.png",
+      coloredSrc: "/Skynly Color.png",
+      url: "#",
     },
-    { 
-      id: 3, 
-      src: "/Lenser Mono.png", 
-      coloredSrc: "/Lenser Color.png", 
-      url: "#" 
+    {
+      id: 3,
+      src: "/Lenser Mono.png",
+      coloredSrc: "/Lenser Color.png",
+      url: "#",
     },
-    { 
-      id: 5, 
-      src: "/Techknigh Mono.png", 
-      coloredSrc: "/Techknigh Color.png", 
-      url: "#" 
+    {
+      id: 5,
+      src: "/Techknigh Mono.png",
+      coloredSrc: "/Techknigh Color.png",
+      url: "#",
     },
-    { 
-      id: 6, 
-      src: "/Brexis Mono.png", 
-      coloredSrc: "/Brexis Color.png", 
-      url: "#" 
+    {
+      id: 6,
+      src: "/Brexis Mono.png",
+      coloredSrc: "/Brexis Color.png",
+      url: "#",
     },
-    { 
-      id: 7, 
-      src: "/stylodore Mono.png", 
-      coloredSrc: "/stylodore Color.png", 
-      url: "#" 
+    {
+      id: 7,
+      src: "/stylodore Mono.png",
+      coloredSrc: "/stylodore Color.png",
+      url: "#",
     },
-    { 
-      id: 8, 
-      src: "/Electimize Mono.png", 
-      coloredSrc: "/Electimize Color.png", 
-      url: "#" 
+    {
+      id: 8,
+      src: "/Electimize Mono.png",
+      coloredSrc: "/Electimize Color.png",
+      url: "#",
     },
-    { 
-      id: 9, 
-      src: "/Signity Mono.png", 
-      coloredSrc: "/Signity Color.png", 
-      url: "#" 
+    {
+      id: 9,
+      src: "/Signity Mono.png",
+      coloredSrc: "/Signity Color.png",
+      url: "#",
     },
-    { 
-      id: 4, 
-      src: "/Novendo Mono.png", 
-      coloredSrc: "/Novendo Color.png", 
-      url: "#" 
+    {
+      id: 4,
+      src: "/Novendo Mono.png",
+      coloredSrc: "/Novendo Color.png",
+      url: "#",
     },
   ],
 
@@ -537,7 +537,8 @@ export const managedByData = {
   },
 
   // Enhanced hover effects with color transformations
-  hoverEffects: "transition-all duration-300 hover:scale-110 hover:brightness-110 hover:saturate-150 hover:contrast-125 hover:drop-shadow-lg"
+  hoverEffects:
+    "transition-all duration-300 hover:scale-110 hover:brightness-110 hover:saturate-150 hover:contrast-125 hover:drop-shadow-lg",
 };
 
 // Categories section data
@@ -606,19 +607,23 @@ export const categoriesData = {
       titleClass:
         "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium",
     },
-     { 
+    {
       id: 6,
-      title: 'Furniture', 
-      img: '/sofa.png',
-      imageClass: "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
-      titleClass: "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium"
+      title: "Furniture",
+      img: "/sofa.png",
+      imageClass:
+        "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
+      titleClass:
+        "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium",
     },
-     { 
+    {
       id: 7,
-      title: 'Furniture', 
-      img: '/sofa.png',
-      imageClass: "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
-      titleClass: "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium"
+      title: "Furniture",
+      img: "/sofa.png",
+      imageClass:
+        "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
+      titleClass:
+        "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium",
     },
   ],
 
@@ -1061,9 +1066,9 @@ export const footerData = {
     mobileTitleClass: "text-sm font-semibold",
     links: [
       { id: 1, name: "Home", href: "/" },
-      { id: 2, name: "Products", href: "https://dashboard.naxi.ae/products" }, 
-      { id: 3, name: "Hot Items", href: "/#hot-items" }, 
-      { id: 4, name: "Categories", href: "/#categories" }, 
+      { id: 2, name: "Products", href: "https://dashboard.naxi.ae/products" },
+      { id: 3, name: "Hot Items", href: "/#hot-items" },
+      { id: 4, name: "Categories", href: "/#categories" },
     ],
     listClass: "space-y-2 text-xs",
     mobileListClass: "space-y-2 text-xs pl-8",
@@ -1077,9 +1082,17 @@ export const footerData = {
     mobileTitleClass: "text-sm font-semibold",
     links: [
       { id: 1, name: "FAQs", href: "/support#faqs" },
-      { id: 2, name: "Terms & conditions", href: "https://www.naxi.ae/terms-and-conditions" },
+      {
+        id: 2,
+        name: "Terms & conditions",
+        href: "https://www.naxi.ae/terms-and-conditions",
+      },
       { id: 3, name: "Blog", href: "https://dashboard.naxi.ae/sign-in" },
-      { id: 4, name: "Privacy Policy", href: "https://www.naxi.ae/privacy-policy" },
+      {
+        id: 4,
+        name: "Privacy Policy",
+        href: "https://www.naxi.ae/privacy-policy",
+      },
     ],
     listClass: "space-y-2 text-xs",
     mobileListClass: "space-y-2 text-xs pl-8",
@@ -1095,16 +1108,16 @@ export const footerData = {
       {
         id: 1,
         type: "phone",
-        value: "+92 300 123 456 7",
-        href: "tel:+923001234567",
-        display: "Call: +92 300 123 456 7",
+        value: "+976 561 008",
+        href: "tel:+976561008",
+        display: "+976 561 008",
       },
       {
         id: 2,
         type: "email",
-        value: "naxi@support.com",
-        href: "mailto:naxi@support.com",
-        display: "E-mail: naxi@support.com",
+        value: "hello@naxi.com",
+        href: "mailto:hello@naxi.com",
+        display: "hello@naxi.com",
       },
     ],
     listClass: "space-y-2 text-xs",

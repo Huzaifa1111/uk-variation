@@ -10,6 +10,8 @@ import { SiWhatsapp, SiSnapchat, SiPinterest } from "react-icons/si";
 import { useState } from "react";
 import { footerData } from "../data";
 
+import { useRouter } from "next/navigation";
+
 // Icon mapping for social media
 const iconComponents = {
   SiWhatsapp,
@@ -21,11 +23,12 @@ const iconComponents = {
 };
 
 export default function Footer() {
+  const router = useRouter();
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isSupportOpen, setIsSupportOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
+  const [isSupportOpen, setIsSupportOpen] = useState(false);
 
   const {
     styles,
@@ -39,9 +42,9 @@ export default function Footer() {
     desktop,
   } = footerData;
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (!email) {
       setMessage("Please enter your email address");
       return;
@@ -52,31 +55,12 @@ export default function Footer() {
       return;
     }
 
-    setIsSubmitting(true);
-    setMessage("");
+    setMessage("Redirecting...");
 
-    try {
-      // Here you would typically send the email to your backend
-      // For now, we'll simulate an API call
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (response.ok) {
-        setMessage("Thank you for subscribing!");
-        setEmail("");
-      } else {
-        setMessage("Something went wrong. Please try again.");
-      }
-    } catch (error) {
-      setMessage("Failed to subscribe. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    // ✅ Redirect to contact page with email query param
+    setTimeout(() => {
+      router.push(`/contact?email=${encodeURIComponent(email)}#contact-form`);
+    }, 500);
   };
 
   return (
@@ -162,7 +146,10 @@ export default function Footer() {
 
         {/* Email Subscription Section */}
         <div className="mb-6">
-          <form onSubmit={handleSubmit} className={subscription.mobileContainerClass}>
+          <form
+            onSubmit={handleSubmit}
+            className={subscription.mobileContainerClass}
+          >
             <input
               type="email"
               value={email}
@@ -171,7 +158,7 @@ export default function Footer() {
               className={subscription.inputClass}
               disabled={isSubmitting}
             />
-            <button 
+            <button
               type="submit"
               className={subscription.buttonClass}
               disabled={isSubmitting}
@@ -187,9 +174,13 @@ export default function Footer() {
             </button>
           </form>
           {message && (
-            <p className={`text-sm mt-2 ${
-              message.includes("Thank you") ? "text-green-600" : "text-red-600"
-            }`}>
+            <p
+              className={`text-sm mt-2 ${
+                message.includes("Thank you")
+                  ? "text-green-600"
+                  : "text-red-600"
+              }`}
+            >
               {message}
             </p>
           )}
@@ -280,26 +271,29 @@ export default function Footer() {
         </div>
 
         {/* Contact Us */}
-<div className={`mb-6 md:mb-0 ${desktop.contactWidth}`}>
-  <h3 className={contact.titleClass}>{contact.title}</h3>
+        <div className={`mb-6 md:mb-0 ${desktop.contactWidth}`}>
+          <h3 className={contact.titleClass}>{contact.title}</h3>
 
-  <div className="space-y-3">
-    {contact.contacts.map((contactItem) => (
-      <div key={`contact-${contactItem.id}`} className="text-xs">
-        <span className="font-medium block">
-          {contactItem.type === "phone" ? "Call: " : "Email: "}
-        </span>
-        <a href={contactItem.href} className={contact.linkClass}>
-          {contactItem.value}
-        </a>
-      </div>
-    ))}
-  </div>
-</div>
+          <div className="space-y-3">
+            {contact.contacts.map((contactItem) => (
+              <div key={`contact-${contactItem.id}`} className="text-xs">
+                <span className="font-medium block">
+                  {contactItem.type === "phone" ? "Call: " : "Email: "}
+                </span>
+                <a href={contactItem.href} className={contact.linkClass}>
+                  {contactItem.value}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Social Media with Email Input */}
         <div className={desktop.socialWidth}>
-          <form onSubmit={handleSubmit} className={subscription.desktopContainerClass}>
+          <form
+            onSubmit={handleSubmit}
+            className={subscription.desktopContainerClass}
+          >
             <div className="Group88 w-96 h-14 relative">
               <div className="Rectangle25 w-65 h-12 left-[115px] t-10 top-0 absolute bg-zinc-300 rounded-lg">
                 <input
@@ -311,7 +305,7 @@ export default function Footer() {
                   disabled={isSubmitting}
                 />
               </div>
-              <button 
+              <button
                 type="submit"
                 className="Rectangle26 w-20 h-8 left-[290px] top-[8px] absolute bg-blue-600 rounded-[5px] flex items-center justify-center gap-1"
                 disabled={isSubmitting}
@@ -328,12 +322,17 @@ export default function Footer() {
             </div>
           </form>
           {message && (
-            <p className={`text-sm mt-2 ml-32 ${
-              message.includes("Thank you") ? "text-green-600" : "text-red-600"
-            }`}>
+            <p
+              className={`text-sm mt-2 ml-32 ${
+                message.includes("Thank you")
+                  ? "text-green-600"
+                  : "text-red-600"
+              }`}
+            >
               {message}
             </p>
           )}
+
           <div className="ml-32">
             <h3 className={socialMedia.titleClass}>{socialMedia.title}</h3>
             <div className={socialMedia.containerClass}>

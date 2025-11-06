@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { heroData } from '../data'; 
+import { heroData } from "../data";
 
 export default function HeroSection() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -10,13 +10,13 @@ export default function HeroSection() {
   const touchTimeoutRef = useRef(null);
 
   // Destructure data from heroData
-  const { 
-    textContent, 
-    styles, 
-    backgroundImages, 
-    mobileSlides, 
-    desktopSlides, 
-    carousel 
+  const {
+    textContent,
+    styles,
+    backgroundImages,
+    mobileSlides,
+    desktopSlides,
+    carousel,
   } = heroData;
 
   // Touch event handlers for mobile swipe
@@ -31,7 +31,7 @@ export default function HeroSection() {
 
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > carousel.minSwipeDistance;
     const isRightSwipe = distance < -carousel.minSwipeDistance;
@@ -41,17 +41,19 @@ export default function HeroSection() {
       setActiveSlide((prev) => (prev + 1) % mobileSlides.length);
     } else if (isRightSwipe) {
       // Swipe right - previous slide
-      setActiveSlide((prev) => (prev - 1 + mobileSlides.length) % mobileSlides.length);
+      setActiveSlide(
+        (prev) => (prev - 1 + mobileSlides.length) % mobileSlides.length
+      );
     }
   };
 
   // Auto switch every 3 seconds (uncomment to enable)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % mobileSlides.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveSlide((prev) => (prev + 1) % mobileSlides.length);
+  //   }, 3000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <section className={styles.sectionClass}>
@@ -60,24 +62,24 @@ export default function HeroSection() {
         <img
           src={backgroundImages.ellipse1}
           alt="Center Ellipse"
-          className="absolute left-1/2 top-1/2 w-[800px] h-[800px] transform -translate-x-1/2 -translate-y-1/2 opacity-70"
+          className="absolute left-1/2 top-1/2 w-[800px] h-[800px] select-none transform -translate-x-1/2 -translate-y-1/2 opacity-70"
         />
         <img
           src={backgroundImages.ellipse2}
           alt="Center Ellipse"
-          className="absolute left-1/2 top-100 w-[1200px] h-[1200px] transform -translate-x-1/2 -translate-y-1/2 opacity-70"
+          className="absolute left-1/2 top-100 w-[1200px] h-[1200px] select-none transform -translate-x-1/2 -translate-y-1/2 opacity-70"
         />
       </div>
 
       {/* Text Content */}
       <div className="text-center max-w-3xl mx-auto relative z-10 mt-10">
-        <h1 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6">
+        <h1 className="text-2xl md:text-5xl font-bold md:mb-6">
           {textContent.title}
         </h1>
-        <p className="mx-auto max-w-[27rem] mb-6 md:mb-8 text-sm md:text-md hidden md:block">
+        <p className="mx-auto max-w-[27rem]  mb-6 md:mb-8 text-sm md:text-md md:block">
           {textContent.subtitle}
         </p>
-        <a 
+        <a
           href="https://dashboard.naxi.ae/sign-up"
           target="_blank"
           rel="noopener noreferrer"
@@ -88,12 +90,12 @@ export default function HeroSection() {
       </div>
 
       {/* Mobile Slides with Touch Events */}
-      <div 
+      <div
         className="block md:hidden relative h-10 touch-pan-y"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
-        style={{ touchAction: 'pan-y' }}
+        style={{ touchAction: "pan-y" }}
       >
         {mobileSlides.map((slide, index) => (
           <div
@@ -114,7 +116,7 @@ export default function HeroSection() {
             ))}
           </div>
         ))}
-        
+
         {/* Mobile Circle Background */}
         <img
           src={backgroundImages.circle}
@@ -144,7 +146,7 @@ export default function HeroSection() {
             ))}
           </div>
         ))}
-        
+
         {/* Desktop Circle Background */}
         <img
           src={backgroundImages.circle}
