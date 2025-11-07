@@ -142,7 +142,7 @@ export const heroData = {
           className: "absolute -left-12 top-20 w-73 transform rotate-36",
         },
         {
-          src: "/massager 3.png",
+          src: "/massager3.png",
           className: "absolute left-49 top-68 w-115 transform -rotate-6 z-0",
         },
         {
@@ -259,7 +259,7 @@ export const regionData = {
 
   // Background globe image configuration
   backgroundGlobe: {
-    src: "/globe 1.png",
+    src: "/globe1.png",
     alt: "Globe Background",
     className: "w-[98rem] opacity-90 mt-[28rem]",
   },
@@ -609,8 +609,6 @@ export const categoriesData = {
       titleClass:
         "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium",
     },
-  
-   
   ],
 
   // Container styling
