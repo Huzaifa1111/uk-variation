@@ -1,7 +1,7 @@
 import { testimonialsData } from '../data'; // or './data' depending on your structure
 
 export default function Testimonials() {
-  // Destructure data from testimonialsData
+ 
   const { 
     styles, 
     heading, 

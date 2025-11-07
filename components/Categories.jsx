@@ -17,12 +17,12 @@ export default function Categories() {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  // Check scroll position to enable/disable arrows
+
   const checkScrollPosition = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
       setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10); // 10px tolerance
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10); 
     }
   };
 
@@ -37,7 +37,7 @@ export default function Categories() {
 
     const container = scrollContainerRef.current;
     const itemWidth = container.children[0]?.children[0]?.offsetWidth || 120;
-    const scrollAmount = itemWidth * 3; // Scroll approximately 3 items at a time
+    const scrollAmount = itemWidth * 3; 
 
     container.scrollBy({
       left: direction === 'right' ? scrollAmount : -scrollAmount,
@@ -47,7 +47,7 @@ export default function Categories() {
     setTimeout(checkScrollPosition, 300);
   };
 
-  // Update scroll position when scroll ends
+
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;

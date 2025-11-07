@@ -2,7 +2,7 @@
   import { regionData } from '../data'; 
 
   export default function RegionSelection() {
-    // Destructure data from regionData
+  
     const { 
       styles, 
       heading, 

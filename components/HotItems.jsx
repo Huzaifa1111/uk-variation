@@ -1,7 +1,7 @@
-import { hotItemsData } from "../data"; // or './data' depending on your structure
+import { hotItemsData } from "../data"; 
 
 export default function HotItems() {
-  // Destructure data from hotItemsData
+
   const { styles, topBar, items, buttonText, card, textStyles, href } = hotItemsData;
 
   return (

@@ -1,9 +1,13 @@
-'use client';
+"use client"
 import { exploreItemsData } from '../data'; // or './data' depending on your structure
 
 export default function ExploreItems() {
-	// Destructure data from exploreItemsData
-	const { styles, desktop, mobile } = exploreItemsData;
+  // Destructure data from exploreItemsData
+  const {
+    styles,
+    desktop,
+    mobile
+  } = exploreItemsData;
 
 	return (
 		<section className={styles.sectionClass}>
@@ -35,29 +39,28 @@ export default function ExploreItems() {
 					</div>
 				</div>
 
-				{/* Right column */}
-				<div className={desktop.rightColumn.class}>
-					{/* Top card */}
-					{/* Top card */}
-					<div className={`${desktop.rightColumn.topCard.class} ${styles.gradient}`}>
-						<div className='text-left'>
-							<h3 className='text-xl mb-4 leading-snug w-3/4'>
-								Exclusive table top
-								<br />
-								and video games.
-							</h3>
-							<button
-								onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
-								className={desktop.rightColumn.topCard.button.class}>
-								{desktop.rightColumn.topCard.button.text}
-							</button>
-						</div>
-						<img
-							src={desktop.rightColumn.topCard.image.src}
-							alt={desktop.rightColumn.topCard.image.alt}
-							className={desktop.rightColumn.topCard.image.class}
-						/>
-					</div>
+        {/* Right column */}
+        <div className={desktop.rightColumn.class}>
+          {/* Top card */}
+        {/* Top card */}
+<div className={`${desktop.rightColumn.topCard.class} ${styles.gradient}`}>
+  <div className="text-left">
+    <h3 className="text-xl mb-4 leading-snug w-3/4">
+      Exclusive table top<br />and video games.
+    </h3>
+    <button 
+      onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+      className={desktop.rightColumn.topCard.button.class}
+    >
+      {desktop.rightColumn.topCard.button.text}
+    </button>
+  </div>
+  <img
+    src={desktop.rightColumn.topCard.image.src}
+    alt={desktop.rightColumn.topCard.image.alt}
+    className={desktop.rightColumn.topCard.image.class}
+  />
+</div>
 
 					{/* Bottom cards */}
 					<div className={desktop.rightColumn.bottomCards.class}>
