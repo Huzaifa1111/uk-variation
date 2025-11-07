@@ -6,6 +6,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
+RUN npm i -g serve@latest
 
 # Production Stage
 FROM node:24-alpine AS PRODUCTION_STAGE
@@ -16,5 +17,5 @@ COPY --from=BUILD_IMAGE /app/public ./public
 COPY --from=BUILD_IMAGE /app/node_modules ./node_modules
 ENV NODE_ENV=production
 EXPOSE 3001
-CMD ["npm", "start"]
+CMD ["serve", "out", "-p", "3001"]
 
