@@ -610,8 +610,8 @@ export const categoriesData = {
     },
     {
       id: 6,
-      title: "Furniture",
-      img: "/sofa.png",
+      title: "Smart tech",
+      img: "/it6.png",
       imageClass:
         "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
       titleClass:
@@ -619,8 +619,8 @@ export const categoriesData = {
     },
     {
       id: 7,
-      title: "Furniture",
-      img: "/sofa.png",
+      title: "Electronics",
+      img: "/its7.png",
       imageClass:
         "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
       titleClass:
@@ -717,7 +717,7 @@ export const exploreItemsData = {
           src: "/boy.png",
           alt: "Exclusive table top and video games",
           class:
-            "absolute w-[250px] h-[250px] object-cover right-8 bottom-[-50px]",
+            "absolute w-[250px] h-[250px] object-cover -right-4 bottom-[-50px]",
         },
       },
 
@@ -739,7 +739,7 @@ export const exploreItemsData = {
             image: {
               src: "/my5.png",
               alt: "Supplements",
-              class: "w-[155px] h-auto object-contain mt-9",
+              class: "  mt-9",
             },
           },
           {
@@ -997,10 +997,10 @@ export const courierPartnersData = {
   // Section styling and layout
   styles: {
     sectionClass: "bg-gray-100 py-12 px-6 text-center",
-    iconClass: "mx-auto mb-4 md:w-16 md:h-14 w-16 sm:w-20 sm:h-16",
-    headingClass: "text-2xl sm:text-4xl font-bold mb-8 text-black",
+    iconClass: "mx-auto mb-4 md:w-18 md:h-12 w-16 sm:w-20 sm:h-16 md:mb-6",
+    headingClass: "text-2xl sm:text-4xl font-bold mb-8 md:mb-12 text-black",
     logosContainerClass:
-      "flex flex-wrap justify-center items-center md:gap-6 gap-8 sm:gap-12",
+      "flex flex-wrap justify-center items-center md:gap-24 gap-8 sm:gap-12",
   },
 
   // Icon and heading content
@@ -1008,6 +1008,7 @@ export const courierPartnersData = {
     icon: {
       src: "/vector (7).png",
       alt: "Delivery Truck",
+      
     },
     heading: "Our Courier Partners",
   },
@@ -1018,7 +1019,7 @@ export const courierPartnersData = {
       id: 1,
       src: "/imile.png",
       alt: "iMile Partner",
-      className: "md:w-24 md:h-14 w-15 h-8 sm:w-28 sm:h-16 object-contain",
+      className: "md:w-20 md:h-14 w-15 h-8 sm:w-28 sm:h-16 object-contain",
     },
     {
       id: 2,

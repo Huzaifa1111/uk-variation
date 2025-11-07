@@ -3,10 +3,10 @@ import { exploreItemsData } from '../data'; // or './data' depending on your str
 
 export default function ExploreItems() {
   // Destructure data from exploreItemsData
-  const { 
-    styles, 
-    desktop, 
-    mobile 
+  const {
+    styles,
+    desktop,
+    mobile
   } = exploreItemsData;
 
   return (
@@ -16,16 +16,16 @@ export default function ExploreItems() {
         {/* Large featured card */}
         <div className={`${desktop.featuredCard.class} ${styles.gradient}`}>
           <div className={desktop.featuredCard.content.class}>
-            <div 
-              className="whitespace-normal text-2xl mb-4 leading-tight" 
+            <div
+              className="whitespace-normal text-2xl mb-4 leading-tight"
               dangerouslySetInnerHTML={{ __html: desktop.featuredCard.content.title }}
             />
-            <button 
-  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
-  className={desktop.featuredCard.content.button.class}
->
-  {desktop.featuredCard.content.button.text}
-</button>
+            <button
+              onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+              className={desktop.featuredCard.content.button.class}
+            >
+              {desktop.featuredCard.content.button.text}
+            </button>
           </div>
 
           <div className="relative w-full flex-1 flex items-center justify-center">
@@ -43,24 +43,25 @@ export default function ExploreItems() {
         {/* Right column */}
         <div className={desktop.rightColumn.class}>
           {/* Top card */}
-          <div className={`${desktop.rightColumn.topCard.class} ${styles.gradient}`}>
-            <div className="text-left">
-              <h3 className="text-xl mb-4 leading-snug w-3/4">
-                {desktop.rightColumn.topCard.title}
-              </h3>
-             <button 
-  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
-  className={desktop.rightColumn.topCard.button.class}
->
-  {desktop.rightColumn.topCard.button.text}
-</button>
-            </div>
-            <img
-              src={desktop.rightColumn.topCard.image.src}
-              alt={desktop.rightColumn.topCard.image.alt}
-              className={desktop.rightColumn.topCard.image.class}
-            />
-          </div>
+        {/* Top card */}
+<div className={`${desktop.rightColumn.topCard.class} ${styles.gradient}`}>
+  <div className="text-left">
+    <h3 className="text-xl mb-4 leading-snug w-3/4">
+      Exclusive table top<br />and video games.
+    </h3>
+    <button 
+      onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+      className={desktop.rightColumn.topCard.button.class}
+    >
+      {desktop.rightColumn.topCard.button.text}
+    </button>
+  </div>
+  <img
+    src={desktop.rightColumn.topCard.image.src}
+    alt={desktop.rightColumn.topCard.image.alt}
+    className={desktop.rightColumn.topCard.image.class}
+  />
+</div>
 
           {/* Bottom cards */}
           <div className={desktop.rightColumn.bottomCards.class}>
@@ -94,16 +95,16 @@ export default function ExploreItems() {
         {/* First Card (Full width) */}
         <div className={`${mobile.firstCard.class} ${styles.gradient}`}>
           <div className="text-left flex flex-col justify-center">
-            <h3 
+            <h3
               className="text-base font-semibold mb-2 leading-snug"
               dangerouslySetInnerHTML={{ __html: mobile.firstCard.title }}
             />
-           <button 
-  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
-  className={mobile.firstCard.button.class}
->
-  {mobile.firstCard.button.text}
-</button> 
+            <button
+              onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+              className={mobile.firstCard.button.class}
+            >
+              {mobile.firstCard.button.text}
+            </button>
           </div>
           <div className="relative flex items-end justify-end">
             {mobile.firstCard.images.map((img, index) => (
@@ -125,12 +126,12 @@ export default function ExploreItems() {
               <h3 className="text-[11px] font-semibold leading-tight w-[95%]">
                 {mobile.secondRow.leftCard.title}
               </h3>
-             <button 
-  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
-  className={mobile.secondRow.leftCard.button.class}
->
-  {mobile.secondRow.leftCard.button.text}
-</button>
+              <button
+                onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+                className={mobile.secondRow.leftCard.button.class}
+              >
+                {mobile.secondRow.leftCard.button.text}
+              </button>
             </div>
             <img
               src={mobile.secondRow.leftCard.image.src}
@@ -145,12 +146,12 @@ export default function ExploreItems() {
               <h3 className="text-[8px] font-bold leading-tight">
                 {mobile.secondRow.rightCard.title}
               </h3>
-             <button 
-  onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
-  className={mobile.secondRow.rightCard.button.class}
->
-  {mobile.secondRow.rightCard.button.text}
-</button>
+              <button
+                onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+                className={mobile.secondRow.rightCard.button.class}
+              >
+                {mobile.secondRow.rightCard.button.text}
+              </button>
             </div>
             <img
               src={mobile.secondRow.rightCard.image.src}
