@@ -27,7 +27,7 @@ export const heroData = {
   mobileSlides: [
     {
       images: [
-        { 
+        {
           src: "/headphone.webp",
           className: "w-33 absolute -left-14 -top-8 w-20 transform -rotate-34",
         },
@@ -347,7 +347,7 @@ export const hotItemsData = {
       title: "Tech",
       desc: "Sell our tech products and earn in AED.",
       img: "/headphone.webp",
-      desktopImageClass: "md:h-70 h-120 rotate-15 mr-12",
+      desktopImageClass: "md:h-70 h-120 rotate-15",
       mobileImageClass: "object-contain h-24 sm:h-28 max-w-full",
     },
     {
@@ -384,7 +384,7 @@ export const hotItemsData = {
       title: "Toys",
       desc: "Games and toys for the young minds.",
       img: "/boy.png",
-      desktopImageClass: "md:h-50",
+      desktopImageClass: "md:h-50 mr-[-2rem]",
       mobileImageClass: "object-contain h-24 sm:h-28 max-w-full",
     },
 
@@ -673,12 +673,12 @@ export const exploreItemsData = {
           src: "/it5.webp",
           alt: "Hot selling items 2",
           class:
-            "w-[180px] h-[180px] object-cover absolute bottom-60 left-5 -rotate-16",
+            "w-[180px] h-[180px] object-cover absolute bottom-60 left-0 -rotate-16",
         },
         {
           src: "/my6.png",
           alt: "Hot selling items 3",
-          class: "w-[200px] h-auto object-cover absolute bottom-50 right-2",
+          class: "w-[200px] h-auto object-cover absolute bottom-50 right-0",
         },
       ],
     },
@@ -992,7 +992,7 @@ export const courierPartnersData = {
     icon: {
       src: "/vector (7).png",
       alt: "Delivery Truck",
-      
+
     },
     heading: "Our Courier Partners",
   },
@@ -1126,60 +1126,60 @@ export const footerData = {
   // Social media links
   socialMedia: {
     title: "Follow us on social media:",
-    titleClass: "text-sm font-semibold mb-4",
+    titleClass: "text-sm font-semibold mb-4 text-center",
     mobileTitleClass: "text-xs font-semibold mb-3",
     platforms: [
-      {
-        id: 1,
-        name: "WhatsApp",
-        icon: "SiWhatsapp",
-        href: "#",
-        color: "hover:text-green-400",
-        size: 24,
-      },
-      {
-        id: 2,
-        name: "Twitter",
-        icon: "Twitter",
-        href: "#",
-        color: "hover:text-sky-400",
-        size: 24,
-      },
+      // {
+      //   id: 1,
+      //   name: "WhatsApp",
+      //   icon: "SiWhatsapp",
+      //   href: "#",
+      //   color: "hover:text-green-400",
+      //   size: 24,
+      // },
+      // {
+      //   id: 2,
+      //   name: "Twitter",
+      //   icon: "Twitter",
+      //   href: "#",
+      //   color: "hover:text-sky-400",
+      //   size: 24,
+      // },
       {
         id: 3,
         name: "Facebook",
         icon: "Facebook",
-        href: "#",
+        href: "https://www.facebook.com/profile.php?id=61554021314577",
         color: "hover:text-blue-500",
         size: 24,
       },
-      {
-        id: 4,
-        name: "Snapchat",
-        icon: "SiSnapchat",
-        href: "#",
-        color: "hover:text-yellow-400",
-        size: 24,
-      },
+      // {
+      //   id: 4,
+      //   name: "Snapchat",
+      //   icon: "SiSnapchat",
+      //   href: "#",
+      //   color: "hover:text-yellow-400",
+      //   size: 24,
+      // },
       {
         id: 5,
         name: "Instagram",
         icon: "Instagram",
-        href: "#",
+        href: "https://www.instagram.com/naxi.ae",
         color: "hover:text-pink-400",
         size: 24,
       },
-      {
-        id: 6,
-        name: "Pinterest",
-        icon: "SiPinterest",
-        href: "#",
-        color: "hover:text-red-500",
-        size: 24,
-      },
+      // {
+      //   id: 6,
+      //   name: "Pinterest",
+      //   icon: "SiPinterest",
+      //   href: "#",
+      //   color: "hover:text-red-500",
+      //   size: 24,
+      // },
     ],
-    containerClass: "flex space-x-4",
-    mobileContainerClass: "flex space-x-3",
+    containerClass: "flex space-x-4 justify-center",
+    mobileContainerClass: "flex space-x-3 justify-center",
   },
 
   // Mobile dropdown configuration
