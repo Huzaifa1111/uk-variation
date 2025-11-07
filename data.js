@@ -455,55 +455,55 @@ export const managedByData = {
       id: 1,
       src: "/Glammeria Mono.png",
       coloredSrc: "/Glammeria Color.png", // Add colored version
-      url: "#",
+      url: "https://www.glammeria.com",
     },
     {
       id: 2,
       src: "/Skynly Mono.png",
       coloredSrc: "/Skynly Color.png",
-      url: "#",
+      url: "https://www.skynly.store",
     },
     {
       id: 3,
       src: "/Lenser Mono.png",
       coloredSrc: "/Lenser Color.png",
-      url: "#",
+      url: "https://www.lenser.store",
     },
     {
       id: 5,
       src: "/Techknigh Mono.png",
       coloredSrc: "/Techknigh Color.png",
-      url: "#",
+      url: "https://www.techknite.store",
     },
     {
       id: 6,
       src: "/Brexis Mono.png",
       coloredSrc: "/Brexis Color.png",
-      url: "#",
+      url: "https://www.Brexis.store",
     },
     {
       id: 7,
       src: "/stylodore Mono.png",
       coloredSrc: "/stylodore Color.png",
-      url: "#",
+      url: "https://www.styladore.store",
     },
     {
       id: 8,
       src: "/Electimize Mono.png",
       coloredSrc: "/Electimize Color.png",
-      url: "#",
+      url: "https://www.Electimize.store",
     },
     {
       id: 9,
       src: "/Signity Mono.png",
       coloredSrc: "/Signity Color.png",
-      url: "#",
+      url: "https://www.signity.store",
     },
     {
       id: 4,
       src: "/Novendo Mono.png",
       coloredSrc: "/Novendo Color.png",
-      url: "#",
+      url: "https://www.novendo.store",
     },
   ],
 
@@ -608,24 +608,8 @@ export const categoriesData = {
       titleClass:
         "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium",
     },
-    {
-      id: 6,
-      title: "Smart tech",
-      img: "/it6.png",
-      imageClass:
-        "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
-      titleClass:
-        "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium",
-    },
-    {
-      id: 7,
-      title: "Electronics",
-      img: "/its7.png",
-      imageClass:
-        "mx-auto mb-1 sm:mb-2 w-12 h-12 sm:w-30 sm:h-24 object-contain bg-[#D9D9D9] rounded-xl md:bg-transparent",
-      titleClass:
-        "hidden sm:block text-[10px] sm:text-sm text-naxi-blue font-medium",
-    },
+  
+   
   ],
 
   // Container styling
@@ -732,7 +716,7 @@ export const exploreItemsData = {
             desc: "Limited time vault unlock for all our sellers.",
             button: {
               text: "Show more",
-              href: "#",
+              href: "https://dashboard.naxi.ae/products",
               class:
                 "text-white underline text-sm mt-2 inline-block hover:text-gray-200",
             },
@@ -748,7 +732,7 @@ export const exploreItemsData = {
             desc: "Beauty and care accessories for woman.",
             button: {
               text: "Show more",
-              href: "#",
+              href: "https://dashboard.naxi.ae/products",
               class:
                 "text-white underline text-sm mt-2 inline-block hover:text-gray-200",
             },

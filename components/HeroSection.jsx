@@ -8,8 +8,6 @@ export default function HeroSection() {
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
   const touchTimeoutRef = useRef(null);
-
-  // Destructure data from heroData
   const {
     textContent,
     styles,
@@ -70,23 +68,23 @@ export default function HeroSection() {
         />
       </div>
 
-     {/* Text Content */}
-<div className="text-center max-w-3xl mx-auto relative z-10 mt-10">
-  <h1 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6">
-    {textContent.title}
-  </h1>
-  <p className="mx-auto max-w-[27rem] mb-6 md:mb-8 text-sm md:text-md hidden md:block">
-    {textContent.subtitle}
-  </p>
-  <a
-    href="https://dashboard.naxi.ae/sign-up"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={styles.buttonClass}
-  >
-    {textContent.buttonText}
-  </a>
-</div>
+      {/* Text Content */}
+      <div className="text-center max-w-3xl mx-auto relative z-10 mt-10">
+        <h1 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6">
+          {textContent.title}
+        </h1>
+        <p className="mx-auto max-w-[27rem] mb-6 md:mb-8 text-sm md:text-md hidden md:block">
+          {textContent.subtitle}
+        </p>
+        <a
+          href="https://dashboard.naxi.ae/sign-up"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.buttonClass}
+        >
+          {textContent.buttonText}
+        </a>
+      </div>
 
       {/* Mobile Slides with Touch Events */}
       <div
@@ -99,11 +97,10 @@ export default function HeroSection() {
         {mobileSlides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              index === activeSlide
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === activeSlide
                 ? "opacity-100"
                 : "opacity-0 pointer-events-none"
-            }`}
+              }`}
           >
             {slide.images.map((img, i) => (
               <img
@@ -133,11 +130,10 @@ export default function HeroSection() {
         {desktopSlides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              index === activeSlide
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === activeSlide
                 ? "opacity-100"
                 : "opacity-0 pointer-events-none"
-            }`}
+              }`}
           >
             {slide.images.map((img, i) => (
               <img
@@ -168,11 +164,10 @@ export default function HeroSection() {
           <button
             key={index}
             onClick={() => setActiveSlide(index)}
-            className={`transition-all duration-300 ${
-              index === activeSlide
+            className={`transition-all duration-300 ${index === activeSlide
                 ? "w-6 h-2 bg-white rounded-full"
                 : "w-2 h-2 bg-white/50 rounded-full"
-            }`}
+              }`}
           ></button>
         ))}
       </div>
