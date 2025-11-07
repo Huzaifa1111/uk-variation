@@ -47,13 +47,12 @@ export default function HeroSection() {
     }
   };
 
-  // Auto switch every 3 seconds (uncomment to enable)
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveSlide((prev) => (prev + 1) % mobileSlides.length);
-  //   }, 3000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % mobileSlides.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className={styles.sectionClass}>
@@ -71,23 +70,23 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Text Content */}
-      <div className="text-center max-w-3xl mx-auto relative z-10 mt-10">
-        <h1 className="text-2xl md:text-5xl font-bold md:mb-6">
-          {textContent.title}
-        </h1>
-        <p className="mx-auto max-w-[27rem]  mb-6 md:mb-8 text-sm md:text-md md:block">
-          {textContent.subtitle}
-        </p>
-        <a
-          href="https://dashboard.naxi.ae/sign-up"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.buttonClass}
-        >
-          {textContent.buttonText}
-        </a>
-      </div>
+     {/* Text Content */}
+<div className="text-center max-w-3xl mx-auto relative z-10 mt-10">
+  <h1 className="text-2xl md:text-5xl font-bold mb-4 md:mb-6">
+    {textContent.title}
+  </h1>
+  <p className="mx-auto max-w-[27rem] mb-6 md:mb-8 text-sm md:text-md hidden md:block">
+    {textContent.subtitle}
+  </p>
+  <a
+    href="https://dashboard.naxi.ae/sign-up"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.buttonClass}
+  >
+    {textContent.buttonText}
+  </a>
+</div>
 
       {/* Mobile Slides with Touch Events */}
       <div

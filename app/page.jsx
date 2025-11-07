@@ -28,7 +28,7 @@ export default function Home() {
       <SellOnlineBanner />
       <ExploreItems />
       <WhyChooseUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CourierPartners />
     </main>
   );

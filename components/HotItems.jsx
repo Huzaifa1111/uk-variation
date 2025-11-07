@@ -2,7 +2,7 @@ import { hotItemsData } from "../data"; // or './data' depending on your structu
 
 export default function HotItems() {
   // Destructure data from hotItemsData
-  const { styles, topBar, items, buttonText, card, textStyles } = hotItemsData;
+  const { styles, topBar, items, buttonText, card, textStyles, href } = hotItemsData;
 
   return (
     <section className={styles.sectionClass}>
@@ -28,9 +28,14 @@ export default function HotItems() {
             <div className="flex-1 z-10">
               <h3 className={textStyles.desktop.title}>{item.title}</h3>
               <p className={textStyles.desktop.description}>{item.desc}</p>
-              <button className={textStyles.desktop.button}>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={textStyles.desktop.button}
+              >
                 {buttonText}
-              </button>
+              </a>
             </div>
             <div className="absolute -right-2 -bottom-10">
               {item.hasMultipleImages ? (
@@ -70,7 +75,14 @@ export default function HotItems() {
               />
             </div>
             <h3 className={textStyles.mobile.title}>{item.title}</h3>
-            <button className={textStyles.mobile.button}>{buttonText}</button>
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={textStyles.mobile.button}
+            >
+              {buttonText}
+            </a>
           </div>
         ))}
       </div>

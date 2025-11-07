@@ -36,7 +36,7 @@ export default function Categories() {
     if (!scrollContainerRef.current) return;
 
     const container = scrollContainerRef.current;
-    const itemWidth = container.children[0]?.offsetWidth || 120;
+    const itemWidth = container.children[0]?.children[0]?.offsetWidth || 120;
     const scrollAmount = itemWidth * 3; // Scroll approximately 3 items at a time
 
     container.scrollBy({
@@ -88,15 +88,24 @@ export default function Categories() {
           </svg>
         </button>
 
-        {/* Categories List - Removed scrollbar-hide and hover effects */}
+        {/* Categories List */}
         <div 
           ref={scrollContainerRef}
-          className={`${categoriesList.class} overflow-x-auto`}
+          className={`${categoriesList.class} overflow-x-auto scrollbar-hide`}
           style={{ 
             scrollBehavior: 'smooth',
-            WebkitOverflowScrolling: 'touch'
+            WebkitOverflowScrolling: 'touch',
+            msOverflowStyle: 'none', 
+            scrollbarWidth: 'none',   
           }}
         >
+          {/* Hide scrollbar for Webkit browsers */}
+          <style jsx>{`
+            .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
+          
           <div className="flex space-x-4 md:space-x-6 min-w-max">
             {categories.map((category) => (
               <div

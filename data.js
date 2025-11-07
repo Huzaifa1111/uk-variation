@@ -335,7 +335,7 @@ export const hotItemsData = {
     title: "Hot items right now",
     exploreLink: {
       text: "Explore more",
-      href: "#",
+      href: "https://dashboard.naxi.ae/products",
       className: "md:text-sm text-xs underline text-white hover:underline",
     },
   },
@@ -400,6 +400,7 @@ export const hotItemsData = {
 
   // Button text
   buttonText: "Grab yours today",
+  href: "https://dashboard.naxi.ae/products",
 
   // Card styling
   card: {
@@ -555,7 +556,7 @@ export const categoriesData = {
     title: "Choose by Categories",
     seeAllLink: {
       text: "See all categories",
-      href: "#",
+      href: "https://dashboard.naxi.ae/products",
       className: "text-xs sm:text-sm underline hover:underline",
     },
   },

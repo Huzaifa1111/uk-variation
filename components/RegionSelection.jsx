@@ -25,8 +25,7 @@
               src={backgroundGlobe.src}
               alt={backgroundGlobe.alt}
               className={backgroundGlobe.className}
-              draggable="false"
-              onDragStart={(e) => e.preventDefault()}
+             
             />
           </div>
 
@@ -38,8 +37,7 @@
                   src={country.flag.src}
                   alt={country.flag.alt}
                   className={country.flag.className}
-                  draggable="false"
-                  onDragStart={(e) => e.preventDefault()}
+                
                 />
                 <p className={country.labelClass}>{country.name}</p>
               </div>
