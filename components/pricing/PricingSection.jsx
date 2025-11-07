@@ -44,7 +44,7 @@ export default function PricingSection() {
       {/* Top Section with Product Image and Platforms */}
       <div className="relative max-w-full md:py-10 text-center bg-[#0F255A] overflow-visible">
         {/* Floating Images - Moved outside the blue section container */}
-        
+
         {/* Heading */}
         <h1 className="text-2xl md:text-[40px] font-bold text-white mb-10 px-4 pt-4 md:pt-0">
           All your stores, <br />in one place
@@ -150,8 +150,8 @@ export default function PricingSection() {
 
       {/* Pricing Section */}
       <div className="relative max-w-full text-center bg-gray-100 overflow-visible">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 pt-12 ">Pricing</h2>
-        
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 pt-12 text-black">Pricing</h2>
+
         {/* Mobile Horizontal Scroll */}
         <div className="md:hidden relative px-6 mb-8">
           <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-gray-100 to-transparent z-10 pointer-events-none" />
@@ -190,7 +190,7 @@ export default function PricingSection() {
           ))}
         </div>
 
-        <p className="mt-10 text-base md:text-xl underline font-semibold pb-20 cursor-pointer hover:text-blue-600">
+        <p className="mt-10 text-base md:text-xl underline font-semibold pb-20 cursor-pointer text-black hover:text-blue-600">
           Compare plans
         </p>
       </div>
