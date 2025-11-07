@@ -60,7 +60,7 @@ export default function ContactForm() {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors text-black"
                       placeholder="Enter your first name"
                       required
                     />
@@ -75,7 +75,7 @@ export default function ContactForm() {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors text-black"
                       placeholder="Enter your last name"
                       required
                     />
@@ -92,7 +92,7 @@ export default function ContactForm() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors text-black"
                       placeholder="Enter your phone number"
                       required
                     />
@@ -107,7 +107,7 @@ export default function ContactForm() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors text-black"
                       placeholder="Enter your email address"
                       required
                     />
@@ -123,7 +123,7 @@ export default function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-colors resize-none text-black"
                     placeholder="How can we help you?"
                     required
                   ></textarea>
@@ -131,7 +131,7 @@ export default function ContactForm() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#1C45A7] to-[#0B1B41] text-white py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  className="w-full bg-linear-to-r from-[#1C45A7] to-[#0B1B41] text-white py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Get in Touch
                 </button>
@@ -141,7 +141,7 @@ export default function ContactForm() {
             {/* Right Side - Contact Information */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
               <div className="text-center mb-8">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-20 h-20 bg-linear-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
