@@ -14,4 +14,5 @@ COPY --from=BUILD_IMAGE /app/out ./out
 
 ENV NODE_ENV=production
 EXPOSE 3001
-CMD ["serve", "-s", "out", "-l", "3001"]
+# CMD ["serve", "-s", "out", "-l", "3001"]
+CMD ["npm", "run", "dev"]
