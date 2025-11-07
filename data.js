@@ -27,7 +27,7 @@ export const heroData = {
   mobileSlides: [
     {
       images: [
-        { 
+        {
           src: "/headphone.webp",
           className: "w-33 absolute -left-14 -top-8 w-20 transform -rotate-34",
         },
@@ -347,7 +347,7 @@ export const hotItemsData = {
       title: "Tech",
       desc: "Sell our tech products and earn in AED.",
       img: "/headphone.webp",
-      desktopImageClass: "md:h-70 h-120 rotate-15 mr-12",
+      desktopImageClass: "md:h-70 h-120 rotate-15",
       mobileImageClass: "object-contain h-24 sm:h-28 max-w-full",
     },
     {
@@ -384,7 +384,7 @@ export const hotItemsData = {
       title: "Toys",
       desc: "Games and toys for the young minds.",
       img: "/boy.png",
-      desktopImageClass: "md:h-50",
+      desktopImageClass: "md:h-50 mr-[-2rem]",
       mobileImageClass: "object-contain h-24 sm:h-28 max-w-full",
     },
 
@@ -689,12 +689,12 @@ export const exploreItemsData = {
           src: "/it5.webp",
           alt: "Hot selling items 2",
           class:
-            "w-[180px] h-[180px] object-cover absolute bottom-60 left-5 -rotate-16",
+            "w-[180px] h-[180px] object-cover absolute bottom-60 left-0 -rotate-16",
         },
         {
           src: "/my6.png",
           alt: "Hot selling items 3",
-          class: "w-[200px] h-auto object-cover absolute bottom-50 right-2",
+          class: "w-[200px] h-auto object-cover absolute bottom-50 right-0",
         },
       ],
     },
@@ -1008,7 +1008,7 @@ export const courierPartnersData = {
     icon: {
       src: "/vector (7).png",
       alt: "Delivery Truck",
-      
+
     },
     heading: "Our Courier Partners",
   },
