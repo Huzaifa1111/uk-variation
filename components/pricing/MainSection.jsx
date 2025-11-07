@@ -4,7 +4,7 @@ export default function MainSection() {
   return (
     <>
       {/* Desktop Layout */}
-      <section className="hidden md:block pt-40 pb-8 px-6 bg-gray-100">
+      <section className="hidden md:block pt-32 pb-8 px-6 bg-gray-100">
         <div className="max-w-7xl mx-auto relative">
           <div className="relative rounded-3xl overflow-hidden shadow-lg">
             <div className="absolute inset-0 pointer-events-none">

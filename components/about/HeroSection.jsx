@@ -66,7 +66,7 @@ export default function HeroSection() {
       </div>
 
       {/* Desktop Layout */}
-      <div className="hidden md:block pt-40 pb-12 px-6">
+      <div className="hidden md:block pt-32 pb-12 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-[#175CFF] to-[#0E3799] text-white p-12 rounded-3xl overflow-hidden flex flex-row items-center gap-28">
             <div className="w-1/2">
