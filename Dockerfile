@@ -1,5 +1,5 @@
 # Build Stage
-FROM node:16-alpine AS BUILD_IMAGE
+FROM node:22-alpine AS BUILD_IMAGE
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
@@ -15,6 +15,6 @@ COPY --from=BUILD_IMAGE /app/.next ./.next
 COPY --from=BUILD_IMAGE /app/public ./public
 COPY --from=BUILD_IMAGE /app/node_modules ./node_modules
 ENV NODE_ENV=production
-EXPOSE 3000
+EXPOSE 3001
 CMD ["npm", "start"]
 
