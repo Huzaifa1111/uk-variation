@@ -35,12 +35,12 @@ export default function Sourcing({ reverse = false }) {
 
       {/* Desktop Layout */}
       <div
-        className={`hidden md:flex flex-col md:flex-row px-32 ${
-          reverse ? "md:flex-row-reverse" : ""
-        } items-center justify-center gap-16 md:gap-32`}
+        className={`hidden md:flex w-full max-w-7xl mx-auto ${
+          reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+        } items-center justify-between gap-12 lg:gap-48`}
       >
-        {/* Image Section */}
-        <div className="md:w-1/2 w-full flex justify-center">
+        {/* Image Section - Fixed width */}
+        <div className="w-[45%] flex justify-center">
           <div className="w-full max-w-md">
             <img
               src="/ser1 (3).png"
@@ -50,13 +50,13 @@ export default function Sourcing({ reverse = false }) {
           </div>
         </div>
 
-        {/* Text Section */}
-        <div className="md:w-1/2 w-full text-center md:text-left flex justify-center items-center">
-          <div>
-            <h2 className="md:text-2xl text-xl md:text-4xl font-bold text-blue-600 mb-4">
+        {/* Text Section - Fixed width */}
+        <div className="w-[50%] flex justify-center items-center">
+          <div className="max-w-lg">
+            <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">
               Sourcing
             </h2>
-            <p className="text-base md:text-lg text-black leading-relaxed">
+            <p className="text-lg text-black leading-relaxed">
               We offer comprehensive sourcing services for clients across
               various industries, ensuring access to high quality products at
               competitive prices. Our team carefully manages every step of the
