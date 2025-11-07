@@ -47,7 +47,7 @@ export default function HeroSection() {
     }
   };
 
-  useEffect(() => {
+   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % mobileSlides.length);
     }, 3000);

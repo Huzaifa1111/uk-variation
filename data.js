@@ -50,7 +50,8 @@ export const heroData = {
       images: [
         {
           src: "/cr1.png",
-          className: "w-20 absolute -left-10 top-5     w-20 transform -rotate-34",
+          className:
+            "w-20 absolute -left-10 top-5     w-20 transform -rotate-34",
         },
         {
           src: "/bottle4.png",
@@ -1008,7 +1009,6 @@ export const courierPartnersData = {
     icon: {
       src: "/vector (7).png",
       alt: "Delivery Truck",
-
     },
     heading: "Our Courier Partners",
   },
@@ -1149,7 +1149,7 @@ export const footerData = {
       //   id: 1,
       //   name: "WhatsApp",
       //   icon: "SiWhatsapp",
-      //   href: "#",
+      //   linkhref: "#",
       //   color: "hover:text-green-400",
       //   size: 24,
       // },
@@ -1157,7 +1157,7 @@ export const footerData = {
       //   id: 2,
       //   name: "Twitter",
       //   icon: "Twitter",
-      //   href: "#",
+      //   linkhref: "#",
       //   color: "hover:text-sky-400",
       //   size: 24,
       // },
@@ -1165,7 +1165,7 @@ export const footerData = {
         id: 3,
         name: "Facebook",
         icon: "Facebook",
-        href: "https://www.facebook.com/profile.php?id=61554021314577",
+        linkhref: "https://www.facebook.com/profile.php?id=61554021314577",
         color: "hover:text-blue-500",
         size: 24,
       },
@@ -1173,7 +1173,7 @@ export const footerData = {
       //   id: 4,
       //   name: "Snapchat",
       //   icon: "SiSnapchat",
-      //   href: "#",
+      //   linkhref: "#",
       //   color: "hover:text-yellow-400",
       //   size: 24,
       // },
@@ -1181,7 +1181,7 @@ export const footerData = {
         id: 5,
         name: "Instagram",
         icon: "Instagram",
-        href: "https://www.instagram.com/naxi.ae",
+        linkhref: "https://www.instagram.com/naxi.ae/",
         color: "hover:text-pink-400",
         size: 24,
       },
@@ -1189,7 +1189,7 @@ export const footerData = {
       //   id: 6,
       //   name: "Pinterest",
       //   icon: "SiPinterest",
-      //   href: "#",
+      //   linkhref: "#",
       //   color: "hover:text-red-500",
       //   size: 24,
       // },

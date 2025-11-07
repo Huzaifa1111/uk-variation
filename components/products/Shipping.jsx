@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { serviceMetadata } from "../../app/servicesData";
 
@@ -22,12 +22,14 @@ export default function Storage() {
                   />
                 </div>
               </div>
-              
+
               {/* Title below image */}
               <div className="w-full text-center mb-4">
-                <h2 className="text-3xl font-bold text-[#004CFF]">{item.title}</h2>
+                <h2 className="text-3xl font-bold text-[#004CFF]">
+                  {item.title}
+                </h2>
               </div>
-              
+
               {/* Text below title */}
               <div className="w-full">
                 <p className="text-base text-black text-center leading-relaxed">
@@ -37,16 +39,18 @@ export default function Storage() {
             </div>
 
             {/* Desktop Layout */}
-            <div className={`hidden md:flex flex-col md:flex-row items-center justify-center gap-16 md:gap-20 ${
-              item.reverse ? "md:flex-row-reverse" : ""
-            }`}>
+            <div
+              className={`hidden md:flex flex-col md:flex-row items-center justify-center gap-16 md:gap-20 ${
+                item.reverse ? "md:flex-row-reverse" : ""
+              }`}
+            >
               {/* Image Section */}
               <div className="md:w-1/2 w-full flex justify-center">
                 <div className="w-full max-w-md">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-auto rounded-lg shadow-md object-contain"
+                    className="w-full h-80  object-contain"
                   />
                 </div>
               </div>
@@ -66,17 +70,21 @@ export default function Storage() {
           </div>
         ))}
       </section>
-      
+
       {/* CTA Section */}
       <section className=" text-center bg-gray-100">
-        <h2 className="text-4xl font-bold text-black mb-8">What are you waiting for?</h2>
+        <h2 className="text-4xl font-bold text-black mb-8">
+          What are you waiting for?
+        </h2>
         <button
-        onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
-        
-        className="mb-16 px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition duration-300">
+          onClick={() =>
+            window.open("https://dashboard.naxi.ae/sign-up", "_blank")
+          }
+          className="mb-16 px-8 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition duration-300"
+        >
           Sign Up
         </button>
       </section>
     </>
   );
-} 
+}

@@ -4,16 +4,14 @@ import ProductsHero from "../../components/products/ProductsHero";
 import WhyChooseUs from "../../components/WhyChooseUs";
 import Shiping from "../../components/products/Shipping";
 
-
 export default function Page() {
   return (
     <div>
       <ProductsHero />
       <WhyChooseUs />
       <OurProcess />
-      <Sourcing />
+      {/* <Sourcing /> */}
       <Shiping />
-      
     </div>
   );
 }
