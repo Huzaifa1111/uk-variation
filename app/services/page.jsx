@@ -4,14 +4,14 @@ import { serviceSlugs, serviceComponents, serviceMetadata } from '../servicesDat
 export default function Services() {
   return (
     <>
-      <section className="py-12 px-6 max-w-7xl mx-auto">
-        <div className="flex flex-col gap-6">
-          {serviceSlugs.map((slug) => {
+      <section className="bg-gray-100">
+        <div className="flex flex-col">
+          {serviceSlugs.map((slug, index) => {
             const Component = serviceComponents[slug];
+            const reverse = index % 2 === 1; // Alternate layout
             return (
-              <div key={slug} className="p-6">
-                <Component />
-                
+              <div key={slug}>
+                <Component reverse={reverse} />
               </div>
             );
           })}
@@ -20,7 +20,6 @@ export default function Services() {
     </>
   );
 }
-
 export const metadata = {
   title: 'Services | Naxi',
   description: 'Explore Naxi’s comprehensive range of services.',

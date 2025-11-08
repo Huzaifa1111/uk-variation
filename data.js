@@ -664,15 +664,15 @@ export const exploreItemsData = {
       },
       images: [
         {
-          src: "/headphone.webp",
-          alt: "Hot selling items",
-          class: "w-[300px] h-auto object-cover rotate-16 z-40 -translate-y-10",
-        },
+    src: "/headphone.webp",
+    alt: "Hot selling items",
+    class: "w-[300px] h-auto object-cover rotate-16 z-40 -translate-y-10 translate-x-18",
+  },
         {
           src: "/it5.webp",
           alt: "Hot selling items 2",
           class:
-            "w-[180px] h-[180px] object-cover absolute bottom-60 left-0 -rotate-16",
+            "w-[180px] h-[180px] object-cover absolute bottom-60 left-6 -rotate-16",
         },
         {
           src: "/my6.png",
@@ -856,8 +856,13 @@ export const whyChooseUsData = {
       id: 2,
       title: "Our Inventory: Your Portfolio",
       desc: "Your dream of a diverse, profitable online store shouldn't be capped by upfront inventory costs. Access our constantly curated portfolio of 5,000+ high-margin, in-demand products across dozens of categories.",
+<<<<<<< HEAD
       icon: "/vector(4).svg",
       iconClass: "md:w-16 md:h-13 w-12 h-10 md:mr-6 mr-5",
+=======
+      icon: "/vector (4).svg",
+      iconClass: "md:w-18 md:h-15 w-12 h-10 md:mr-6 mr-5",
+>>>>>>> 2e904c9063a6934bee494552453b7e77f9113a5c
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
       descClass:
@@ -867,8 +872,13 @@ export const whyChooseUsData = {
       id: 3,
       title: "Work from Anywhere",
       desc: "Your laptop and an internet connection are your new headquarters. Naxi's entire platform is cloud-based, giving you the freedom to manage your thriving e-commerce business from anywhere in the world.",
+<<<<<<< HEAD
       icon: "/vector(5).svg",
       iconClass: "md:w-16 md:h-13 w-12 h-10 md:mr-6 mr-5",
+=======
+      icon: "/vector (5).svg",
+      iconClass: "md:w-15 md:h-12  w-12 h-10 md:mr-6 mr-5",
+>>>>>>> 2e904c9063a6934bee494552453b7e77f9113a5c
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
       descClass:
@@ -878,8 +888,13 @@ export const whyChooseUsData = {
       id: 4,
       title: "Payment: Get Paid Faster",
       desc: "Your focus should be on growth, not on chasing payments or calculating fees. Naxi offers transparent, seller-friendly payment terms. We ensure you get your earned profits on time, every time, with a clear breakdown for every transaction.",
+<<<<<<< HEAD
       icon: "/vector(6).svg",
       iconClass: "md:w-14 md:h-12 w-12 h-10 md:mr-6 mr-5",
+=======
+      icon: "/vector (6).svg",
+      iconClass: "md:w-14 md:h-11 w-12 h-10 md:mr-6 mr-5",
+>>>>>>> 2e904c9063a6934bee494552453b7e77f9113a5c
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
       descClass:

@@ -6,11 +6,11 @@ import Shiping from "../../components/products/Shipping";
 
 export default function Page() {
   return (
-    <div>
+    <div className="bg-gray-100">
       <ProductsHero />
       <WhyChooseUs />
       <OurProcess />
-      {/* <Sourcing /> */}
+      <Sourcing reverse={true} />
       <Shiping />
     </div>
   );
