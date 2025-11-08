@@ -45,7 +45,7 @@ export default function HeroSection() {
     }
   };
 
-   useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % mobileSlides.length);
     }, 3000);
@@ -97,10 +97,11 @@ export default function HeroSection() {
         {mobileSlides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === activeSlide
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+              index === activeSlide
                 ? "opacity-100"
                 : "opacity-0 pointer-events-none"
-              }`}
+            }`}
           >
             {slide.images.map((img, i) => (
               <img
@@ -130,10 +131,11 @@ export default function HeroSection() {
         {desktopSlides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === activeSlide
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+              index === activeSlide
                 ? "opacity-100"
                 : "opacity-0 pointer-events-none"
-              }`}
+            }`}
           >
             {slide.images.map((img, i) => (
               <img
@@ -164,10 +166,11 @@ export default function HeroSection() {
           <button
             key={index}
             onClick={() => setActiveSlide(index)}
-            className={`transition-all duration-300 ${index === activeSlide
+            className={`transition-all duration-300 ${
+              index === activeSlide
                 ? "w-6 h-2 bg-white rounded-full"
                 : "w-2 h-2 bg-white/50 rounded-full"
-              }`}
+            }`}
           ></button>
         ))}
       </div>

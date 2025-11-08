@@ -57,7 +57,7 @@ export default function Footer() {
 
     setMessage("Redirecting...");
 
-    // ✅ Redirect to contact page with email query param
+
     setTimeout(() => {
       router.push(`/contact?email=${encodeURIComponent(email)}#contact-form`);
     }, 500);

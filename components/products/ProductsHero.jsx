@@ -5,7 +5,7 @@ export default function ProductsHero() {
     <section className="bg-gray-100 relative overflow-hidden text-white  md:pt-32 md:px-32">
       {/* Mobile Logo */}
       <img
-        src="/Group (3).png"
+        src="/group(3).png"
         alt="Naxi Logo"
         className="z-20 absolute left-4 top-4 w-20 h-auto object-contain"
       />
@@ -15,7 +15,7 @@ export default function ProductsHero() {
           {/* Product Images */}
           <div className="absolute inset-0 pointer-events-none">
             <img
-              src="/cr8.PNG"
+              src="/cr8.png"
               alt="Product 1"
               className="z-20 absolute -left-8 top-7 w-35 h-35 md:left-10 md:w-65 md:h-65 object-contain rotate-12"
             />
@@ -40,12 +40,12 @@ export default function ProductsHero() {
           <div className="relative bg-[radial-gradient(circle_at_center,#175CFF_0%,#0E3799_100%)] p-6 md:p-12 flex flex-col justify-center items-center text-center h-64 md:h-90 overflow-hidden rounded-none md:rounded-3xl">
             {/* Ellipse Backgrounds */}
             <img
-              src="/Ellipse 27 (1).png"
+              src="/ellipse27(1).png"
               alt="Background Ellipse 1"
               className="absolute left-1/2 top-70 w-[200px] h-[200px] md:w-[450px] md:h-[450px] transform -translate-x-1/2 -translate-y-1/2  rotate-90"
             />
             <img
-              src="/Ellipse 27.png"
+              src="/ellipse27.png"
               alt="Background Ellipse 2"
               className="absolute left-1/2 top-60 w-[400px] h-[400px] md:w-[1000px] md:h-[1000px] transform -translate-x-1/2 -translate-y-1/2 rotate-110"
             />
@@ -56,11 +56,14 @@ export default function ProductsHero() {
                 Sell your <br /> own products!
               </h1>
               <p className="hidden md:block text-xs md:text-base mb-4 md:mb-6 leading-relaxed">
-                Source anything from China with Naxi and sell <br className="hidden md:block" /> in
-                Pakistan, UAE, UK & Saudi Arabia
+                Source anything from China with Naxi and sell{" "}
+                <br className="hidden md:block" /> in Pakistan, UAE, UK & Saudi
+                Arabia
               </p>
               <button
-                onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+                onClick={() =>
+                  window.open("https://dashboard.naxi.ae/sign-up", "_blank")
+                }
                 className="bg-white text-blue-600 mt-2 px-4 py-2 md:px-6 md:py-2 rounded-lg text-xs md:text-base font-medium hover:bg-gray-200"
               >
                 Start Selling

@@ -1,7 +1,7 @@
-import { courierPartnersData } from '../data';
+import { courierPartnersData } from "../data";
 
 export default function CourierPartners() {
-  const { styles, content, partners } = courierPartnersData;
+const { styles, content, partners } = courierPartnersData;
 
   return (
     <section className={styles.sectionClass}>
@@ -13,9 +13,7 @@ export default function CourierPartners() {
       />
 
       {/* Title */}
-      <h2 className={styles.headingClass}>
-        {content.heading}
-      </h2>
+      <h2 className={styles.headingClass}>{content.heading}</h2>
 
       {/* Logos */}
       <div className={styles.logosContainerClass}>

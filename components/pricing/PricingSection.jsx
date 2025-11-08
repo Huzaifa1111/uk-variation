@@ -6,33 +6,33 @@ export default function PricingSection() {
   const platforms = [
     "path46.svg",
     "layer1.svg",
-    "Group 7.svg",
-    "layer1 (1).svg",
+    "group7.svg",
+    "layer1(1).svg",
     "Wordpress_logo 1.svg",
-    "Group.svg",
+    "group.svg",
     "path833.svg",
-    "Group 3.svg",
-    "Group 8.svg",
+    "group3.svg",
+    "group8.svg",
   ];
 
   const plans = [
     {
       gradient: "bg-gradient-to-br from-[#D9D9D9] to-[#737373]",
-      icon: "/vector (24).svg",
+      icon: "/vector(24).svg",
       title: "Basic Plan",
       price: "$29",
       period: "/month",
     },
     {
       gradient: "bg-gradient-to-br from-[#467DFF] to-[#004CFF]",
-      icon: "/vector (24).svg",
+      icon: "/vector(24).svg",
       title: "Pro Plan",
       price: "$79",
       period: "/month",
     },
     {
       gradient: "bg-gradient-to-br from-[#0B1B41] to-[#1C45A7]",
-      icon: "/vector (24).svg",
+      icon: "/vector(24).svg",
       title: "Enterprise Plan",
       price: "$199",
       period: "/month",

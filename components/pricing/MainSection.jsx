@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function MainSection() {
   return (
@@ -38,9 +38,9 @@ export default function MainSection() {
                   Source anything from China with Naxi and sell <br /> in
                   Pakistan, UAE, UK & Saudi Arabia
                 </p>
-                <a 
-                  href="https://dashboard.naxi.ae/sign-up" 
-                  target="_blank" 
+                <a
+                  href="https://dashboard.naxi.ae/sign-up"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-white text-black px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-gray-200 transition-colors"
                 >
@@ -58,12 +58,12 @@ export default function MainSection() {
           <div className="relative overflow-hidden shadow-lg h-48">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#175CFF_0%,#0E3799_100%)]"></div>
             <img
-              src="/Ellipse 27 (1).png"
+              src="/ellipse27(1).png"
               alt="Background Ellipse 1"
               className="absolute left-1/2 top-1/2 w-[200px] h-[200px] transform -translate-x-1/2 -translate-y-1/2 opacity-120"
             />
             <img
-              src="/Ellipse 27.png"
+              src="/ellipse27.png"
               alt="Background Ellipse 2"
               className="absolute left-1/2 top-1/2 w-[400px] h-[400px] transform -translate-x-1/2 -translate-y-1/2 opacity-120"
             />
@@ -79,11 +79,12 @@ export default function MainSection() {
             />
             <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-white p-4">
               <h1 className="text-xl font-bold mb-3">
-                Dropshipping<br /> with Naxi
+                Dropshipping
+                <br /> with Naxi
               </h1>
-              <a 
-                href="https://dashboard.naxi.ae/sign-up" 
-                target="_blank" 
+              <a
+                href="https://dashboard.naxi.ae/sign-up"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-blue-700 px-4 py-2 rounded-lg text-xs font-medium hover:bg-gray-200 transition-colors"
               >
@@ -99,30 +100,35 @@ export default function MainSection() {
 
 function HowToStartSection() {
   const steps = [
-    { 
-      icon: '/vector (18).png', 
-      title: 'Account Registration', 
-      description: 'New sellers must begin by creating a new account on our platform. Provide accurate details such as your name, email address, and business information to complete the registration process.' 
+    {
+      icon: "/vector(18).png",
+      title: "Account Registration",
+      description:
+        "New sellers must begin by creating a new account on our platform. Provide accurate details such as your name, email address, and business information to complete the registration process.",
     },
-    { 
-      icon: '/vector (19).png', 
-      title: 'Email Verification', 
-      description: 'After signing up, a verification code will be sent to your registered email address. Enter this code in the verification section of your account to confirm your identity and activate your seller profile.' 
+    {
+      icon: "/vector(19).png",
+      title: "Email Verification",
+      description:
+        "After signing up, a verification code will be sent to your registered email address. Enter this code in the verification section of your account to confirm your identity and activate your seller profile.",
     },
-    { 
-      icon: '/vector (20).png', 
-      title: 'Bank Account Setup', 
-      description: 'Once your account is verified, link your bank account to receive payments securely. Ensure the provided bank details are correct to avoid delays or issues in payment processing.' 
+    {
+      icon: "/vector(20).png",
+      title: "Bank Account Setup",
+      description:
+        "Once your account is verified, link your bank account to receive payments securely. Ensure the provided bank details are correct to avoid delays or issues in payment processing.",
     },
-    { 
-      icon: '/vector (21).png', 
-      title: 'Product Listing', 
-      description: 'With your account ready, you can start listing your products. Include clear product titles, descriptions, prices, and high-quality images to attract customers and boost sales.' 
+    {
+      icon: "/vector(21).png",
+      title: "Product Listing",
+      description:
+        "With your account ready, you can start listing your products. Include clear product titles, descriptions, prices, and high-quality images to attract customers and boost sales.",
     },
-    { 
-      icon: '/vector (22).png', 
-      title: 'Start Selling', 
-      description: 'After listing your products, your online store will go live. Begin promoting your items, managing orders, and growing your business through consistent quality and customer satisfaction.' 
+    {
+      icon: "/vector(22).png",
+      title: "Start Selling",
+      description:
+        "After listing your products, your online store will go live. Begin promoting your items, managing orders, and growing your business through consistent quality and customer satisfaction.",
     },
   ];
 
@@ -131,18 +137,34 @@ function HowToStartSection() {
       {/* Desktop Layout */}
       <section className="hidden md:block py-12 px-6 bg-gray-100">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">How to start?</h2>
+          <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
+            How to start?
+          </h2>
           <div className="grid grid-cols-2 gap-6">
             {steps.map((step, index) => (
-              <div 
-                key={index} 
-                className={`p-6 px-12 ${index === steps.length - 1 ? 'col-span-2 text-center' : ''}`}
+              <div
+                key={index}
+                className={`p-6 px-12 ${
+                  index === steps.length - 1 ? "col-span-2 text-center" : ""
+                }`}
               >
-                <div className={`flex items-center mb-4 ${index === steps.length - 1 ? 'justify-center' : ''}`}>
-                  <img src={step.icon} alt={`${step.title} icon`} className="w-10 h-10 mr-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 antialiased">{step.title}</h3>
+                <div
+                  className={`flex items-center mb-4 ${
+                    index === steps.length - 1 ? "justify-center" : ""
+                  }`}
+                >
+                  <img
+                    src={step.icon}
+                    alt={`${step.title} icon`}
+                    className="w-10 h-10 mr-4"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 antialiased">
+                    {step.title}
+                  </h3>
                 </div>
-                <p className="text-gray-800 leading-relaxed antialiased">{step.description}</p>
+                <p className="text-gray-800 leading-relaxed antialiased">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
@@ -152,7 +174,9 @@ function HowToStartSection() {
       {/* Mobile Layout */}
       <section className="md:hidden py-8 px-4 bg-gray-100">
         <div className="mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">How to start?</h2>
+          <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">
+            How to start?
+          </h2>
           <div className="space-y-4">
             {steps.map((step, index) => (
               <div key={index} className="p-4">
@@ -168,8 +192,12 @@ function HowToStartSection() {
 
                   {/* Title and description on the right */}
                   <div className="flex-1">
-                    <h3 className="text-base font-semibold leading-tight mb-2 text-gray-900 antialiased">{step.title}</h3>
-                    <p className="text-gray-800 text-sm leading-relaxed antialiased">{step.description}</p>
+                    <h3 className="text-base font-semibold leading-tight mb-2 text-gray-900 antialiased">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-800 text-sm leading-relaxed antialiased">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               </div>

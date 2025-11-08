@@ -454,56 +454,56 @@ export const managedByData = {
   partnerBrands: [
     {
       id: 1,
-      src: "/Glammeria Mono.png",
-      coloredSrc: "/Glammeria Color.png", // Add colored version
+      src: "/glammeriamono.png",
+      coloredSrc: "/glammeriacolor.png", // Add colored version
       url: "https://www.glammeria.com",
     },
     {
       id: 2,
-      src: "/Skynly Mono.png",
-      coloredSrc: "/Skynly Color.png",
+      src: "/skynlymono.png",
+      coloredSrc: "/skynlycolor.png",
       url: "https://www.skynly.store",
     },
     {
       id: 3,
-      src: "/Lenser Mono.png",
-      coloredSrc: "/Lenser Color.png",
+      src: "/lensermono.png",
+      coloredSrc: "/lensercolor.png",
       url: "https://www.lenser.store",
     },
     {
       id: 5,
-      src: "/Techknigh Mono.png",
-      coloredSrc: "/Techknigh Color.png",
+      src: "/techknighmono.png",
+      coloredSrc: "/techknighcolor.png",
       url: "https://www.techknite.store",
     },
     {
       id: 6,
-      src: "/Brexis Mono.png",
-      coloredSrc: "/Brexis Color.png",
+      src: "/brexismono.png",
+      coloredSrc: "/brexiscolor.png",
       url: "https://www.Brexis.store",
     },
     {
       id: 7,
-      src: "/stylodore Mono.png",
-      coloredSrc: "/stylodore Color.png",
+      src: "/stylodoremono.png",
+      coloredSrc: "/stylodorecolor.png",
       url: "https://www.styladore.store",
     },
     {
       id: 8,
-      src: "/Electimize Mono.png",
-      coloredSrc: "/Electimize Color.png",
+      src: "/electimizemono.png",
+      coloredSrc: "/electimizecolor.png",
       url: "https://www.Electimize.store",
     },
     {
       id: 9,
-      src: "/Signity Mono.png",
-      coloredSrc: "/Signity Color.png",
+      src: "/signitymono.png",
+      coloredSrc: "/signitycolor.png",
       url: "https://www.signity.store",
     },
     {
       id: 4,
-      src: "/Novendo Mono.png",
-      coloredSrc: "/Novendo Color.png",
+      src: "/novendomono.png",
+      coloredSrc: "/novendocolor.png",
       url: "https://www.novendo.store",
     },
   ],
@@ -845,8 +845,8 @@ export const whyChooseUsData = {
       id: 1,
       title: "Shipping and Delivery",
       desc: "Naxi's strategically located UAE warehouses are your ultimate advantage. We store, pack, and ship everything for you, ensuring lightning-fast delivery across all seven emirates.",
-      icon: "/vector (3).svg",
-      iconClass: "md:w-16 md:h-13 w-12 h-10 md:mr-6 mr-5",
+      icon: "/vector(3).svg",
+      iconClass: "md:w-14 md:h-12 w-12 h-10 md:mr-6 mr-5",
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
       descClass:
@@ -856,7 +856,7 @@ export const whyChooseUsData = {
       id: 2,
       title: "Our Inventory: Your Portfolio",
       desc: "Your dream of a diverse, profitable online store shouldn't be capped by upfront inventory costs. Access our constantly curated portfolio of 5,000+ high-margin, in-demand products across dozens of categories.",
-      icon: "/vector (4).svg",
+      icon: "/vector(4).svg",
       iconClass: "md:w-16 md:h-13 w-12 h-10 md:mr-6 mr-5",
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
@@ -867,7 +867,7 @@ export const whyChooseUsData = {
       id: 3,
       title: "Work from Anywhere",
       desc: "Your laptop and an internet connection are your new headquarters. Naxi's entire platform is cloud-based, giving you the freedom to manage your thriving e-commerce business from anywhere in the world.",
-      icon: "/vector (5).svg",
+      icon: "/vector(5).svg",
       iconClass: "md:w-16 md:h-13 w-12 h-10 md:mr-6 mr-5",
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
@@ -878,8 +878,8 @@ export const whyChooseUsData = {
       id: 4,
       title: "Payment: Get Paid Faster",
       desc: "Your focus should be on growth, not on chasing payments or calculating fees. Naxi offers transparent, seller-friendly payment terms. We ensure you get your earned profits on time, every time, with a clear breakdown for every transaction.",
-      icon: "/vector (6).svg",
-      iconClass: "md:w-16 md:h-13 w-12 h-10 md:mr-6 mr-5",
+      icon: "/vector(6).svg",
+      iconClass: "md:w-14 md:h-12 w-12 h-10 md:mr-6 mr-5",
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
       descClass:
@@ -989,7 +989,7 @@ export const courierPartnersData = {
   // Icon and heading content
   content: {
     icon: {
-      src: "/vector (7).png",
+      src: "/vector(7).png",
       alt: "Delivery Truck",
     },
     heading: "Our Courier Partners",
@@ -1112,7 +1112,7 @@ export const footerData = {
   subscription: {
     placeholder: "Write E-mail",
     buttonText: "Send",
-    polygonIcon: "/polygon 1.png",
+    polygonIcon: "/polygon1.png",
     inputClass:
       "flex-1 bg-transparent text-neutral-400 text-sm px-2 outline-none",
     buttonClass:
