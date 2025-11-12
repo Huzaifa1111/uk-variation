@@ -9,7 +9,7 @@ export default function PricingSection() {
     "group7.svg",
     "layer1(1).svg",
     "Wordpress_logo 1.svg",
-    "Group.svg",
+    "onbuy.svg",
     "path833.svg",
     "group3.svg",
     "group8.svg",
