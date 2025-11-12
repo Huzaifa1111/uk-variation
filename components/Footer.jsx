@@ -9,7 +9,6 @@ import {
 import { SiWhatsapp, SiSnapchat, SiPinterest } from "react-icons/si";
 import { useState } from "react";
 import { footerData } from "../data";
-
 import { useRouter } from "next/navigation";
 
 // Icon mapping for social media
@@ -222,10 +221,10 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Desktop Layout */}
+      {/* Tablet and Desktop Layout */}
       <div className={styles.desktopContainerClass}>
         {/* Left Side: Logo + About + Copyright */}
-        <div className={`mb-6 md:mb-0 ${desktop.leftSectionWidth}`}>
+        <div className={`mb-6 lg:mb-0 ${desktop.leftSectionWidth}`}>
           <img
             src={companyInfo.logo.src}
             alt={companyInfo.logo.alt}
@@ -243,7 +242,7 @@ export default function Footer() {
         </div>
 
         {/* Navigation */}
-        <div className={`mb-6 md:mb-0 ${desktop.navigationWidth}`}>
+        <div className={`mb-6 lg:mb-0 ${desktop.navigationWidth}`}>
           <h3 className={navigation.titleClass}>{navigation.title}</h3>
           <ul className={navigation.listClass}>
             {navigation.links.map((link) => (
@@ -257,7 +256,7 @@ export default function Footer() {
         </div>
 
         {/* Help & Support */}
-        <div className={`mb-6 md:mb-0 ${desktop.supportWidth}`}>
+        <div className={`mb-6 lg:mb-0 ${desktop.supportWidth}`}>
           <h3 className={support.titleClass}>{support.title}</h3>
           <ul className={support.listClass}>
             {support.links.map((link) => (
@@ -271,9 +270,8 @@ export default function Footer() {
         </div>
 
         {/* Contact Us */}
-        <div className={`mb-6 md:mb-0 ${desktop.contactWidth}`}>
+        <div className={`mb-6 lg:mb-0 ${desktop.contactWidth}`}>
           <h3 className={contact.titleClass}>{contact.title}</h3>
-
           <div className="space-y-3">
             {contact.contacts.map((contactItem) => (
               <div key={`contact-${contactItem.id}`} className="text-xs">
@@ -290,51 +288,54 @@ export default function Footer() {
 
         {/* Social Media with Email Input */}
         <div className={desktop.socialWidth}>
-          <form
-            onSubmit={handleSubmit}
-            className={subscription.desktopContainerClass}
-          >
-            <div className="Group88 w-96 h-14 relative">
-              <div className="Rectangle25 w-65 h-12 left-[115px] t-10 top-0 absolute bg-zinc-300 rounded-lg">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={subscription.placeholder}
-                  className="w-full h-full bg-transparent text-black border-none outline-none px-4 text-sm"
-                  disabled={isSubmitting}
-                />
-              </div>
-              <button
-                type="submit"
-                className="Rectangle26 w-20 h-8 left-[290px] top-[8px] absolute bg-blue-600 rounded-[5px] flex items-center justify-center gap-1"
-                disabled={isSubmitting}
-              >
-                <span className="text-white text-sm font-normal">
-                  {isSubmitting ? "..." : subscription.buttonText}
-                </span>
-                <img
-                  src={subscription.polygonIcon}
-                  alt="Polygon"
-                  className="w-3 h-4"
-                />
-              </button>
-            </div>
-          </form>
-          {message && (
-            <p
-              className={`text-sm mt-2 ml-32 ${
-                message.includes("Thank you")
-                  ? "text-green-600"
-                  : "text-red-600"
-              }`}
+          <div className="space-y-4">
+            {/* Email Subscription */}
+            <form
+              onSubmit={handleSubmit}
+              className={subscription.desktopContainerClass}
             >
-              {message}
-            </p>
-          )}
+              <div className="w-full">
+                <div className="relative bg-zinc-300 rounded-lg h-12 flex items-center">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder={subscription.placeholder}
+                    className="w-full h-full bg-transparent text-black border-none outline-none px-4 text-sm rounded-lg"
+                    disabled={isSubmitting}
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-blue-600 rounded-[5px] h-8 px-3 flex items-center justify-center gap-1"
+                    disabled={isSubmitting}
+                  >
+                    <span className="text-white text-sm font-normal">
+                      {isSubmitting ? "..." : subscription.buttonText}
+                    </span>
+                    <img
+                      src={subscription.polygonIcon}
+                      alt="Polygon"
+                      className="w-3 h-4"
+                    />
+                  </button>
+                </div>
+              </div>
+            </form>
+            
+            {message && (
+              <p
+                className={`text-sm mt-2 ${
+                  message.includes("Thank you")
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
+              >
+                {message}
+              </p>
+            )}
 
-          <div className="ml-32">
-            <div>
+            {/* Social Media */}
+            <div className="w-full">
               <h3 className={socialMedia.titleClass}>{socialMedia.title}</h3>
               <div className={socialMedia.containerClass}>
                 {socialMedia.platforms.map((platform) => {

@@ -1,7 +1,6 @@
 import { hotItemsData } from "../data"; 
 
 export default function HotItems() {
-
   const { styles, topBar, items, buttonText, card, textStyles, href } = hotItemsData;
 
   return (
@@ -18,50 +17,55 @@ export default function HotItems() {
       </div>
 
       {/* Desktop layout */}
-      <div className={styles.desktopGridClass}>
-        {items.map((item) => (
-          <div
-            key={item.id}
-            className={card.desktop.className}
-            style={{ minHeight: card.desktop.minHeight }}
-          >
-            <div className="flex-1 z-10">
-              <h3 className={textStyles.desktop.title}>{item.title}</h3>
-              <p className={textStyles.desktop.description}>{item.desc}</p>
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={textStyles.desktop.button}
-              >
-                {buttonText}
-              </a>
-            </div>
-            <div className="absolute -right-2 -bottom-10">
-              {item.hasMultipleImages ? (
-                <div className="flex flex-row items-end">
-                  <img
-                    src={item.img}
-                    alt={`${item.title} Image 1`}
-                    className={item.desktopImageClass}
-                  />
-                  <img
-                    src={item.secondaryImg}
-                    alt={`${item.title} Image 2`}
-                    className={item.secondaryImageClass}
-                  />
-                </div>
-              ) : (
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className={item.desktopImageClass}
-                />
-              )}
-            </div>
-          </div>
-        ))}
+<div className={styles.desktopGridClass}>
+  {items.map((item) => (
+    <div
+      key={item.id}
+      className={card.desktop.className}
+      style={{ minHeight: card.desktop.minHeight }}
+    >
+      {/* Content container with consistent button positioning */}
+      <div className={textStyles.desktop.contentContainer}>
+        <div className="flex-1 z-10">
+          <h3 className={textStyles.desktop.title}>{item.title}</h3>
+          <p className={textStyles.desktop.description}>{item.desc}</p>
+        </div>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={textStyles.desktop.button}
+        >
+          {buttonText}
+        </a>
       </div>
+      
+      {/* Image container */}
+      <div className="absolute -right-2 -bottom-10">
+        {item.hasMultipleImages ? (
+          <div className="flex flex-row items-end">
+            <img
+              src={item.img}
+              alt={`${item.title} Image 1`}
+              className={item.desktopImageClass}
+            />
+            <img
+              src={item.secondaryImg}
+              alt={`${item.title} Image 2`}
+              className={item.secondaryImageClass}
+            />
+          </div>
+        ) : (
+          <img
+            src={item.img}
+            alt={item.title}
+            className={item.desktopImageClass}
+          />
+        )}
+      </div>
+    </div>
+  ))}
+</div>
 
       {/* Mobile layout */}
       <div className={styles.mobileGridClass}>

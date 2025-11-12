@@ -28,50 +28,48 @@ export default function Header() {
   }, []);
 
   // Navigation data
-  const navData = {
-    mobileTabs: [
-      { href: "/", icon: Home, label: "Home" },
-      { href: "/naxi-360", icon: Package, label: "Naxi 360", whitespace: true },
-      { href: "/about", icon: Users, label: "About Us", whitespace: true },
-      { href: "/profile", icon: User, label: "Profile" },
-    ],
-    desktopNav: [
-      { href: "/", label: "Home" },
-      { href: "/naxi-360", label: "Naxi 360" },
-      { href: "/about", label: "About Us" },
-      { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
-      { href: "/support", label: "Support" },
-      { href: "/contact", label: "Contact Us" },
-    ],
-    servicesItems: [
-      { href: "/services", icon: null, label: "All Services" },
-      { href: "/services/storage", icon: FaWarehouse, label: "Storage" },
-      { href: "/services/sourcing", icon: FaSearch, label: "Sourcing" },
-      { href: "/services/threeplservice", icon: FaTruck, label: "3PL Service" },
-      { href: "/services/productqualitycheck", icon: FaClipboardCheck, label: "Quality Check" },
-    ],
-    moreMenuItems: [
-      { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
-      { href: "/support", label: "Support" },
-      { href: "/contact", label: "Contact Us" },
-    ]
-  };
+const navData = {
+  mobileTabs: [
+    { href: "/", icon: Home, label: "Home" },
+    { href: "/naxi-360", icon: Package, label: "Naxi 360", whitespace: true },
+    { href: "/about", icon: Users, label: "About Us", whitespace: true },
+    { href: "/support", icon: User, label: "Support" }, // Changed from Profile to Support
+  ],
+  desktopNav: [
+    { href: "/", label: "Home" },
+    { href: "/naxi-360", label: "Naxi 360" },
+    { href: "/about", label: "About Us" },
+    { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
+    { href: "/support", label: "Support" },
+    { href: "/contact", label: "Contact Us" },
+  ],
+  servicesItems: [
+    { href: "/services", icon: null, label: "All Services" },
+    { href: "/services/storage", icon: FaWarehouse, label: "Storage" },
+    { href: "/services/sourcing", icon: FaSearch, label: "Sourcing" },
+    { href: "/services/threeplservice", icon: FaTruck, label: "3PL Service" },
+    { href: "/services/productqualitycheck", icon: FaClipboardCheck, label: "Quality Check" },
+  ],
+  moreMenuItems: [
+    { href: "/naxi-dropshipping", label: "Naxi Dropshipping" },
+    { href: "/contact", label: "Contact Us" },
+  ]
+};
 
-  // Page checks
-  const pageChecks = {
-    isAboutPage: pathname === "/about" || pathname === "/about/",
-    isServicesPage: pathname === "/services",
-    isStoragePage: pathname === "/services/storage",
-    isSourcingPage: pathname === "/services/sourcing",
-    isThreePlServicePage: pathname === "/services/threeplservice",
-    isProductQualityCheckPage: pathname === "/services/productqualitycheck",
-    isProductsPage: pathname === "/naxi-360" || pathname === "/naxi-360/",
-    isPricingPage: pathname === "/naxi-dropshipping",
-    isHomePage: pathname === "/",
-    isProfilePage: pathname === "/profile" || pathname === "/profile/",
-    isSupportPage: pathname === "/support" || pathname === "/support/",
-    isContactPage: pathname === "/contact" || pathname === "/contact/",
-  };
+ // Page checks
+const pageChecks = {
+  isAboutPage: pathname === "/about" || pathname === "/about/",
+  isServicesPage: pathname === "/services",
+  isStoragePage: pathname === "/services/storage",
+  isSourcingPage: pathname === "/services/sourcing",
+  isThreePlServicePage: pathname === "/services/threeplservice",
+  isProductQualityCheckPage: pathname === "/services/productqualitycheck",
+  isProductsPage: pathname === "/naxi-360" || pathname === "/naxi-360/",
+  isPricingPage: pathname === "/naxi-dropshipping",
+  isHomePage: pathname === "/",
+  isSupportPage: pathname === "/support" || pathname === "/support/", 
+  
+};
 
   const isAnyServicesPage = Object.values(pageChecks).slice(1, 6).some(Boolean);
   
@@ -101,36 +99,35 @@ export default function Header() {
     return "bg-gradient-to-r from-[#1C45A7] to-[#0B1B41]";
   };
 
-  // Reusable Components
   const MobileTab = ({ tab }) => {
-    const IconComponent = tab.icon;
-    const isActive = pageChecks[`is${tab.label.replace(/\s+/g, '')}Page`] ||
-      (tab.href === "/" && pageChecks.isHomePage) ||
-      (tab.href === "/naxi-360" && pageChecks.isProductsPage) ||
-      (tab.href === "/about" && pageChecks.isAboutPage) ||
-      (tab.href === "/profile" && pageChecks.isProfilePage);
+  const IconComponent = tab.icon;
+  const isActive = pageChecks[`is${tab.label.replace(/\s+/g, '')}Page`] ||
+    (tab.href === "/" && pageChecks.isHomePage) ||
+    (tab.href === "/naxi-360" && pageChecks.isProductsPage) ||
+    (tab.href === "/about" && pageChecks.isAboutPage) ||
+    (tab.href === "/support" && pageChecks.isSupportPage); // Updated this line
 
-    return (
-      <a href={tab.href} className="flex flex-col items-center relative flex-1 mt-2">
-        {isActive ? (
-          <div className="relative flex flex-col items-center px-4 py-2">
-            <img src="/Union.png" alt="Selected Tab" className="absolute top-0 w-full h-full object-cover" />
-            <div className="relative z-10 flex flex-col items-center">
-              <IconComponent size={22} className="text-blue-700" />
-              <span className={`text-xs mt-1 text-blue-700 ${tab.whitespace ? 'whitespace-nowrap' : ''}`}>
-                {tab.label}
-              </span>
-            </div>
+  return (
+    <a href={tab.href} className="flex flex-col items-center relative flex-1 mt-2">
+      {isActive ? (
+        <div className="relative flex flex-col items-center px-4 py-2">
+          <img src="/Union.png" alt="Selected Tab" className="absolute top-0 w-full h-full object-cover" />
+          <div className="relative z-10 flex flex-col items-center">
+            <IconComponent size={22} className="text-blue-700" />
+            <span className={`text-xs mt-1 text-blue-700 ${tab.whitespace ? 'whitespace-nowrap' : ''}`}>
+              {tab.label}
+            </span>
           </div>
-        ) : (
-          <div className="flex flex-col items-center px-4 py-2 text-white hover:text-gray-200 transition-colors">
-            <IconComponent size={22} />
-            <span className={`text-xs mt-1 ${tab.whitespace ? 'whitespace-nowrap' : ''}`}>{tab.label}</span>
-          </div>
-        )}
-      </a>
-    );
-  };
+        </div>
+      ) : (
+        <div className="flex flex-col items-center px-4 py-2 text-white hover:text-gray-200 transition-colors">
+          <IconComponent size={22} />
+          <span className={`text-xs mt-1 ${tab.whitespace ? 'whitespace-nowrap' : ''}`}>{tab.label}</span>
+        </div>
+      )}
+    </a>
+  );
+};
 
   const ServicesItem = ({ item, isMobile = false }) => {
     const IconComponent = item.icon;

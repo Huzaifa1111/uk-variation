@@ -33,7 +33,7 @@ export default function FAQSection() {
   };
 
   const handleContactSupport = () => {
-    window.open('https://www.naxi.ae/contact-us', '_blank');
+ window.open('https://www.naxi.ae/contact', '_blank');
   };
 
   return (

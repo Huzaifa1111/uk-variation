@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import imgv1 from "../../public/Vector (10).png";
 
 export default function OurProcess() {
   const steps = [
@@ -11,7 +10,7 @@ export default function OurProcess() {
       desc: "We offer air and sea shipping through trusted partners, ensuring fast, affordable, and hassle-free global delivery with complete customs support.",
     },
     {
-      img: "/vector.svg",
+      img: "/vector (10).svg",
       title: "Sourcing",
       desc: "We source high-quality products at competitive prices, managing every step from supplier selection to quality inspection to ensure reliability and value.",
     },

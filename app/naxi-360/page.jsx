@@ -1,4 +1,3 @@
-import Sourcing from "../../components/services/Sourcing";
 import OurProcess from "../../components/products/OurProcess";
 import ProductsHero from "../../components/products/ProductsHero";
 import WhyChooseUs from "../../components/WhyChooseUs";
@@ -10,7 +9,6 @@ export default function Page() {
       <ProductsHero />
       <WhyChooseUs />
       <OurProcess />
-      <Sourcing reverse={true} />
       <Shiping />
     </div>
   );

@@ -416,20 +416,20 @@ export const hotItemsData = {
     },
   },
 
-  // Text styling
-  textStyles: {
-    desktop: {
-      title: "font-bold md:text-2xl mb-2",
-      description: "text-sm mb-4 leading-relaxed max-w-[160px] break-words= ",
-
-      button: "text-sm underline hover:no-underline",
-    },
-    mobile: {
-      title:
-        "font-semibold text-[12px] text-black mt-2 truncate w-full text-center",
-      button: "text-[10px] underline hover:no-underline text-black mb-4",
-    },
+ // Text styling
+textStyles: {
+  desktop: {
+    title: "font-bold md:text-2xl mb-2",
+    description: "text-sm mb-4 leading-relaxed max-w-[160px] break-words",
+    // Added container class for consistent button positioning
+    contentContainer: "flex flex-col h-full justify-end", // Changed to justify-end
+    button: "text-sm underline hover:no-underline mb-12", // Added margin-bottom instead of mt-auto
   },
+  mobile: {
+    title: "font-semibold text-[12px] text-black mt-2 truncate w-full text-center",
+    button: "text-[10px] underline hover:no-underline text-black mb-4",
+  },
+},
 };
 
 // Managed by section data
@@ -829,12 +829,10 @@ export const exploreItemsData = {
 export const whyChooseUsData = {
   // Section styling and layout
   styles: {
-    sectionClass: "md:py-12 py-1 md:px-6",
-    headingClass:
-      "md:text-4xl text-3xl font-bold md:mb-12 mb-4 text-gray-900 text-center",
-    gridClass: "grid grid-cols-1 lg:grid-cols-2 md:gap-8 max-w-6xl mx-auto",
-    itemClass:
-      "md:p-6 p-4 hover:shadow-lg transition-shadow duration-300 flex items-center",
+    sectionClass: "md:py-12 py-8 md:px-6 px-4",
+    headingClass: "md:text-4xl text-3xl font-bold md:mb-12 mb-8 text-gray-900 text-center",
+    gridClass: "grid grid-cols-1 lg:grid-cols-2 md:gap-8 gap-6 max-w-6xl mx-auto",
+    itemClass: "md:p-6 p-4 hover:shadow-lg transition-shadow duration-300 flex md:items-start items-center", // Different alignment for mobile vs desktop
   },
 
   // Main heading
@@ -846,8 +844,8 @@ export const whyChooseUsData = {
       id: 1,
       title: "Shipping and Delivery",
       desc: "Naxi's strategically located UAE warehouses are your ultimate advantage. We store, pack, and ship everything for you, ensuring lightning-fast delivery across all seven emirates.",
-      icon: "/vector(3).svg",
-      iconClass: "md:w-14 md:h-12 w-12 h-10 md:mr-6 mr-5",
+      icon: "/vector (3).svg",
+      iconClass: "md:w-16 md:h-13 w-12 h-10 md:mr-6 mr-5",
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
       descClass:
@@ -857,13 +855,8 @@ export const whyChooseUsData = {
       id: 2,
       title: "Our Inventory: Your Portfolio",
       desc: "Your dream of a diverse, profitable online store shouldn't be capped by upfront inventory costs. Access our constantly curated portfolio of 5,000+ high-margin, in-demand products across dozens of categories.",
-
-      icon: "/vector(4).svg",
-      iconClass: "md:w-16 md:h-13 w-12 h-10 md:mr-6 mr-5",
-
-      icon: "/vector(4).svg",
+      icon: "/vector (4).svg",
       iconClass: "md:w-18 md:h-15 w-12 h-10 md:mr-6 mr-5",
-
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
       descClass:
@@ -873,13 +866,8 @@ export const whyChooseUsData = {
       id: 3,
       title: "Work from Anywhere",
       desc: "Your laptop and an internet connection are your new headquarters. Naxi's entire platform is cloud-based, giving you the freedom to manage your thriving e-commerce business from anywhere in the world.",
-
-      icon: "/vector(5).svg",
-      iconClass: "md:w-16 md:h-13 w-12 h-10 md:mr-6 mr-5",
-
-      icon: "/vector(5).svg",
+      icon: "/vector (5).svg",
       iconClass: "md:w-15 md:h-12  w-12 h-10 md:mr-6 mr-5",
-
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
       descClass:
@@ -889,13 +877,8 @@ export const whyChooseUsData = {
       id: 4,
       title: "Payment: Get Paid Faster",
       desc: "Your focus should be on growth, not on chasing payments or calculating fees. Naxi offers transparent, seller-friendly payment terms. We ensure you get your earned profits on time, every time, with a clear breakdown for every transaction.",
-
-      icon: "/vector(6).svg",
-      iconClass: "md:w-14 md:h-12 w-12 h-10 md:mr-6 mr-5",
-
-      icon: "/vector(6).svg",
+      icon: "/vector (6).svg",
       iconClass: "md:w-14 md:h-11 w-12 h-10 md:mr-6 mr-5",
-
       titleClass:
         "md:text-lg text-sm md:mb-4 mb-2 md:text-gray-500 text-gray-900",
       descClass:
@@ -904,10 +887,10 @@ export const whyChooseUsData = {
   ],
 
   // Content container styling
-  contentClass: "text-left",
+  contentClass: "flex-1",
 };
 
-// Testimonials section data\
+// Testimonials section data
 export const testimonialsData = {
   // Section styling and layout
   styles: {
@@ -1038,23 +1021,22 @@ export const courierPartnersData = {
 export const footerData = {
   // Footer styling
   styles: {
-    footerClass: "bg-[#0E2A62] text-white py-8 p md:px-6 px-4",
-    mobileContainerClass: "block md:hidden",
-    desktopContainerClass:
-      "hidden md:flex flex-col md:flex-row justify-between max-w-8xl mx-auto text-left",
+    footerClass: "bg-[#0E2A62] text-white py-8 px-4 sm:px-6 lg:px-8",
+    mobileContainerClass: "block lg:hidden",
+    desktopContainerClass: "hidden lg:flex flex-col xl:flex-row justify-between gap-8 max-w-8xl mx-auto",
   },
 
   // Logo and company info
   companyInfo: {
     logo: {
-      src: "/group.png",
+      src: "/logofooter.svg",
       alt: "Naxi Logo",
-      mobileClass: "w-24 h-auto mb-6",
-      desktopClass: "w-28 h-auto mb-8",
+      mobileClass: "w-24 h-auto mb-4",
+      desktopClass: "w-28 h-auto mb-6",
     },
     description:
       "Naxi.ae is an online platform for wholesalers who want to sell and ship their products to their customers directly.",
-    descriptionClass: "text-xs text-gray-300 mb-2",
+    descriptionClass: "text-xs sm:text-sm text-gray-300 mb-2",
     copyright: "All rights reserved",
     copyrightClass: "text-xs text-blue-500",
   },
@@ -1070,9 +1052,9 @@ export const footerData = {
       { id: 3, name: "Hot Items", href: "/#hot-items" },
       { id: 4, name: "Categories", href: "/#categories" },
     ],
-    listClass: "space-y-2 text-xs",
+    listClass: "space-y-2 text-xs sm:text-sm",
     mobileListClass: "space-y-2 text-xs pl-8",
-    linkClass: "text-gray-300 hover:text-white",
+    linkClass: "text-gray-300 hover:text-white transition-colors",
   },
 
   // Help & Support links
@@ -1094,9 +1076,9 @@ export const footerData = {
         href: "https://www.naxi.ae/privacy-policy",
       },
     ],
-    listClass: "space-y-2 text-xs",
+    listClass: "space-y-2 text-xs sm:text-sm",
     mobileListClass: "space-y-2 text-xs pl-8",
-    linkClass: "text-gray-300 hover:text-white",
+    linkClass: "text-gray-300 hover:text-white transition-colors",
   },
 
   // Contact information
@@ -1120,86 +1102,85 @@ export const footerData = {
         display: "hello@naxi.com",
       },
     ],
-    listClass: "space-y-2 text-xs",
-    linkClass: "text-gray-300 hover:text-white",
+    listClass: "space-y-2 text-xs sm:text-sm",
+    linkClass: "text-gray-300 hover:text-white transition-colors",
   },
 
   // Email subscription
   subscription: {
     placeholder: "Write E-mail",
     buttonText: "Send",
-    polygonIcon: "/polygon1.png",
+    polygonIcon: "/polygon 1.png",
     inputClass:
       "flex-1 bg-transparent text-neutral-400 text-sm px-2 outline-none",
     buttonClass:
       "bg-blue-600 text-white rounded-[5px] px-4 py-2 flex items-center gap-2 -ml-16",
     mobileContainerClass: "flex items-center bg-zinc-300 rounded-lg p-2",
-    desktopContainerClass: "mb-18 flex justify-end",
+    desktopContainerClass: "mb-4 flex justify-start w-full",
   },
 
   // Social media links
   socialMedia: {
     title: "Follow us on social media:",
-    titleClass: "text-sm font-semibold mb-4 text-center",
+    titleClass: "text-sm font-semibold mb-3 text-left",
     mobileTitleClass: "text-xs font-semibold mb-3",
     platforms: [
-      // {
-      //   id: 1,
-      //   name: "WhatsApp",
-      //   icon: "SiWhatsapp",
-      //   linkhref: "#",
-      //   color: "hover:text-green-400",
-      //   size: 24,
-      // },
-      // {
-      //   id: 2,
-      //   name: "Twitter",
-      //   icon: "Twitter",
-      //   linkhref: "#",
-      //   color: "hover:text-sky-400",
-      //   size: 24,
-      // },
+      {
+        id: 1,
+        name: "WhatsApp",
+        icon: "SiWhatsapp",
+        linkhref: "#",
+        color: "hover:text-green-400 transition-colors",
+        size: 24,
+      },
+      {
+        id: 2,
+        name: "Twitter",
+        icon: "Twitter",
+        linkhref: "#",
+        color: "hover:text-sky-400 transition-colors",
+        size: 24,
+      },
       {
         id: 3,
         name: "Facebook",
         icon: "Facebook",
         linkhref: "https://www.facebook.com/profile.php?id=61554021314577",
-        color: "hover:text-blue-500",
+        color: "hover:text-blue-500 transition-colors",
         size: 24,
       },
-      // {
-      //   id: 4,
-      //   name: "Snapchat",
-      //   icon: "SiSnapchat",
-      //   linkhref: "#",
-      //   color: "hover:text-yellow-400",
-      //   size: 24,
-      // },
+      {
+        id: 4,
+        name: "Snapchat",
+        icon: "SiSnapchat",
+        linkhref: "#",
+        color: "hover:text-yellow-400 transition-colors",
+        size: 24,
+      },
       {
         id: 5,
         name: "Instagram",
         icon: "Instagram",
         linkhref: "https://www.instagram.com/naxi.ae/",
-        color: "hover:text-pink-400",
+        color: "hover:text-pink-400 transition-colors",
         size: 24,
       },
-      // {
-      //   id: 6,
-      //   name: "Pinterest",
-      //   icon: "SiPinterest",
-      //   linkhref: "#",
-      //   color: "hover:text-red-500",
-      //   size: 24,
-      // },
+      {
+        id: 6,
+        name: "Pinterest",
+        icon: "SiPinterest",
+        linkhref: "#",
+        color: "hover:text-red-500 transition-colors",
+        size: 24,
+      },
     ],
-    containerClass: "flex space-x-4 justify-center",
-    mobileContainerClass: "flex space-x-3 justify-center",
+    containerClass: "flex space-x-4 justify-start flex-wrap",
+    mobileContainerClass: "flex space-x-3 justify-center flex-wrap",
   },
 
   // Mobile dropdown configuration
   mobile: {
-    dropdownButtonClass:
-      "w-7 h-7 bg-gray-400 rounded-full flex items-center justify-center",
+    dropdownButtonClass: "w-7 h-7 bg-gray-400 rounded-full flex items-center justify-center",
     dropdownIcon: {
       src: "/downarrow.png",
       alt: "arrow",
@@ -1208,12 +1189,12 @@ export const footerData = {
     dropdownSectionClass: "flex-1",
   },
 
-  // Desktop layout widths
+  // Desktop layout widths - Balanced spacing
   desktop: {
-    leftSectionWidth: "w-1/5",
-    navigationWidth: "w-1/5 ml-12",
-    supportWidth: "w-1/5",
-    contactWidth: "w-1/5",
-    socialWidth: "max-w-6xl",
+    leftSectionWidth: "w-full lg:w-1/5 xl:w-1/6",
+    navigationWidth: "w-full lg:w-1/5 xl:w-1/6",
+    supportWidth: "w-full lg:w-1/5 xl:w-1/6",
+    contactWidth: "w-full lg:w-1/5 xl:w-1/6",
+    socialWidth: "w-full lg:w-1/5 xl:w-1/5", // Balanced width
   },
 };
