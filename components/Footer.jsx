@@ -56,7 +56,6 @@ export default function Footer() {
 
     setMessage("Redirecting...");
 
-
     setTimeout(() => {
       router.push(`/contact?email=${encodeURIComponent(email)}#contact-form`);
     }, 500);
@@ -321,7 +320,7 @@ export default function Footer() {
                 </div>
               </div>
             </form>
-            
+
             {message && (
               <p
                 className={`text-sm mt-2 ${

@@ -10,7 +10,7 @@ export default function OurProcess() {
       desc: "We offer air and sea shipping through trusted partners, ensuring fast, affordable, and hassle-free global delivery with complete customs support.",
     },
     {
-      img: "/vector (10).svg",
+      img: "/vector(10).svg",
       title: "Sourcing",
       desc: "We source high-quality products at competitive prices, managing every step from supplier selection to quality inspection to ensure reliability and value.",
     },

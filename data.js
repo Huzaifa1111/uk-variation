@@ -416,20 +416,21 @@ export const hotItemsData = {
     },
   },
 
- // Text styling
-textStyles: {
-  desktop: {
-    title: "font-bold md:text-2xl mb-2",
-    description: "text-sm mb-4 leading-relaxed max-w-[160px] break-words",
-    // Added container class for consistent button positioning
-    contentContainer: "flex flex-col h-full justify-end", // Changed to justify-end
-    button: "text-sm underline hover:no-underline mb-12", // Added margin-bottom instead of mt-auto
+  // Text styling
+  textStyles: {
+    desktop: {
+      title: "font-bold md:text-2xl mb-2",
+      description: "text-sm mb-4 leading-relaxed max-w-[160px] break-words",
+      // Added container class for consistent button positioning
+      contentContainer: "flex flex-col h-full justify-end", // Changed to justify-end
+      button: "text-sm underline hover:no-underline mb-12", // Added margin-bottom instead of mt-auto
+    },
+    mobile: {
+      title:
+        "font-semibold text-[12px] text-black mt-2 truncate w-full text-center",
+      button: "text-[10px] underline hover:no-underline text-black mb-4",
+    },
   },
-  mobile: {
-    title: "font-semibold text-[12px] text-black mt-2 truncate w-full text-center",
-    button: "text-[10px] underline hover:no-underline text-black mb-4",
-  },
-},
 };
 
 // Managed by section data
@@ -830,9 +831,12 @@ export const whyChooseUsData = {
   // Section styling and layout
   styles: {
     sectionClass: "md:py-12 py-8 md:px-6 px-4",
-    headingClass: "md:text-4xl text-3xl font-bold md:mb-12 mb-8 text-gray-900 text-center",
-    gridClass: "grid grid-cols-1 lg:grid-cols-2 md:gap-8 gap-6 max-w-6xl mx-auto",
-    itemClass: "md:p-6 p-4 hover:shadow-lg transition-shadow duration-300 flex md:items-start items-center", // Different alignment for mobile vs desktop
+    headingClass:
+      "md:text-4xl text-3xl font-bold md:mb-12 mb-8 text-gray-900 text-center",
+    gridClass:
+      "grid grid-cols-1 lg:grid-cols-2 md:gap-8 gap-6 max-w-6xl mx-auto",
+    itemClass:
+      "md:p-6 p-4 hover:shadow-lg transition-shadow duration-300 flex md:items-start items-center", // Different alignment for mobile vs desktop
   },
 
   // Main heading
@@ -1023,7 +1027,8 @@ export const footerData = {
   styles: {
     footerClass: "bg-[#0E2A62] text-white py-8 px-4 sm:px-6 lg:px-8",
     mobileContainerClass: "block lg:hidden",
-    desktopContainerClass: "hidden lg:flex flex-col xl:flex-row justify-between gap-8 max-w-8xl mx-auto",
+    desktopContainerClass:
+      "hidden lg:flex flex-col xl:flex-row justify-between gap-8 max-w-8xl mx-auto",
   },
 
   // Logo and company info
@@ -1110,7 +1115,7 @@ export const footerData = {
   subscription: {
     placeholder: "Write E-mail",
     buttonText: "Send",
-    polygonIcon: "/polygon 1.png",
+    polygonIcon: "/polygon1.png",
     inputClass:
       "flex-1 bg-transparent text-neutral-400 text-sm px-2 outline-none",
     buttonClass:
@@ -1180,7 +1185,8 @@ export const footerData = {
 
   // Mobile dropdown configuration
   mobile: {
-    dropdownButtonClass: "w-7 h-7 bg-gray-400 rounded-full flex items-center justify-center",
+    dropdownButtonClass:
+      "w-7 h-7 bg-gray-400 rounded-full flex items-center justify-center",
     dropdownIcon: {
       src: "/downarrow.png",
       alt: "arrow",
