@@ -4,7 +4,7 @@ import { serviceMetadata } from '../../servicesData';
 export default function ProductQualityCheckPage() {
   return (
     <section className="py-12 px-6 max-w-6xl mx-auto">
-      <ProductQualityCheck reverse={true} />
+      <ProductQualityCheck  />
     </section>
   );
 }

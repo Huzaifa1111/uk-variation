@@ -13,16 +13,21 @@ export default function ThreePlService({ reverse = false }) {
             />
           </div>
         </div>
-        
+
         {/* Title below image */}
         <div className="w-full text-center mb-4">
           <h2 className="text-3xl font-bold text-blue-600">3PL Service</h2>
         </div>
-        
+
         {/* Text below title */}
         <div className="w-full">
           <p className="text-base text-black text-center leading-relaxed">
-            We also offer comprehensive 3PL (Third-Party Logistics) services to support customers selling on platforms such as Amazon, TikTok Shop, eBay, Shopify, Facebook, and more. From inventory management and order fulfillment to packaging and timely delivery, we handle every step of the logistics process, allowing our clients to focus on growing their business while we take care of the operations.
+            We also offer comprehensive 3PL (Third-Party Logistics) services to
+            support customers selling on platforms such as Amazon, TikTok Shop,
+            eBay, Shopify, Facebook, and more. From inventory management and
+            order fulfillment to packaging and timely delivery, we handle every
+            step of the logistics process, allowing our clients to focus on
+            growing their business while we take care of the operations.
           </p>
         </div>
       </div>
@@ -30,7 +35,7 @@ export default function ThreePlService({ reverse = false }) {
       {/* Desktop Layout */}
       <div
         className={`hidden md:flex w-full max-w-7xl mx-auto ${
-          reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+          reverse ? "md:flex-row" : "md:flex-row-reverse"
         } items-center justify-between gap-12 lg:gap-48`}
       >
         {/* Image Section - Fixed width */}
@@ -51,7 +56,12 @@ export default function ThreePlService({ reverse = false }) {
               3PL Service
             </h2>
             <p className="text-lg text-black leading-relaxed">
-              We also offer comprehensive 3PL (Third-Party Logistics) services to support customers selling on platforms such as Amazon, TikTok Shop, eBay, Shopify, Facebook, and more. From inventory management and order fulfillment to packaging and timely delivery, we handle every step of the logistics process, allowing our clients to focus on growing their business while we take care of the operations.
+              We also offer comprehensive 3PL (Third-Party Logistics) services
+              to support customers selling on platforms such as Amazon, TikTok
+              Shop, eBay, Shopify, Facebook, and more. From inventory management
+              and order fulfillment to packaging and timely delivery, we handle
+              every step of the logistics process, allowing our clients to focus
+              on growing their business while we take care of the operations.
             </p>
           </div>
         </div>

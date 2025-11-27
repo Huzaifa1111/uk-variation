@@ -1,7 +1,7 @@
-"use client"
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
 
-export default function ServicesHero() {
+export default function ServicesHero({ reverse = false }) {
   return (
     <section className="bg-gray-100">
       {/* Mobile Layout */}
@@ -10,7 +10,7 @@ export default function ServicesHero() {
           <div className="bg-gradient-to-r from-[#0E3799] to-[#175CFF] text-white p-6 rounded-3xl flex flex-col items-center">
             <div className="w-full">
               <Image
-                 src="/ser1 (2).svg"
+                src="/ser1 (2).svg"
                 alt="Services Overview"
                 width={400}
                 height={200}
@@ -20,12 +20,14 @@ export default function ServicesHero() {
               <div className="w-full text-left mb-6 mt-6">
                 <h1 className="text-2xl font-bold mb-4">Our Services</h1>
                 <p className="text-sm mb-6 leading-relaxed">
-                  Experience the best of Naxi’s services! We offer highly competitive rates for our INDIVIDUAL services, so you can enjoy top-notch solutions              </p>
+                  Experience the best of Naxi’s services! We offer highly
+                  competitive rates for our INDIVIDUAL services, so you can
+                  enjoy top-notch solutions{" "}
+                </p>
                 <button className="px-6 py-2 bg-white text-black rounded-xl hover:bg-gray-200 transition-colors">
                   Sign Up
                 </button>
               </div>
-
             </div>
           </div>
         </div>
@@ -38,9 +40,14 @@ export default function ServicesHero() {
             <div className="w-1/2">
               <h1 className="text-4xl font-bold mb-6">Our Services</h1>
               <p className="text-lg mb-6">
-                Experience the best of Naxi’s services! We offer highly competitive rates for our INDIVIDUAL services, so you can enjoy top-notch solutions              </p>
+                Experience the best of Naxi’s services! We offer highly
+                competitive rates for our INDIVIDUAL services, so you can enjoy
+                top-notch solutions{" "}
+              </p>
               <button
-                onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+                onClick={() =>
+                  window.open("https://dashboard.naxi.ae/sign-up", "_blank")
+                }
                 className="px-6 py-2 bg-white text-black rounded-xl hover:bg-gray-200 transition-colors"
               >
                 Sign Up
@@ -61,4 +68,4 @@ export default function ServicesHero() {
       </div>
     </section>
   );
-} 
+}

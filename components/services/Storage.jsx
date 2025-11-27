@@ -13,16 +13,20 @@ export default function Storage({ reverse = false }) {
             />
           </div>
         </div>
-        
+
         {/* Title below image */}
         <div className="w-full text-center mb-4">
           <h2 className="text-3xl font-bold text-blue-600">Storage</h2>
         </div>
-        
+
         {/* Text below title */}
         <div className="w-full">
           <p className="text-base text-black text-center leading-relaxed">
-            We provide our customers with reliable and well-managed storage solutions designed to keep their products safe, organized, and protected. Our facilities are maintained with strict safety standards, ensuring that every item remains secure and in excellent condition until it's ready for delivery or use.
+            We provide our customers with reliable and well-managed storage
+            solutions designed to keep their products safe, organized, and
+            protected. Our facilities are maintained with strict safety
+            standards, ensuring that every item remains secure and in excellent
+            condition until it's ready for delivery or use.
           </p>
         </div>
       </div>
@@ -30,7 +34,7 @@ export default function Storage({ reverse = false }) {
       {/* Desktop Layout */}
       <div
         className={`hidden md:flex w-full max-w-7xl mx-auto ${
-          reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+          reverse ? "md:flex-row" : "md:flex-row-reverse"
         } items-center justify-between gap-12 lg:gap-48`}
       >
         {/* Image Section - Fixed width */}
@@ -51,7 +55,11 @@ export default function Storage({ reverse = false }) {
               Storage
             </h2>
             <p className="text-lg text-black leading-relaxed">
-              We provide our customers with reliable and well-managed storage solutions designed to keep their products safe, organized, and protected. Our facilities are maintained with strict safety standards, ensuring that every item remains secure and in excellent condition until it's ready for delivery or use.
+              We provide our customers with reliable and well-managed storage
+              solutions designed to keep their products safe, organized, and
+              protected. Our facilities are maintained with strict safety
+              standards, ensuring that every item remains secure and in
+              excellent condition until it's ready for delivery or use.
             </p>
           </div>
         </div>

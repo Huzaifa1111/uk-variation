@@ -1,4 +1,4 @@
-export default function Sourcing({ reverse = false }) {
+export default function Sourcing({ reverse = true }) {
   return (
     <section className="py-12 px-4 md:px-6 max-w-full bg-gray-100">
       {/* Mobile Layout */}
@@ -36,7 +36,7 @@ export default function Sourcing({ reverse = false }) {
       {/* Desktop Layout */}
       <div
         className={`hidden md:flex w-full max-w-7xl mx-auto ${
-          reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+          reverse ? "md:flex-row" : "md:flex-row-reverse"
         } items-center justify-between gap-12 lg:gap-48`}
       >
         {/* Image Section - Fixed width */}

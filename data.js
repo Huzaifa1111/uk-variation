@@ -1,19 +1,80 @@
 // Hero section data - contains all text content, images, and slide configurations
+
 export const heroData = {
-  // Main text content for the hero section
+  styles: {
+    sectionClass: "flex justify-between items-center gap-8",
+  },
+
   textContent: {
-    title: "Start E-commerce with Naxi from today",
-    subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    buttonText: "Start Selling",
+    heading1: "Start E-Commerce",
+    heading2: "with Naxi Today",
+  },
+
+  desktopSlides: {
+    leftSide: [
+      {
+        src: "/medicine_homebanner.png",
+        width: 200,
+        height: 20,
+        className:
+          "transform transition-transform duration-300 h-110 w-80 ease-in-out hover:scale-105",
+      },
+      {
+        src: "/juicer_homebanner.png",
+        width: 200,
+        height: 20,
+        className:
+          "transform transition-transform duration-300 h-50 w-80 ease-in-out hover:scale-105",
+      },
+    ],
+
+    middle: {
+      leftCard: {
+        src: "/lego_homebanner.png",
+        width: 20,
+        height: 20,
+        className:
+          "transform transition-transform duration-300 ease-in-out hover:scale-105 h-90 w-70",
+      },
+      centerCard: {
+        src: "/face_homebanner.png",
+        width: 20,
+        height: 20,
+        className:
+          "transform transition-transform duration-300 ease-in-out hover:scale-105 h-70 w-70",
+        buttonText: "Join Now",
+      },
+      rightCard: {
+        src: "/lotion_homebanner.png",
+        width: 200,
+        height: 500,
+        className:
+          "transform transition-transform duration-300 ease-in-out hover:scale-105 h-90 w-70",
+      },
+    },
+
+    rightSide: [
+      {
+        src: "/head_homebanner.png",
+        width: 200,
+        height: 500,
+        className:
+          "transform transition-transform duration-300 ease-in-out hover:scale-105 h-110 w-80",
+      },
+      {
+        src: "/lipstick_homebanner.png",
+        width: 200,
+        height: 500,
+        className:
+          "h-50 w-80 transform transition-transform duration-300 ease-in-out hover:scale-105",
+      },
+    ],
   },
 
   // Styling and layout constants
   styles: {
     sectionClass:
-      "bg-[radial-gradient(circle_at_center,#175CFF_0%,#0E3799_100%)] text-white md:py-40 py-20 px-6 relative overflow-hidden",
-    buttonClass:
-      "bg-white text-blue-600 md:px-16 px-8 py-2 md:py-3 rounded-lg md:text-2xl text-base font-semibold hover:bg-gray-200",
+      "border-3 md:py-40 py-20 px-6 relative overflow-hidden grid grid-flow-col gap-4",
   },
 
   // Background images for desktop
@@ -134,108 +195,6 @@ export const heroData = {
   ],
 
   // Desktop-specific slides configuration
-  desktopSlides: [
-    {
-      images: [
-        {
-          src: "/headphone.webp",
-          className: "absolute -left-12 top-20 w-73 transform rotate-36",
-        },
-        {
-          src: "/massager3.png",
-          className: "absolute left-49 top-68 w-115 transform -rotate-6 z-0",
-        },
-        {
-          src: "/it12.webp",
-          className: "absolute right-20 top-2 w-70 transform rotate-12",
-        },
-        {
-          src: "/it10.webp",
-          className: "absolute right-25 -bottom-20 w-175 transform rotate-25",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          src: "/cr1.png",
-          className: "absolute left-37 top-40 w-65 transform rotate-5",
-        },
-        {
-          src: "/cr4.png",
-          className: "absolute left-65 top-85 w-70 transform z-0",
-        },
-        {
-          src: "/cr3.png",
-          className: "absolute right-35 top-78 w-110 transform -rotate-5",
-        },
-        {
-          src: "/cr2.png",
-          className: "absolute right-25 bottom-12  w-75 transform -rotate-3",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          src: "/cr8.png",
-          className: "absolute left-12 top-35 w-75 transform rotate-4",
-        },
-        {
-          src: "/cr7.png",
-          className: "absolute left-48 top-90 w-100 transform -rotate-6 z-0",
-        },
-        {
-          src: "/cr5.png",
-          className: "absolute right-1 top-35 w-130 transform rotate-7",
-        },
-        {
-          src: "/cr6.png",
-          className: "absolute right-70 bottom-1 w-55 transform rotate-3",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          src: "/cr12.png",
-          className: "absolute left-5 top-18 w-120 transform rotate-5",
-        },
-        {
-          src: "/cr11.png",
-          className: "absolute left-48 top-100 w-65 transform z-0",
-        },
-        {
-          src: "/cr9.png",
-          className: "absolute right-0 top-18 w-110 transform",
-        },
-        {
-          src: "/cr10.png",
-          className: "absolute right-40 top-77 w-95 transform rotate-2",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          src: "/cr16.png",
-          className: "absolute left-20 top-35 w-75 transform rotate-2",
-        },
-        {
-          src: "/cr15.png",
-          className: "absolute left-48 top-80 w-95 transform z-0",
-        },
-        {
-          src: "/cr14.png",
-          className: "absolute right-30 top-40 w-80 transform",
-        },
-        {
-          src: "/cr13.png",
-          className: "absolute right-65 bottom-0 w-70 transform",
-        },
-      ],
-    },
-  ],
 
   // Carousel configuration
   carousel: {
@@ -249,13 +208,15 @@ export const regionData = {
   styles: {
     sectionClass: "md:bg-gray-100 bg-gray-100",
     containerClass:
-      "relative flex flex-col items-center p-[60px] text-center text-black overflow-hidden",
+      " flex flex-col items-center p-[60px] text-center text-black overflow-hidden",
     headingClass:
-      "text-2xl sm:text-3xl md:text-[54px] font-bold md:mb-10 text-black whitespace-nowrap",
+      "text-2xl sm:text-2xl md:text-[54px] font-bold md:mb-10 text-black whitespace-nowrap text-blue-600",
   },
 
   // Main heading text
-  heading: "Select your Region.",
+  // headingp1: `Making money`,
+  // headingp2: `has never been easier`,
+  // para: "We handle the inventory and delivery while YOU keep the profit",
 
   // Background globe image configuration
   backgroundGlobe: {
@@ -268,10 +229,10 @@ export const regionData = {
   countries: [
     {
       id: 1,
-      name: "Pakistan",
+      name: "Saudi Arabia",
       flag: {
-        src: "/pakistan.png",
-        alt: "Pakistan Map",
+        src: "/ksaflag.png",
+        alt: "Saudi Arabia Map",
         className:
           "w-16 h-16 sm:w-24 sm:h-24 md:w-[160px] md:h-[160px] object-contain mb-2",
       },
@@ -279,10 +240,10 @@ export const regionData = {
     },
     {
       id: 2,
-      name: "Saudi Arabia",
+      name: "Pakistan",
       flag: {
-        src: "/saudi.png",
-        alt: "Saudi Arabia Map",
+        src: "/pakflag.png",
+        alt: "Pakistan Map",
         className:
           "w-16 h-16 sm:w-24 sm:h-24 md:w-[160px] md:h-[160px] object-contain mb-2",
       },
@@ -292,7 +253,7 @@ export const regionData = {
       id: 3,
       name: "United Arab Emirates",
       flag: {
-        src: "/country2.png",
+        src: "/uaeflag.png",
         alt: "UAE Map",
         className:
           "w-16 h-16 sm:w-24 sm:h-24 md:w-[160px] md:h-[160px] object-contain mb-2",
@@ -303,7 +264,7 @@ export const regionData = {
       id: 4,
       name: "United Kingdom",
       flag: {
-        src: "/country1.png",
+        src: "/ukflag.png",
         alt: "UK Map",
         className:
           "w-16 h-16 sm:w-24 sm:h-24 md:w-[160px] md:h-[160px] object-contain mb-2",
@@ -1095,16 +1056,16 @@ export const footerData = {
       {
         id: 1,
         type: "phone",
-        value: "+976 561 008",
-        href: "tel:+976561008",
-        display: "+976 561 008",
+        value: "+123 456 789",
+        href: "tel:+123 456 789",
+        display: "+123 456 789",
       },
       {
         id: 2,
         type: "email",
-        value: "hello@naxi.com",
-        href: "mailto:hello@naxi.com",
-        display: "hello@naxi.com",
+        value: "naxi@support.com",
+        href: "mailto:naxi@support.com",
+        display: "naxi@support.com",
       },
     ],
     listClass: "space-y-2 text-xs sm:text-sm",

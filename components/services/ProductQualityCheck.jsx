@@ -1,5 +1,5 @@
-"use client"
-export default function ProductQualityCheck({ reverse = false }) {
+"use client";
+export default function ProductQualityCheck({ reverse = true }) {
   return (
     <>
       <section className="py-12 px-4 md:px-6 max-w-full bg-gray-100">
@@ -15,16 +15,23 @@ export default function ProductQualityCheck({ reverse = false }) {
               />
             </div>
           </div>
-          
+
           {/* Title below image */}
           <div className="w-full text-center mb-4">
-            <h2 className="text-3xl font-bold text-blue-600">Product Quality Check</h2>
+            <h2 className="text-3xl font-bold text-blue-600">
+              Product Quality Check
+            </h2>
           </div>
-          
+
           {/* Text below title */}
           <div className="w-full">
             <p className="text-base text-black text-center leading-relaxed">
-              We have three dedicated teams based in China that specialize in product quality inspections. Each team ensures that every item meets strict quality standards before shipment. Since we believe quality is the foundation of any successful business, our inspection process is designed to identify and eliminate defects, guaranteeing that our clients receive only the best products.
+              We have three dedicated teams based in China that specialize in
+              product quality inspections. Each team ensures that every item
+              meets strict quality standards before shipment. Since we believe
+              quality is the foundation of any successful business, our
+              inspection process is designed to identify and eliminate defects,
+              guaranteeing that our clients receive only the best products.
             </p>
           </div>
         </div>
@@ -32,7 +39,7 @@ export default function ProductQualityCheck({ reverse = false }) {
         {/* Desktop Layout */}
         <div
           className={`hidden md:flex w-full max-w-7xl mx-auto ${
-            reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+            reverse ? "md:flex-row" : "md:flex-row-reverse"
           } items-center justify-between gap-12 lg:gap-48`}
         >
           {/* Image Section - Fixed width */}
@@ -53,19 +60,29 @@ export default function ProductQualityCheck({ reverse = false }) {
                 Product Quality Check
               </h2>
               <p className="text-lg text-black leading-relaxed">
-                We have three dedicated teams based in China that specialize in product quality inspections. Each team ensures that every item meets strict quality standards before shipment. Since we believe quality is the foundation of any successful business, our inspection process is designed to identify and eliminate defects, guaranteeing that our clients receive only the best products.
+                We have three dedicated teams based in China that specialize in
+                product quality inspections. Each team ensures that every item
+                meets strict quality standards before shipment. Since we believe
+                quality is the foundation of any successful business, our
+                inspection process is designed to identify and eliminate
+                defects, guaranteeing that our clients receive only the best
+                products.
               </p>
             </div>
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section - Responsive */}
       <section className="py-8 md:py-12 text-center bg-gray-100">
-        <h2 className="text-2xl md:text-4xl font-bold text-black mb-4 md:mb-8">What are you waiting for?</h2>
-        <button 
+        <h2 className="text-2xl md:text-4xl font-bold text-black mb-4 md:mb-8">
+          What are you waiting for?
+        </h2>
+        <button
           className="mb-6 md:mb-8 px-6 md:px-8 py-2 md:py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition duration-300"
-          onClick={() => window.open('https://dashboard.naxi.ae/sign-up', '_blank')}
+          onClick={() =>
+            window.open("https://dashboard.naxi.ae/sign-up", "_blank")
+          }
         >
           Sign Up
         </button>

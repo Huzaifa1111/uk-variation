@@ -6,28 +6,27 @@ import Categories from "../components/Categories";
 import SellOnlineBanner from "../components/SellOnlineBanner";
 import ExploreItems from "../components/ExploreItems";
 import WhyChooseUs from "../components/WhyChooseUs";
-import Testimonials from "../components/Testimonials";
 import CourierPartners from "../components/CourierPartners";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <RegionSelection />
+      <WhyChooseUs />
 
       <section id="hot-items">
         <HotItems />
       </section>
+      <RegionSelection />
 
-      <ManagedBy />
+      {/* <ManagedBy /> */}
 
-      <section id="categories">
+      {/* <section id="categories">
         <Categories />
-      </section>
+      </section> */}
 
-      <SellOnlineBanner />
+      {/* <SellOnlineBanner /> */}
       <ExploreItems />
-      <WhyChooseUs />
       {/* <Testimonials /> */}
       <CourierPartners />
     </main>
