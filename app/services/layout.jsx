@@ -1,10 +1,7 @@
-import ServicesHero from '../../components/services/ServicesHero';
-
 export default function ServicesLayout({ children }) {
   return (
     <main className="min-h-screen bg-gray-100">
-      <ServicesHero />
-      {children}
+      {children} {/* This renders the specific page content */}
     </main>
   );
 }

@@ -1,10 +1,8 @@
 import WhyChooseUs from "../../components/WhyChooseUs";
 
-import HeroSection from "../../components/about/HeroSection";
+import AboutHero from "../../components/about/AboutHero";
 import WhatDoWeDo from "../../components/about/WhatDoWeDo";
-import OurMission from "../../components/about/OurMission";
 import OurValues from "../../components/about/OurValues";
-import OurVision from "../../components/about/OurVision";
 
 export const metadata = {
   title: "About Us | Naxi",
@@ -15,10 +13,8 @@ export const metadata = {
 export default function About() {
   return (
     <main className="min-h-screen bg-gray-100">
-      <HeroSection />
+      <AboutHero />
       <WhatDoWeDo />
-      <OurMission />
-      <OurVision />
       <OurValues />
       <WhyChooseUs />
     </main>

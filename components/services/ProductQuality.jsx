@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const Sourcing = () => {
+const ProductQuality = () => {
   return (
     <section className="w-full min-h-screen bg-[#F5F5F7] font-sans overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -72,4 +72,4 @@ const Sourcing = () => {
   );
 };
 
-export default Sourcing;
+export default ProductQuality;

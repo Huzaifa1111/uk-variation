@@ -1,6 +1,87 @@
-import { testimonialsData } from '../data'; // or './data' depending on your structure
-
 export default function Testimonials() {
+  // Testimonials section data - moved from data.js
+  const testimonialsData = {
+    // Section styling and layout
+    styles: {
+      sectionClass:
+        "bg-gradient-to-b from-[#0E3799] to-[#175CFF] text-white md:py-12 pt-6 px-6 text-center",
+      headingClass:
+        "md:text-3xl text-xl sm:text-2xl font-bold md:mb-12 mb-6 leading-tight",
+    },
+
+    // Main heading with line breaks
+    heading: {
+      line1: "What our Customers",
+      line2: "have to say",
+    },
+
+    // Testimonials data with text, ratings, and styling
+    testimonials: [
+      {
+        id: 1,
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+        stars: 4,
+        customer: {
+          name: "Lorem Ipsum",
+          role: "Lorem Ipsum",
+          avatarClass:
+            "w-16 h-16 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-gray-100",
+        },
+      },
+      {
+        id: 2,
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+        stars: 5,
+        customer: {
+          name: "Lorem Ipsum",
+          role: "Lorem Ipsum",
+          avatarClass:
+            "w-16 h-16 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-gray-100",
+        },
+      },
+      {
+        id: 3,
+        text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+        stars: 4,
+        customer: {
+          name: "Lorem Ipsum",
+          role: "Lorem Ipsum",
+          avatarClass:
+            "w-16 h-16 bg-gray-300 rounded-full mx-auto mb-4 border-4 border-gray-100",
+        },
+      },
+    ],
+
+    // Desktop layout configuration
+    desktop: {
+      gridClass: "hidden md:grid grid-cols-3 gap-10 max-w-6xl mx-auto",
+      cardClass:
+        "bg-gray-200 text-black p-6 rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300",
+      textClass: "text-sm text-gray-800 leading-relaxed mb-4",
+      nameClass: "font-semibold text-sm mb-2",
+      starsClass: "text-blue-600 text-lg",
+      starsContainerClass: "flex justify-center",
+    },
+
+    // Mobile layout configuration
+    mobile: {
+      containerClass:
+        "md:hidden relative overflow-y-scroll h-[400px] snap-y snap-mandatory space-y-8 scrollbar-hide",
+      cardClass:
+        "bg-gray-200 text-black p-6 rounded-3xl shadow-lg snap-start transition-transform duration-300",
+      textClass: "text-xs text-gray-700 mb-4 leading-relaxed",
+      avatarClass:
+        "w-12 h-12 bg-gray-300 rounded-full border border-gray-100 mr-3",
+      customerInfoClass: "text-left",
+      customerNameClass: "font-bold text-sm",
+      customerRoleClass: "text-xs text-gray-600",
+      starsClass: "text-blue-600 text-sm",
+      starsContainerClass: "flex justify-start",
+    },
+
+    // Star symbol
+    starSymbol: "★",
+  };
  
   const { 
     styles, 

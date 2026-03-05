@@ -1,7 +1,7 @@
-import PricingSection from "../../components/pricing/PricingSection";
+import PricingSection from "../../components/naxidropshipping/PricingSection";
 import MainSection, {
   HowToStartSection,
-} from "../../components/pricing/MainSection";
+} from "../../components/naxidropshipping/MainSection";
 
 export const metadata = {
   title: "Naxi Dropshipping | Naxi",
